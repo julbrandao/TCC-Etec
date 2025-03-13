@@ -15,16 +15,34 @@
     gap: 1rem;
 }
 
+label{
+    width: 45%;
+}
+
 #title{
     font-family: 'Open Sans';
     color: #2c2f2c;
+}
+
+#btnentrar{
+    width: 150px;
+    padding: 1rem;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 0.5px solid black;
+}
+
+.inputtxt{
+    padding: 5px 15px;
+    text-align: left;
+    width: 200px;
 }
 
 .container{
     width: 50%;
     height: 100vh;
     background-image: linear-gradient(to right, #e3b055, #f86d68);
-    border-radius: 0 120px 120px 0;
+    border-radius: 0 50% 50% 0;
 }
 
 .flex{
