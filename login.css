@@ -1,0 +1,34 @@
+/* Fontes abaixo, lembrar de fazer o dowload das fontes para apresentar em checkpoints. */
+/* Achar font Coconut Pro por fora, pois o Google Fonts não disponibiliza. */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+    margin: 0%;
+}
+
+#form-login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    gap: 1rem;
+}
+
+#title{
+    font-family: 'Open Sans';
+    color: #2c2f2c;
+}
+
+.container{
+    width: 50%;
+    height: 100vh;
+    background-image: linear-gradient(to right, #e3b055, #f86d68);
+    border-radius: 0 120px 120px 0;
+}
+
+.flex{
+    display: flex;
+}
+
+/* sujeito a múltiplas alterações, esqueci alguns fundamentos do CSS. */
