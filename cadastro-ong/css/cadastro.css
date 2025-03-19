@@ -10,6 +10,12 @@
     color: black;
 }
 
+input:focus {
+    outline: none;
+    border: none;
+}
+
+
 #form-cadastro{
     display: flex;
     align-items: center;
@@ -17,6 +23,19 @@
     flex-direction: column;
     height: 100vh;
     gap: 20px;
+    
+}
+
+.divScroll{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 30px ;
+    overflow-y: auto;
+    width: 400px;
+    height: 200px;
 }
 
 .info-form{
@@ -71,6 +90,7 @@
     border-bottom: 1px solid grey;
     color: black;
     transition: border-bottom 0.4s ease;
+    box-sizing: border-box;
 }
 
 .checkbox-container{
@@ -90,51 +110,51 @@
     background-color: #e3b055;
 }
 
-.container-left{
-    width: 32%;
+.containerLateral{
+    width: 33%;
     height: 100vh;
-    background-image: linear-gradient(#e3b055, #f86d68);
-    border-radius: 0 100% 100% 0;
+    background-image: linear-gradient(#f86d68, #e3b055);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.container-left h1, p, a{
+.containerLateral h1, p, a{
     color: white;
     font-family: 'Poppins';
 
 }
 
-.container-left a {
+.containerLateral h1 {
+    font-size: 30pt;
+    animation-name: animation;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+}
+
+.containerLateral a {
     padding: 1rem;
     border: 2px solid white;
     border-radius: 20px;
     font-size: 15pt;
 }
 
-.container-left p {
+.containerLateral p {
     font-size: 20pt;
     text-align: center;
 }
 
-.container-left div {
+.containerLateral div {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 3rem;
-    padding-right: 30px;
 }
 
 .flex{
     display: flex;
-}
-
-input:focus {
-    outline: none;
-    border: none;
 }
 
 .inputtxt:focus{
@@ -144,11 +164,17 @@ input:focus {
 .input-container:focus-within .lbllogin {
     color: #e3b055; 
 }
-/*
-#btnentrar:hover{
-    box-shadow: 1px 1px 10px #ffa1359a;
-    background-color: #ff9249;
-}
-*/
 
-/* sujeito a múltiplas alterações, esqueci alguns fundamentos do CSS. */
+@keyframes animation {
+    0% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    
+    90% {
+        opacity: 100%;
+        transform: scale(1.0);
+    }
+
+}
+
