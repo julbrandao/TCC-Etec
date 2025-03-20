@@ -21,12 +21,12 @@
     justify-content: space-between;
     height: 40px;
     background-image: linear-gradient(to right, #e3b055, #f86d68);
+    padding: 0 20px;
     
 }
 
 .title{
     line-height: 40px;
-    margin-left: 50px;
     font-family: 'Cocomat Pro';
     font-weight: bold;
     color: white;
@@ -36,7 +36,12 @@
     display: flex;
     gap: 10px;
     line-height: 40px;
-    margin-right: 10px;
+}
+
+.navbar ul li{
+    color: white;
+    font: 'Open Sans';
+    
 }
 
 .seach-bar{
@@ -45,4 +50,11 @@
     border: none;
     border-radius: 10px;
     /* acertar animação para abrir a barra de pesquisa. */
+}
+@media only screen and (max-width: 450px){
+
+    .seach-bar{
+        display: none;
+    }
+
 }

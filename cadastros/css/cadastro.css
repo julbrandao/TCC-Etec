@@ -197,6 +197,11 @@ input:focus {
         display: none;
     }
 
+    .container-inferior-mobile{
+        display: flex;
+        flex-direction: column;
+    }
+
     .divScroll{
         align-items: center;
         width: 370px;
