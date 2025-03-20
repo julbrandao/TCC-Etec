@@ -10,6 +10,10 @@
     color: black;
 }
 
+main{
+    width: 60%;
+}
+
 input:focus {
     outline: none;
     border: none;
@@ -62,11 +66,12 @@ input:focus {
     font-size: 12px; text-align: left; width: 100%; margin-bottom: 0px; font-family: 'Nunito';
 }
 
-#title{
+.title{
     font-family: 'Open Sans';
     color: #2c2f2c;
     font-size: 30pt;
     margin-bottom: -10px;
+    text-align: center;
 }
 
 .button{
@@ -110,7 +115,7 @@ input:focus {
     background-color: #e3b055;
 }
 
-.containerLateral{
+.container-lateral-desktop{
     width: 33%;
     height: 100vh;
     background-image: linear-gradient(#f86d68, #e3b055);
@@ -120,32 +125,32 @@ input:focus {
     flex-direction: column;
 }
 
-.containerLateral h1, p, a{
+.container-lateral-desktop h1, p, a{
     color: white;
     font-family: 'Poppins';
 
 }
 
-.containerLateral h1 {
+.container-lateral-desktop h1 {
     font-size: 30pt;
     animation-name: animation;
     animation-duration: 0.5s;
     animation-timing-function: linear;
 }
 
-.containerLateral a {
+.container-lateral-desktop a {
     padding: 1rem;
     border: 2px solid white;
     border-radius: 20px;
     font-size: 15pt;
 }
 
-.containerLateral p {
+.container-lateral-desktop p {
     font-size: 20pt;
     text-align: center;
 }
 
-.containerLateral div {
+.container-lateral-desktop div {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -178,3 +183,23 @@ input:focus {
 
 } */
 
+@media only screen and (max-width: 900px){
+
+    .flex{
+        flex-direction: column;
+    }
+
+    main{
+        width: 100%;
+    }
+
+    .container-lateral-desktop{
+        display: none;
+    }
+
+    .divScroll{
+        align-items: center;
+        width: 370px;
+    }
+    
+}
