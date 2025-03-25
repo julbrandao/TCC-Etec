@@ -33,6 +33,12 @@ main{
     justify-content: center;
 }
 
+.main-perfil{
+    width: 100%;
+    height: 100%;
+    margin-top: 2rem;
+}
+
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -63,7 +69,7 @@ main{
 .dropdown-content{
     display: none;
     position: absolute;
-    background-color: #f86d68;
+    background-color: #f2f2f2;
     border-radius: 20px 0 0 20px;
     padding: 20px 10px;
     min-width: 170px;
@@ -107,6 +113,110 @@ main{
     font-family: 'Nunito';
     background-color: #f4863e;
     text-align: center;
+}
+
+.flex{
+    display: flex;
+}
+
+.home-image{
+    width: 500px;
+    height: auto;
+}
+
+.icon-profile{
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #f7f1f1;
+    border: 1px solid #cdcccc;
+    top: 60px;
+    left: 50px;
+}
+
+.info-perfil{
+    width: 100%;
+    height: 50px;
+    background-color: #f7f1f1;
+    border-top: 1px solid #cdcccc;
+}
+
+.perfil-containt{
+    display: flex;
+    justify-content: space-around;
+    line-height: 50px;
+}
+
+.header-perfil{
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(to right, #f2f2f2 #d3d3d3);
+}
+
+.itens-salvos{
+    width: 300px;
+    height: 350px;
+    background-color: #ffff;
+    border: 1px solid #cdcccc;
+    border-radius: 20px;
+}
+
+.title-itens{
+    width: 100%;
+    border-bottom: 1px solid #cdcccc;
+}
+
+.title-itens h4{
+    padding: 1rem;
+    color: #708372;
+}
+
+.elementos-salvos{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.item-colecao{
+    display: flex;
+    width: 100%;
+    height: 40px;
+    justify-content: space-around;
+}
+
+.item-colecao p{
+    line-height: 40px;
+}
+
+
+.icon-colecao{
+    padding: 10px 13px;
+    background-color: #f4863e;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.menu-perfil{
+    width: 250px;
+    height: 40px;
+    background-color: white;
+    border: 1px solid #cdcccc;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.feed-profile{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: flex-start;
 }
 
 @media only screen and (max-width: 450px){
