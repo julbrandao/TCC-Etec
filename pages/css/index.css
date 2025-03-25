@@ -2,10 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @font-face {
-    font-family: 'Cocomat Pro';
-    src: url('../fonts/cocomat-pro-regular.ttf');
+    font-family: 'Cocomat Pro Regular';
+    src: url('../fonts/Cocomat.Pro/CocomatPro-Regular.ttf');
     }
 
+@font-face {
+    font-family: 'Cocomat Pro Bold';
+    src: url('../fonts/Cocomat.Pro/CocomatPro-Bold.ttf');
+    }
 
 *{
     margin: 0;
@@ -16,19 +20,32 @@
     color: black;
 }
 
+body{
+    height: 200vh;
+    width: 100%;
+}
+
+main{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .navbar{
     display: flex;
     justify-content: space-between;
     height: 40px;
     background-image: linear-gradient(to right, #e3b055, #f86d68);
     padding: 0 20px;
+    box-shadow: 0 8px 20px rgb(197, 197, 197);
     
 }
 
-.title{
+.nav-title{
     line-height: 40px;
-    font-family: 'Cocomat Pro';
-    font-weight: bold;
+    font-family: 'Cocomat Pro Bold';
     color: white;
 }
 
@@ -46,9 +63,11 @@
 .dropdown-content{
     display: none;
     position: absolute;
-    background-color: #f2f2f2;
+    background-color: #f86d68;
+    border-radius: 20px 0 0 20px;
     padding: 20px 10px;
     min-width: 170px;
+    height: 190px;
     right: -56%;
     z-index: 1;
 
@@ -72,6 +91,24 @@
     border-radius: 10px;
     /* acertar animação para abrir a barra de pesquisa. */
 }
+
+.container-title{
+    font-family: 'Cocomat Pro Bold';
+    font-size: 30pt;
+}
+
+.button{
+    width: 80px;
+    padding: 0.5rem 1.2rem;
+    font-size: 17px;
+    border-radius: 10px;
+    color: whitesmoke;
+    border: none;
+    font-family: 'Nunito';
+    background-color: #f4863e;
+    text-align: center;
+}
+
 @media only screen and (max-width: 450px){
 
     .seach-bar{
