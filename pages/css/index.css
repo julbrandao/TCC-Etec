@@ -42,23 +42,24 @@ main{
 .navbar{
     display: flex;
     justify-content: space-between;
-    height: 40px;
+    height: 60px;
     background-image: linear-gradient(to right, #e3b055, #f86d68);
-    padding: 0 20px;
+    padding: 0 30px;
     box-shadow: 0 8px 20px rgb(197, 197, 197);
     
 }
 
 .nav-title{
-    line-height: 40px;
+    line-height: 60px;
     font-family: 'Cocomat Pro Bold';
+    font-size: 17pt;
     color: white;
 }
 
 .nav-elements{
     display: flex;
     gap: 10px;
-    line-height: 40px;
+    line-height: 60px;
 }
 
 .dropdown {
@@ -131,8 +132,8 @@ main{
     border-radius: 50%;
     background-color: #f7f1f1;
     border: 1px solid #cdcccc;
-    top: 60px;
-    left: 50px;
+    top: 75px;
+    left: 85px;
 }
 
 .info-perfil{
@@ -146,6 +147,7 @@ main{
     display: flex;
     justify-content: space-around;
     line-height: 50px;
+    box-shadow: 0 5px 15px 1px rgb(215, 215, 215)
 }
 
 .header-perfil{
@@ -160,6 +162,7 @@ main{
     background-color: #ffff;
     border: 1px solid #cdcccc;
     border-radius: 20px;
+    box-shadow: 3px 3px 10px 1px rgb(215, 215, 215)
 }
 
 .title-itens{
@@ -170,22 +173,26 @@ main{
 .title-itens h4{
     padding: 1rem;
     color: #708372;
+    font-size: 15pt;
 }
 
 .elementos-salvos{
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
+    gap: 1.5rem;
+    
 }
 
 .item-colecao{
     display: flex;
     width: 100%;
     height: 40px;
-    justify-content: space-around;
+    margin-left: 1.5rem;
+    gap: 10px;
 }
 
 .item-colecao p{
@@ -194,15 +201,19 @@ main{
 
 
 .icon-colecao{
-    padding: 10px 13px;
+    width: 40px;
+    height: 40px;
     background-color: #f4863e;
     border-radius: 10px;
     color: white;
     font-weight: bold;
+    font-size: 18pt;
+    text-align: center;
+    line-height: 40px;
 }
 
 .menu-perfil{
-    width: 250px;
+    width: 80%;
     height: 40px;
     background-color: white;
     border: 1px solid #cdcccc;
@@ -210,6 +221,15 @@ main{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    box-shadow: 0 3px 10px 1px rgb(215, 215, 215)
+}
+
+.option-menu{
+    font-family: 'Open Sans';
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+
 }
 
 .feed-profile{
