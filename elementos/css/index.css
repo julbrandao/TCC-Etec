@@ -198,6 +198,7 @@ main{
 
 .item-colecao p{
     line-height: 40px;
+    font-weight: bold;
 }
 
 
@@ -232,6 +233,10 @@ main{
     text-align: center;
     color: #2c2f2c;
 
+}
+
+.op-menu-active{
+    border-bottom: 2px solid #f4863e;
 }
 
 .feed-profile{
