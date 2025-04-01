@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Cocomat Pro Regular';
+    src: url('../fonts/Cocomat.Pro/CocomatPro-Regular.ttf');
+    }
+
+@font-face {
+    font-family: 'Cocomat Pro Bold';
+    src: url('../fonts/Cocomat.Pro/CocomatPro-Bold.ttf');
+    }
+    
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf');
+    }
+    
+@font-face {
+    font-family: 'Nunito';
+    src: url('../fonts/Nunito_Sans/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf');
+    }
+
+/*  Global Styles */
+    
+*{
+    margin: 0;
+    padding: 0%;
+    list-style: none;
+    font-family: 'Nunito';
+    text-decoration: none;
+    color: black;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: #f2f5f5;
+}
+
+.main{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex{
+    display: flex;
+}

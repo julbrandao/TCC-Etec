@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de ONG</title>
+    <link rel="stylesheet" href="../../assets/css/partials/navbar.css">
+    <link rel="stylesheet" href="../../assets/css/index.css">
+    <link rel="stylesheet" href="../../assets/css/pages/cadastros/cadastros.css">
+</head>
+<body>
+
+<div class="flex" style="gap: 1rem; justify-content: space-between;">
+    <main>
+        <form action="" id="form-cadastro">
+            
+            <h1 class="title">Bem-vindo de volta!</h1>
+            <p class="info-form">Não possui uma conta? <span><a href="">Faça login</a></span></p>
+
+                <div class="input-container">
+                    <label class="lbllogin" for="txtnome">Nome da ONG</label>
+                    <br>
+                    <input class="inputtxt" type="text" name="txtnome" id="txtnome" placeholder="">
+                </div>
+
+                <div class="input-container">
+                    <label class="lbllogin" for="txtcnpj">CNPJ</label>
+                    <br>
+                    <input class="inputtxt" type="text" name="txtcnpj" id="txtcnpj" placeholder="">
+                </div>
+
+                <div class="input-container">
+                    <label class="lbllogin" class="lbllogin" for="txtsenha">Senha</label>
+                    <br>
+                    <input class="inputtxt" type="password" name="txtsenha" id="txtsenha">
+                </div>
+
+            <br>
+            <button class="button">Entrar</button>
+        </form>
+    </main>
+
+        <div class="container-lateral-desktop" style="border-radius: 100% 0 0 100% ;">
+            <!-- Opção para se cadastrar como doador -->
+            <div style="padding-left: 35px;">
+                <h1>Olá, amigo!</h1>
+                <p>Deseja registrar-se como doador?</p>
+    
+                <a href="login-doador.html">Cadastrar-se</a>
+            </div>
+        </div>
+
+        <div class="container-inferior-mobile">
+            <!-- Versão responsiva do container de escolha de cadastro/login -->
+        </div>
+    </div>
+    
+</body>
+</html>

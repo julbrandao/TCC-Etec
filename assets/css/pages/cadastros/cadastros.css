@@ -1,0 +1,280 @@
+input{
+    all: unset;
+}
+
+#form-cadastro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    gap: 20px;
+    
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 55%;
+}
+
+.divScroll{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 30px ;
+    overflow-y: auto;
+    width: 400px;
+    height: 200px;
+}
+
+.info-form{
+    font-size: 10pt;
+    color: black;
+}
+
+.info-form span a{
+    color: #0047ff;
+    text-decoration: underline;
+}
+
+.lbllogin{
+    width: 30%;
+    font-family:'Nunito';
+    font-size: 14px;
+    margin-bottom: 1rem ;
+    color: grey;
+    transition: color 0.4s ease;
+
+}
+
+.lblcheckbox{
+    font-size: 12px; text-align: left; width: 100%; margin-bottom: 0px; font-family: 'Nunito';
+}
+
+.title{
+    font-family: 'Open Sans';
+    color: #2c2f2c;
+    font-size: 30pt;
+    margin-bottom: -10px;
+    text-align: center;
+}
+
+.button{
+    width: 280px;
+    padding: 1rem;
+    font-size: 17px;
+    border-radius: 15px;
+    color: whitesmoke;
+    border: none;
+    font-family: 'Nunito';
+    background-color: #f4863e;
+}
+
+.inputtxt{
+    padding: 5px 0px;
+    text-align: left;
+    width: 350px;
+    background-color: #f2f5f5;
+    border-radius: 0%;
+    border: none;
+    border-bottom: 1px solid grey;
+    color: black;
+    transition: border-bottom 0.4s ease;
+    box-sizing: border-box;
+}
+
+.checkbox-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 350px;
+    transition: background-color 0.3s ease;
+    
+}
+
+.checkbox{
+    margin-right: 5px;
+}
+
+.checkbox:focus{
+    background-color: #e3b055;
+}
+
+.container-lateral-desktop{
+    width: 38%;
+    height: 100vh;
+    background-image: linear-gradient(#f86d68, #e3b055);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-right: -7%;
+}
+
+.container-lateral-desktop h1, p, a{
+    color: white;
+    font-family: 'Poppins';
+
+}
+
+.container-lateral-desktop h1 {
+    font-size: 30pt;
+    animation-name: animation;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    font-family: 'Nunito';
+}
+
+.container-lateral-desktop a {
+    padding: 1rem;
+    border: 2px solid white;
+    border-radius: 20px;
+    font-size: 15pt;
+    font-family: 'Nunito';
+}
+
+.container-lateral-desktop p {
+    font-size: 20pt;
+    text-align: center;
+    font-family: 'Nunito';
+}
+
+.container-lateral-desktop div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.flex{
+    display: flex;
+}
+
+.inputtxt:focus{
+    border-bottom: 1.3px solid #e3b055;
+}
+
+.input-container:focus-within .lbllogin {
+    color: #e3b055; 
+}
+
+header{
+    display: none;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    background-image: linear-gradient(to right, #e3b055, #f4863e, #f86d68);
+    padding: 0 30px;
+    box-shadow: 0 8px 20px rgb(197, 197, 197);
+    
+}
+
+.nav-title{
+    line-height: 50px;
+    font-family: 'Cocomat Pro Bold';
+    font-size: 15pt;
+    color: white;
+}
+
+.nav-elements{
+    display: flex;
+    gap: 10px;
+    line-height: 50px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f2f2f2;
+    border-radius: 20px 0 0 20px;
+    padding: 20px 10px;
+    min-width: 170px;
+    height: 190px;
+    right: -56%;
+    z-index: 1;
+
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+.navbar ul li{
+    color: white;
+    font: 'Open Sans';
+    
+}
+
+.seach-bar{
+    width: 200px;
+    height: 10px;
+    border: none;
+    border-radius: 10px;
+    /* acertar animação para abrir a barra de pesquisa. */
+}
+
+@media only screen and (max-width: 900px){
+
+    .flex{
+        flex-direction: column;
+    }
+
+    main{
+        width: 100%;
+    }
+
+    .container-lateral-desktop{
+        display: none;
+    }
+
+    .container-inferior-mobile{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .divScroll{
+        align-items: center;
+        width: 370px;
+    }
+
+    header{
+        display: block;
+    }
+
+    .seach-bar{
+        display: none;
+    }
+
+    .dropdown-content{
+        position: absolute;
+        top: 40px; 
+        width: 100vw; 
+        min-width: 100vw;
+        background-color: #f2f2f2;
+        padding: 20px 10px;
+        box-sizing: border-box;
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
+    
+}
