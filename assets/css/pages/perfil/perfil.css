@@ -21,14 +21,13 @@
 }
 
 .icon-profile{
-    position: absolute;
+    margin-top: -70px;
+    margin-bottom: 10px;
     width: 120px;
     height: 120px;
     border-radius: 50%;
     background-color: #f7f1f1;
     border: 1px solid #cdcccc;
-    top: 75px;
-    left: 85px;
 }
 
 .info-perfil{
@@ -40,8 +39,8 @@
 
 .perfil-containt{
     display: flex;
-    justify-content: space-around;
-    line-height: 50px;
+    justify-content: space-between;
+    line-height: 55px;
     box-shadow: 0 5px 15px 1px rgb(215, 215, 215)
 }
 
