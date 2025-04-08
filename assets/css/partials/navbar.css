@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     height: 50px;
-    background-image: linear-gradient(to right, #e3b055, #f4863e, #f86d68);
+    background-image: linear-gradient(to right, var(--yellow), var(--orange), var(--red));
     padding: 0 30px;
     box-shadow: 0 8px 20px rgb(197, 197, 197);
     

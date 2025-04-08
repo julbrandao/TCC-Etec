@@ -18,6 +18,17 @@
     src: url('../fonts/Nunito_Sans/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf');
     }
 
+
+/* Variáveis Globais*/
+:root{
+    /* Colors */
+    --yellow: #e3b055;
+    --orange: #f4863e;
+    --gray-border: #cdcccc;
+    --red: #f86d68;
+
+}
+
 /*  Global Styles */
     
 *{

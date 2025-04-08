@@ -7,12 +7,13 @@
     color: whitesmoke;
     border: none;
     font-family: 'Nunito';
-    background-color: #f4863e;
+    background-color: var(--orange);
     text-align: center;
 }
 
 .main-perfil{
-    margin-top: 2rem;
+    margin: 2rem;
+    
 }
 
 .home-image{
@@ -21,26 +22,30 @@
 }
 
 .icon-profile{
-    margin-top: -70px;
-    margin-bottom: 10px;
-    width: 120px;
-    height: 120px;
+    margin-top: -72px;
+    margin-bottom: 5px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
     background-color: #f7f1f1;
-    border: 1px solid #cdcccc;
+    border: 1px solid var(--gray-border);
+}
+
+.name-profile{
+    font-size: 14pt;
 }
 
 .info-perfil{
     width: 100%;
     height: 50px;
-    background-color: #f7f1f1;
-    border-top: 1px solid #cdcccc;
+    border-top: 1px solid var(--gray-border);
 }
 
 .perfil-containt{
     display: flex;
     justify-content: space-between;
     line-height: 55px;
+    background-color: #f7f1f1;
     box-shadow: 0 5px 15px 1px rgb(215, 215, 215)
 }
 
@@ -51,23 +56,24 @@
 }
 
 .itens-salvos{
-    width: 300px;
-    height: 350px;
+    width: 350px;
+    padding-bottom: 20px;
     background-color: #ffff;
-    border: 1px solid #cdcccc;
+    border: 1px solid var(--gray-border);
     border-radius: 20px;
     box-shadow: 3px 3px 10px 1px rgb(215, 215, 215)
 }
 
 .title-itens{
     width: 100%;
-    border-bottom: 1px solid #cdcccc;
+    border-bottom: 5px solid #f2f5f5;
 }
 
 .title-itens h4{
-    padding: 1rem;
+    padding:  1rem 1rem 0.5rem 1rem;
     color: #708372;
     font-size: 15pt;
+    font-family: 'Open Sans';
 }
 
 .elementos-salvos{
@@ -81,11 +87,29 @@
     
 }
 
+.ver-tudo{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 35px;
+}
+
+.ver-tudo a{
+    color: var(--orange);
+    font-size: 13pt;
+    transition: color 0.5s ease;
+}
+
+.ver-tudo a:hover{
+    color: var(--red)
+}
+
 .item-colecao{
     display: flex;
     width: 100%;
     height: 40px;
-    margin-left: 1.5rem;
+    margin-left: 2rem;
     gap: 10px;
 }
 
@@ -97,7 +121,7 @@
 .icon-colecao{
     width: 40px;
     height: 40px;
-    background-color: #f4863e;
+    background-color: var(--orange);
     border-radius: 10px;
     color: white;
     font-weight: bold;
@@ -107,11 +131,11 @@
 }
 
 .menu-perfil{
-    width: 80%;
+    width: 760px;
     height: 40px;
     background-color: white;
-    border: 1px solid #cdcccc;
-    border-radius: 20px;
+    border: 1px solid var(--gray-border);
+    border-radius: 15px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -130,16 +154,17 @@
 .feed-profile{
     display: flex;
     width: 100%;
+    height: 100%;
     justify-content: space-around;
     align-items: flex-start;
 }
 
 .postagens{
-    width: 72%;
+    width: 710px;
     min-height: 200px;
     max-height: 550px;
     background-color: white;
-    border: 1px solid #cdcccc;
+    border: 1px solid var(--gray-border);
     border-radius: 20px;
     padding: 1.5rem;
     box-shadow: 0 3px 10px 1px rgb(215, 215, 215);
@@ -152,7 +177,7 @@
 }
 
 .autor{
-    color: #f25662;
+    color: var(--red);
     font-family: 'Nunito';
     font-weight: bold;
 }
@@ -198,10 +223,10 @@
 }
 
 .reaction:hover{
-    color: #f4863e;
+    color: var(--orange);
 }
 
 .reaction:active{
-    color: #f25662;
+    color: var(--red);
     transform: scale(0.95);
 }
