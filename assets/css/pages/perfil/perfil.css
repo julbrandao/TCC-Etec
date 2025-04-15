@@ -1,6 +1,7 @@
 .main-perfil{
-    margin: 1rem;
+    margin: var(--margin-small);
     padding: 1rem;
+    min-height: 100vh;
     box-sizing: border-box;
     contain: layout;
 }
@@ -18,12 +19,12 @@
     height: 100%;
     width: 60%;
     gap: 12px;
-    margin-right: 0.5rem;
+    margin-right: 0.8vh;
 }
 
 .icon-profile{
-    margin-top: -72px;
-    margin-bottom: 5px;
+    margin-top: var(--margin-negative-large);
+    margin-bottom: var(--margin-xsmall);
     width: 110px;
     height: 110px;
     border-radius: 50%;
@@ -37,7 +38,6 @@
 
 .info-perfil{
     width: 100%;
-    height: 50px;
     border-top: 1px solid var(--gray-border);
 }
 
@@ -57,11 +57,12 @@
 
 .itens-salvos{
     width: 350px;
-    padding-bottom: 20px;
+    padding: 2vh;
     background-color: #ffff;
     border: 1px solid var(--gray-border);
     border-radius: 20px;
-    box-shadow: 3px 3px 10px 1px rgb(215, 215, 215)
+    box-shadow: 3px 3px 10px 1px rgb(215, 215, 215);
+    flex-shrink: 1;
 }
 
 .title-itens{
@@ -82,17 +83,18 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: var(--margin-xmedium);
     gap: 1.5rem;
     
 }
 
 .ver-tudo{
-    width: 100%;
+    width: 95%;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    padding-right: 35px;
+    margin-right: 5%;
+    padding-right: var(--margin-medium-right);
 }
 
 .ver-tudo a{
@@ -109,7 +111,7 @@
     display: flex;
     width: 100%;
     height: 40px;
-    margin-left: 2rem;
+    margin-left: var(--margin-xmedium);
     gap: 10px;
 }
 
@@ -145,7 +147,7 @@
 .option-menu{
     font-family: 'Open Sans';
     font-weight: bold;
-    width: 100%;
+    width: 70%;
     text-align: center;
     color: #2c2f2c;
 
@@ -160,9 +162,9 @@
 }
 
 .postagens{
-    width: 710px;
-    min-height: 200px;
-    max-height: 550px;
+    width: 90%; 
+    min-height: 30%; 
+    max-height: 70%; 
     background-color: white;
     border: 1px solid var(--gray-border);
     border-radius: 20px;
@@ -173,7 +175,7 @@
 .autor-post{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 2rem;
+    margin-bottom: var(--margin-xmedium);
 }
 
 .autor{
@@ -198,7 +200,7 @@
 
 .corpo-post{
     padding: 0 1rem;
-    padding-bottom: 2rem;
+    padding-bottom: var(--margin-xmedium);
 }
 
 .corpo-post p{
@@ -212,7 +214,7 @@
     display: flex;
     gap: 1rem;
     justify-content: flex-end;
-    padding-top: 1rem;
+    padding-top: var(--margin-small);
 }
 
 .reaction{
@@ -244,6 +246,7 @@
     width: 60%;
 }
 
+
 @media (max-width: 1200px){
     .perfil-containt{
         flex-direction: column;
@@ -255,6 +258,7 @@
         align-items:center;
         gap: 0;
         margin: 0;
+        margin-bottom: -12px;
         justify-content: center;
     }
 
@@ -262,8 +266,39 @@
         width: 100%;
     }
 
+    .itens-salvos{
+        width: 100%;
+        border-radius: 0;
+        margin-top: 5px;
+    }
+
     .main-left{
         width: 100%;
         flex-direction: row;
+    }
+
+    .main-right{
+        width: 100vh;
+        margin-top: 2rem;
+    }
+
+
+    .main-perfil{
+        margin: 0;
+        padding: 0;
+    }
+
+    .feed-profile{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .postagens{
+        width: 350px;
+    }
+
+    .menu-perfil{
+        width: 350px;
     }
 }

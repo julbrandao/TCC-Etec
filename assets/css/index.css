@@ -30,10 +30,28 @@
 
     /* Texts */
 
-    --small: 9pt;
-    --medium: 12pt;
-    --large: 15pt;
-    --xlarge: 18pt;
+    --small: 1vh;
+    --medium: 1.5vh;
+    --large: 2.0vh;
+    --xlarge: 2.5vh;
+
+    /* Margins Paddings*/
+
+    --margin-small: 1.6vh; /* 1rem */
+    --margin-medium: 0.8vh; /* 0.5rem */
+    --margin-negative-large: -7.2vh; /* -72px */
+    --margin-large: 2vh; /* 20px */
+    --margin-xmedium: 3.2vh; /* 2rem */
+    --margin-negative-medium: -1.2vh; /* -12px */
+    --margin-right-large: 3.5vh; /* 35px */
+    --margin-small-medium: 1vh; /* 10px */
+    --margin-xsmall: 0.5vh; /* 5px */
+    --padding-medium: 2.4vh; /* 1.5rem */
+    --padding-small: 4vh; /* 40px */
+    --height-small: 20vh; /* 200px */
+    --height-large: 55vh; /* 550px */
+    --height-xlarge: 10vh; /* 100px */
+    --padding-small-small: 0.3vh; /* 3px */
 
 }
 
