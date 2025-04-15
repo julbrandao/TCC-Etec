@@ -5,6 +5,12 @@
     contain: layout;
 }
 
+.main-left{
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+
 .main-right{
     flex-direction: column;
     justify-content: center;
@@ -254,5 +260,10 @@
 
     .flex-2{
         width: 100%;
+    }
+
+    .main-left{
+        width: 100%;
+        flex-direction: row;
     }
 }
