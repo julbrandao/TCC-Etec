@@ -30,16 +30,16 @@
 
     /* Texts */
 
-    --small: 1vh;
-    --medium: 1.5vh;
-    --large: 2.0vh;
-    --xlarge: 2.5vh;
+    --small: 1.5vh;
+    --medium: 2vh;
+    --large: 2.5vh;
+    --xlarge: 4vh;
 
     /* Margins Paddings*/
 
     --margin-small: 1.6vh; /* 1rem */
     --margin-medium: 0.8vh; /* 0.5rem */
-    --margin-negative-large: -7.2vh; /* -72px */
+    --margin-negative-large: -75px;
     --margin-large: 2vh; /* 20px */
     --margin-xmedium: 3.2vh; /* 2rem */
     --margin-negative-medium: -1.2vh; /* -12px */

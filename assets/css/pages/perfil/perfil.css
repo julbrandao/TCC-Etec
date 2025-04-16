@@ -30,10 +30,20 @@
     border-radius: 50%;
     background-color: #f7f1f1;
     border: 1px solid var(--gray-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-profile img{
+    width: 95px;
+    height: 95px;
+    border-radius: 100%;
+    object-fit: cover;
 }
 
 .name-profile{
-    font-size: 14pt;
+    font-size: var(--large);
 }
 
 .info-perfil{
@@ -207,6 +217,7 @@
     font-family: 'Nunito';
     font-weight: bold;
     color: #2c2f2c;
+    font-size: var(--medium);
 }
 
 .reactions-post{
@@ -246,12 +257,26 @@
     width: 60%;
 }
 
+.flex-2 p{
+    font-weight: bold; font-size: var(--large);
+}
+
 
 @media (max-width: 1200px){
     .perfil-containt{
         flex-direction: column;
         align-items: center;
     }
+
+    .name-profile{
+        font-size: var(--medium);
+    }
+
+    .flex-2 p{
+        font-weight: bold; font-size: var(--medium);
+    }
+    
+
 
     .flex-1{
         flex-direction: column;
@@ -280,6 +305,7 @@
     .main-right{
         width: 100vh;
         margin-top: 2rem;
+        align-items: center;
     }
 
 
