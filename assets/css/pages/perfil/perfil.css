@@ -43,7 +43,7 @@
 }
 
 .name-profile{
-    font-size: var(--large);
+    font-size: var(--medium);
 }
 
 .info-perfil{
@@ -83,7 +83,7 @@
 .title-itens h4{
     padding:  1rem 1rem 0.5rem 0.5rem;
     color: #708372;
-    font-size: 3vh;
+    font-size: var(--medium);
     font-family: 'Open Sans';
 }
 
@@ -94,7 +94,7 @@
     justify-content: center;
     align-items: center;
     margin-top: var(--margin-xmedium);
-    gap: 1.5rem;
+    gap: 0.5rem;
     
 }
 
@@ -173,7 +173,7 @@
     align-items: flex-start;
 }
 
-.postagens{
+.post{
     width: 90%; 
     min-height: 30%; 
     max-height: 70%; 
@@ -194,13 +194,21 @@
     color: var(--red);
     font-family: 'Nunito';
     font-weight: bold;
+    line-height: 30px;
+}
+
+.autor-photo img{
+    border-radius: 100%;
+    height: 30px;
+    width: 30px;
+    margin: 0 10px 0 0;
 }
 
 .horario{
     color: #708372;
     font-family: 'Nunito';
     font-weight: bold;
-    font-size: var(--small);
+    font-size: var(--smallsmall);
 }
 
 .options-post{
@@ -219,7 +227,7 @@
     font-family: 'Nunito';
     font-weight: bold;
     color: #2c2f2c;
-    font-size: var(--medium);
+    font-size: var(--small);
 }
 
 .reactions-post{
@@ -260,7 +268,7 @@
 }
 
 .flex-2 p{
-    font-weight: bold; font-size: var(--large);
+    font-weight: bold; font-size: var(--medium);
 }
 
 
@@ -297,7 +305,7 @@
     }
 
     .elementos-salvos{
-        gap: 0.5rem;
+        gap: 0.2rem;
     }
 
     .ver-tudo a{
@@ -354,8 +362,9 @@
         justify-content: center;
     }
 
-    .postagens{
-        width: 350px;
+    .post{
+        width: 70%;
+        max-width: 300px;
     }
 
     .menu-perfil{

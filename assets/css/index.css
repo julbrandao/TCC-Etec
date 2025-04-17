@@ -29,11 +29,11 @@
     --gray-bg: #f2f5f5;
 
     /* Texts */
-
-    --small: 1.5vh;
-    --medium: 2vh;
-    --large: 2.5vh;
-    --xlarge: 4vh;
+    --smallsmall: 8pt;
+    --small: 10pt;
+    --medium: 12pt;
+    --large: 14pt;
+    --xlarge: 27pt;
 
     /* Margins Paddings*/
 
