@@ -5,17 +5,17 @@
 
 @font-face {
     font-family: 'Cocomat Pro Bold';
-    src: url('../fonts/Cocomat.Pro/CocomatPro-Bold.ttf');
+    src: url('../assets/fonts/Cocomat.Pro/CocomatPro-Bold.ttf');
     }
     
 @font-face {
     font-family: 'Open Sans';
-    src: url('../fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf');
+    src: url('../assets//fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf');
     }
     
 @font-face {
     font-family: 'Nunito';
-    src: url('../fonts/Nunito_Sans/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf');
+    src: url('../assets/fonts/Nunito_Sans/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf');
     }
 
 
@@ -27,6 +27,7 @@
     --gray-border: #cdcccc;
     --red: #f86d68;
     --gray-bg: #f2f5f5;
+    --gray-bg2: #f5f5f5;
 
     /* Texts */
     --smallsmall: 8pt;
@@ -82,4 +83,10 @@ body{
 
 .flex{
     display: flex;
+}
+
+.checkbox{
+    width: 14px;
+    height: 14px;
+    border: 1px solid black;
 }

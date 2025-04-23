@@ -35,11 +35,13 @@ main{
 .info-form{
     font-size: 10pt;
     color: black;
+    font-family: 'Nunito';
 }
 
 .info-form span a{
     color: #0047ff;
     text-decoration: underline;
+    font-family: 'Nunito';
 }
 
 .lbllogin{
@@ -100,6 +102,7 @@ main{
 .checkbox{
     margin-right: 5px;
 }
+
 
 .checkbox:focus{
     background-color: #e3b055;
