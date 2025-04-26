@@ -11,25 +11,52 @@
 
     <header>
         <nav class="navbar">
-            <a class="nav-title" href="index.html">UneONG</a>
-            <ul class="nav-elements">
-                <li><input class="seach-bar" type="text"></li>
-            <!-- vai ter um dropdown nessa div abaixo-->
-            <li class="dropdown">
-                Drop
-                <ul class="dropdown-content">
-                    <li><a href="">Teste 1</a></li>
-                    <li><a href="">Teste 2</a></li>
-                    <li><a href="">Teste 3</a></li>
+            <div class="flex" style="gap: 5rem;">
+                <a class="nav-title" href="index.html">UneONG</a>
+            
+                <ul class="nav-elements">
+                    <li><a href="">Início</a></li>
+                    <li><a href="">Explorar</a></li>
+                    <li><a href="">ONGs</a></li>
+                    <li><a href="">Sobre nós</a></li>
                 </ul>
-            </li>
-        </ul>
+            </div>
+
+            <div class="nav-elements">
+                
+                <div class="src-icon"></div>
+
+                <div class="icon-menu" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                    <div class="dropdown" id="dropdownMenu">
+                        <div class="flex" style="width: 100%;">
+                            <img class="foto-perfil" src="../assets/jpg/foto-perfil-exemplo.jpg" alt="">
+                            <div class="mn-part1">
+                                <p class="name-account">Cartinha Mágica</p>
+                                <p class="email-account">cartinhamagica@gmail.com</p>
+                                <a class="perfil-account" href="perfil.html">Seu perfil ➞</a>
+                            </div>
+                        </div>
+                        <div class="mn-part2">
+                            <ul>
+                                <li><a onclick="modoEscuro()">☀ Modo escuro</a></li>
+                                <li><a href="">☀ Gerenciamento</a></li>
+                                <li><a href="">☀ Sair</a></li>
+                            </ul>
+                        </div>
+                    </div>
+            </div>
         </nav>
     </header>
 
     <main>
 
     </main>
+
+    <script src="../js/funcionalidades.js"></script>
     
 </body>
 </html>

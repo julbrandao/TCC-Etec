@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     height: 50px;
-    background-image: linear-gradient(to right, var(--yellow), var(--orange), var(--red));
+    background-image: var(--gray-bg2);
     padding: 0 30px;
     box-shadow: 0 8px 20px rgb(197, 197, 197);
     
@@ -12,7 +12,7 @@
     line-height: 50px;
     font-family: 'Cocomat Pro Bold';
     font-size: 15pt;
-    color: white;
+    color: var(--orange);
 }
 
 .nav-elements{
@@ -21,34 +21,60 @@
     line-height: 50px;
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
+.navbar ul li{
+    color: var(--orange);
+    font: 'Open Sans';
+    font-weight: bold;
+
+    & a {
+        color: var(--orange);
+        font-weight: bold;
+    }
+}
+
+.icon-menu {
+    width: 35px;
+    height: 25px;
+    padding-top: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  
+  .icon-menu span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: var(--orange);
+    border-radius: 2px;
   }
 
-.dropdown-content{
+.dropdown {
     display: none;
+    flex-direction: column;
+    gap: 1.5rem;
     position: absolute;
     background-color: var(--gray-bg2);
     padding: 20px 10px;
     box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.164);
     min-width: 260px;
     height: 190px;
-    right: -84%;
+    right: 0%;
+    top: 6%;
     z-index: 1;
-
-}
-
-.dropdown:hover .dropdown-content {
-    display: flex;
-    flex-direction: column;
   }
 
-.navbar ul li{
-    color: white;
-    font: 'Open Sans';
-    
-}
+  .dropdown li {
+    margin: 10px 0;
+  }
+  
+  .dropdown li a {
+    color: #333;
+    text-decoration: none;
+  }
+
+
 
 .seach-bar{
     width: 200px;
@@ -56,4 +82,47 @@
     border: none;
     border-radius: 10px;
     /* acertar animação para abrir a barra de pesquisa. */
+}
+
+.mn-part1{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    & .name-account, .email-account, .perfil-account {
+        font-weight: bold;
+        margin: -1rem 0;
+        font-family: 'Cocomat Pro Bold';
+    };
+
+    & .email-account, .perfil-account{
+        font-size: 9pt;
+    }
+
+    & .perfil-account{
+        color: #ff7f00;
+    }
+}
+
+.foto-perfil{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+.mn-part2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    & ul li{
+        margin: -1rem 0;
+        margin-left: 10px;
+
+        & a{
+            color: #708372;
+            font-family: 'Cocomat Pro Bold';
+        }
+    }
 }
