@@ -5,12 +5,13 @@ function toggleOptions(element) {
 }
 
 document.addEventListener('click', function(e) {
-    document.querySelectorAll('.options-container').forEach(container => {
-        if (!container.contains(e.target)) {
-            container.classList.remove('active');
-        }
-    });
+  document.querySelectorAll('.options-container, .nav-responsive').forEach(container => {
+      if (!container.contains(e.target)) {
+          container.classList.remove('active');
+      }
+  });
 });
+  
 
 function toggleMenu() {
     var menu = document.getElementById("dropdownMenu");
@@ -20,4 +21,3 @@ function toggleMenu() {
       menu.style.display = "flex";
     }
   }
-  

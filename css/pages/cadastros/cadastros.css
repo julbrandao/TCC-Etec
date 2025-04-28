@@ -109,9 +109,9 @@ main{
 }
 
 .container-lateral-desktop{
-    width: 38%;
+    width: 35%;
     height: 100vh;
-    background-image: linear-gradient(#f86d68, #e3b055);
+    background-image: linear-gradient(#f86d68, #f4863e, #e3b055);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -121,7 +121,7 @@ main{
 
 .container-lateral-desktop h1, p, a{
     color: white;
-    font-family: 'Poppins';
+    font-family: 'Poppins Bold';
 
 }
 
@@ -142,7 +142,8 @@ main{
 }
 
 .container-lateral-desktop p {
-    font-size: 20pt;
+    font-size: 22pt;
+    width: 300px;
     text-align: center;
     font-family: 'Nunito';
 }

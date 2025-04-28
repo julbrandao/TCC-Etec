@@ -12,20 +12,31 @@
 
     <header>
         <nav class="navbar">
-            <div class="flex" style="gap: 5rem;">
+            <div class="flex" style="gap: 5rem; justify-content: space-evenly;">
                 <a class="nav-title" href="index.html">UneONG</a>
             
-                <ul class="nav-elements">
-                    <li><a href="">Início</a></li>
+                <ul class="nav-elements" id="nav-elements-web">
+                    <li><a href="index.html">Início</a></li>
                     <li><a href="">Explorar</a></li>
                     <li><a href="">ONGs</a></li>
                     <li><a href="">Sobre nós</a></li>
                 </ul>
+
+                <div class="nav-responsive">
+                    <a onclick="toggleOptions(this)">Páginas</a>
+                    <ul class="content-responsive">
+                        <li class="nav-responsive-op"><a href="">Início</a></li>
+                        <li class="nav-responsive-op"><a href="">Explorar</a></li>
+                        <li class="nav-responsive-op"><a href="">ONGs</a></li>
+                        <li class="nav-responsive-op"><a href="">Sobre nós</a></li>
+                    </ul>
+                </div>
+            
             </div>
 
-            <div class="nav-elements">
+            <div class="nav-elements" style="width: 100px; justify-content: space-between;">
                 
-                <div class="src-icon"></div>
+                <div class="src-icon"><a href="">🔍</a></div>
 
                 <div class="icon-menu" onclick="toggleMenu()">
                     <span></span>
