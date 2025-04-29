@@ -43,7 +43,7 @@
 }
 
 .name-profile{
-    font-size: var(--medium);
+    font-size: 13pt
 }
 
 .info-perfil{
@@ -150,7 +150,7 @@
 }
 
 .menu-perfil{
-    width: 820px;
+    width: 775px;
     height: 40px;
     background-color: white;
     border: 1px solid var(--gray-border);
@@ -305,7 +305,7 @@
 }
 
 .flex-2 p{
-    font-weight: bold; font-size: var(--medium);
+    font-weight: bold; font-size: 12pt;
 }
 
 

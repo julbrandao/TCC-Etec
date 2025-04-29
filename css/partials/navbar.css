@@ -11,13 +11,15 @@
 .nav-title{
     line-height: 50px;
     font-family: 'Cocomat Pro Bold';
+    float: left;
+    padding-right: 2rem;
     font-size: 15pt;
     color: var(--orange);
 }
 
 .nav-elements{
     display: flex;
-    gap: 10px;
+    gap: 30px;
     line-height: 50px;
 }
 
@@ -69,6 +71,9 @@
 
 .nav-responsive{
     display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
         & a{
             line-height: 50px;
             color: var(--orange);
@@ -119,6 +124,11 @@
         font-family: 'Cocomat Pro Bold';
     };
 
+    & .email-account{
+        color: #2c2f2c;
+        font-family: 'Nunito Regular';
+    }
+
     & .email-account, .perfil-account{
         font-size: 9pt;
     }
@@ -126,6 +136,11 @@
     & .perfil-account{
         color: #ff7f00;
     }
+}
+
+.email-account{
+    color: #2c2f2c;
+    font-family: 'Nunito Regular';
 }
 
 .foto-perfil{
@@ -157,7 +172,7 @@
     }
 
     .nav-responsive{
-        display: block;
+        display: flex;
     }
 
     #dropdownMenu {

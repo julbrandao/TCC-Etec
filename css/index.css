@@ -18,6 +18,11 @@
     src: url('../assets/fonts/Nunito_Sans/NunitoSans-VariableFont_YTLC\,opsz\,wdth\,wght.ttf');
     }
 
+    @font-face {
+        font-family: 'Nunito Regular';
+        src: url('../assets/fonts/Nunito/static/Nunito-Regular.ttf');
+    }
+
 @font-face {
     font-family: 'Poppins Bold';
     src: url('../assets/fonts/Poppins/Poppins-Bold.ttf');
