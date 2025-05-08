@@ -150,7 +150,7 @@
 }
 
 .menu-perfil{
-    width: 775px;
+    width: 90%;
     height: 40px;
     background-color: white;
     border: 1px solid var(--gray-border);
