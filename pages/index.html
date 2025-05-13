@@ -12,33 +12,23 @@
 
     <header>
         <nav class="navbar" style="box-shadow: none;">
-            <div class="flex" style="justify-content: flex-start; width: 100%">
-                <a class="nav-title" href="index.html">UneONG</a>
-
-                <ul class="nav-elements" id="nav-elements-web">
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="">Explorar</a></li>
-                    <li><a href="">ONGs</a></li>
-                    <li><a href="">Sobre nós</a></li>
-                </ul>
-
-                <div class="nav-responsive">
-                    <a onclick="toggleOptions(this)">Páginas</a>
-                    <ul class="content-responsive">
-                        <li class="nav-responsive-op"><a href="">Início</a></li>
-                        <li class="nav-responsive-op"><a href="">Explorar</a></li>
-                        <li class="nav-responsive-op"><a href="">ONGs</a></li>
-                        <li class="nav-responsive-op"><a href="">Sobre nós</a></li>
+            <div class="flex" style="justify-content: flex-start; width: 100%; gap: 1.5rem;">
+                    <div class="icon-menu" onclick="toggleMenu()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul id="containerMenu">
+                        <li class="menu-op"><a href="">Início</a></li>
+                        <li class="menu-op"><a href="">Explorar</a></li>
+                        <li class="menu-op"><a href="">ONGs</a></li>
                     </ul>
-                </div>
-            
-            </div>
-
-            <div class="nav-elements" style="width: 100px; justify-content: space-between;padding-left: 1rem;">
                 
-                <div class="src-icon">🔍</div>
+                <a class="nav-title" href="index.html">UneONG</a>
+            </div>
+            <div class="nav-elements" style="width: 100px; justify-content: space-between;padding-left: 1rem;">
 
-                <div class="icon-menu" onclick="toggleMenu()">
+                <div class="icon-menu" style="display: none;" onclick="toggleMenu()">
                     <span></span>
                     <span></span>
                     <span></span>

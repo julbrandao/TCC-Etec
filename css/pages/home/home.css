@@ -5,13 +5,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 50px;
+    gap: 38px;
 
     & h1, p{
         color: #622110;
     }
     & h1 {
-        font-size: 45pt;
+        font-size: 10vh;
         font-family: 'Cocomat Pro Bold';
     }
     & p {
@@ -25,5 +25,16 @@
         color: white;
         font-size: 15pt;
         font-weight: bold;
+    }
+}
+
+@media (max-width: 600px){
+    .home-section1 {
+
+        & h1 {font-size: 6vh;
+        }
+        & p {
+            font-size: 3vh;
+    }
     }
 }
