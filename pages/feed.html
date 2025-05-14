@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UneONG - Feed</title>
+    <link rel="stylesheet" href="../css/partials/navbar.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/pages/feed/feed.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar" style="box-shadow: none;">
+            <div class="flex" style="justify-content: flex-start; width: 100%; gap: 1.5rem;">
+                    <div class="icon-menu" onclick="toggleMenu('containerMenu')">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul id="containerMenu">
+                        <li class="menu-op"><a href="">Início</a></li>
+                        <li class="menu-op"><a href="">Explorar</a></li>
+                        <li class="menu-op"><a href="">ONGs</a></li>
+                    </ul>
+                
+                <a class="nav-title" href="index.html">UneONG</a>
+            </div>
+            <div class="nav-elements" style="width: 100px; justify-content: flex-end;padding-left: 1rem;">
+
+                <div class="icon-menu" onclick="toggleMenu('dropdownMenu')">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                    <div class="dropdown" id="dropdownMenu">
+                        <div class="flex" style="width: 100%;">
+                            <img class="foto-perfil" src="../assets/jpg/foto-perfil-exemplo.jpg" alt="">
+                            <div class="mn-part1">
+                                <p class="name-account">Cartinha Mágica</p>
+                                <p class="email-account">cartinhamagica@gmail.com</p>
+                                <a class="perfil-account" href="perfil.html">Seu perfil ➞</a>
+                            </div>
+                        </div>
+                        <div class="mn-part2">
+                            <ul>
+                                <li><a onclick="modoEscuro()">☀ Modo escuro</a></li>
+                                <li><a href="">☀ Gerenciamento</a></li>
+                                <li><a href="">☀ Sair</a></li>
+                            </ul>
+                        </div>
+                    </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="feed-section sm">
+            <h4>Patrocinado</h4>
+        </div>
+
+        <div class="feed-section lg">
+            <article class="post">
+                <div class="autor-post">
+                    <div class="flex" style="flex-direction: column;">
+                        <div class="flex">
+                            <div class="autor-photo">
+                                <img src="../assets/jpg/foto-perfil-exemplo.jpg" alt="">
+                            </div>
+                            <a class="autor" href="">Cartinha Mágica</a>
+                        </div>
+                        <span class="horario">Fev 26 às 19h19</span>
+                    </div>
+                    <div>
+                        <div class="options-container">
+                            <a class="options-post" onclick="toggleOptions(this)">...</a>
+                            <div class="dropdown-options">
+                                <a href="#">Salvar post</a>
+                                <a href="#">Compartilhar</a>
+                            </div>
+                        </div>
+                </div>
+                
+                </div>
+                <div class="corpo-post">
+                    <p>
+                        Esse projeto tem o intuito de levar alegria e esperança para crianças que muitas vezes não têm condições de ter um Natal tão especial. A cada ano, voluntários se unem para arrecadar doações e organizar essa festa inesquecível.
+                    </p>
+                </div>
+
+                <div class="reactions-post">
+                    <a class="reaction" href="">Curtir</a>
+                    <a class="reaction" href="">Compartilhar</a>
+                </div>
+            </article>
+
+            <article class="post">
+                <div class="autor-post">
+                    <div class="flex" style="flex-direction: column;">
+                        <div class="flex">
+                            <div class="autor-photo">
+                                <img src="../assets/jpg/foto-perfil-exemplo.jpg" alt="">
+                            </div>
+                            <a class="autor" href="">Cartinha Mágica</a>
+                        </div>
+                        <span class="horario">Fev 26 às 19h19</span>
+                    </div>
+                    <div>
+                        <div class="options-container">
+                            <a class="options-post" onclick="toggleOptions(this)">...</a>
+                            <div class="dropdown-options">
+                                <a href="#">Salvar post</a>
+                                <a href="#">Compartilhar</a>
+                            </div>
+                        </div>
+                </div>
+                
+                </div>
+                <div class="corpo-post">
+                    <p>
+                        Esse projeto tem o intuito de levar alegria e esperança para crianças que muitas vezes não têm condições de ter um Natal tão especial. A cada ano, voluntários se unem para arrecadar doações e organizar essa festa inesquecível.
+                    </p>
+                </div>
+
+                <div class="reactions-post">
+                    <a class="reaction" href="">Curtir</a>
+                    <a class="reaction" href="">Compartilhar</a>
+                </div>
+            </article>
+        </div>
+        <div class="feed-section sm"></div>
+    </main>
+    
+    <script src="../js/funcionalidades.js"></script>
+</body>
+</html>

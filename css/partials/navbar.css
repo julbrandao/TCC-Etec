@@ -17,6 +17,23 @@
     color: var(--orange);
 }
 
+.nav-elements{
+    display: flex;
+    gap: 30px;
+    line-height: 50px;
+}
+
+.navbar ul li{
+    color: var(--orange);
+    font: 'Open Sans';
+    font-weight: bold;
+
+    & a {
+        color: var(--orange);
+        font-weight: bold;
+    }
+}
+
 .icon-menu {
     width: 25px;
     height: 20px;

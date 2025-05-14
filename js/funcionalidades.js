@@ -13,8 +13,8 @@ document.addEventListener('click', function(e) {
 });
   
 
-function toggleMenu() {
-    var menu = document.getElementById("containerMenu");
+function toggleMenu(elemento) {
+    var menu = document.getElementById(elemento);
     if (menu.style.display === "flex") {
       menu.style.display = "none";
     } else {
