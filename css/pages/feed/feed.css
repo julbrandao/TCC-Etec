@@ -14,9 +14,27 @@
     width: 25%;
     align-items: flex-start;
     padding-left: 30px;
+    
 
     & h4{
         color: #708372;
         text-align: left;
+        padding-top: 1rem;
     }
+}
+
+.news h4{
+    font-weight: normal;
+    font-size: 11px;
+}
+
+.news p{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.suggested-accounts{
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
 }

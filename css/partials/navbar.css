@@ -4,7 +4,7 @@
     height: 50px;
     background-image: var(--gray-bg2);
     padding: 0 30px;
-    box-shadow: 0 8px 20px rgb(197, 197, 197);
+    box-shadow: 0 4px 15px rgba(215, 215, 215, 0.797);
     
 }
 
@@ -62,8 +62,8 @@
     min-width: 260px;
     height: 190px;
     right: 0%;
-    top: 7.5%;
-    z-index: 1;
+    top: 8.5%;
+    z-index: 0;
   }
 
 
@@ -163,6 +163,7 @@
         & a{
             color: #708372;
             font-family: 'Cocomat Pro Bold';
+            font-size: 14px;
         }
     }
 }

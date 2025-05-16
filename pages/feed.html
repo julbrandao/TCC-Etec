@@ -11,7 +11,7 @@
 <body>
 
     <header>
-        <nav class="navbar" style="box-shadow: none;">
+        <nav class="navbar">
             <div class="flex" style="justify-content: flex-start; width: 100%; gap: 1.5rem;">
                     <div class="icon-menu" onclick="toggleMenu('containerMenu')">
                         <span></span>
@@ -44,8 +44,7 @@
                         </div>
                         <div class="mn-part2">
                             <ul>
-                                <li><a onclick="modoEscuro()">☀ Modo escuro</a></li>
-                                <li><a href="">☀ Gerenciamento</a></li>
+                                <li><a href="">☀ Configurações</a></li>
                                 <li><a href="">☀ Sair</a></li>
                             </ul>
                         </div>
@@ -128,7 +127,42 @@
                 </div>
             </article>
         </div>
-        <div class="feed-section sm"></div>
+        <div class="feed-section sm">
+            <div class="container">
+                <h4>O que está acontecendo:</h4>
+                
+                <article class="news">
+                    <h4>Assuntos do Momento em Salto</h4>
+                    <p>Campanha APAE</p>
+                </article>
+                
+                <article class="news">
+                    <h4>Amarati • Assunto do momento</h4>
+                    <p>Evento beneficente</p>
+                </article>
+
+                <article class="news">
+                    <h4>Rever Cidadania • Assunto do momento</h4>
+                    <p>Arrecadação</p>
+                </article>
+            </div>
+
+            <div class="container">
+                <h4>Contas Sugeridas:</h4>
+
+                <article class="suggested-accounts">
+                <p class="autor" style="font-size: 11pt;">Cartinha Mágica</p>
+                <a href="" class="button">Seguir</a>
+                </article>
+
+                <article class="suggested-accounts">
+                <p class="autor" style="font-size: 11pt;">Cartinha Mágica</p>
+                <a href="" class="button">Seguir</a>
+                </article>
+            
+            </div>
+
+        </div>
     </main>
     
     <script src="../js/funcionalidades.js"></script>
