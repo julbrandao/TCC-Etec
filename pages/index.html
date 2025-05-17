@@ -11,7 +11,7 @@
 <body>
 
     <header>
-        <nav class="navbar" style="box-shadow: none;">
+        <nav class="navbar">
             <div class="flex" style="justify-content: flex-start; width: 100%; gap: 1.5rem;">
                     <div class="icon-menu" onclick="toggleMenu('containerMenu')">
                         <span></span>
@@ -29,9 +29,7 @@
             <div class="nav-elements" style="width: 100px; justify-content: flex-end;padding-left: 1rem;">
 
                 <div class="icon-menu" onclick="toggleMenu('dropdownMenu')">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                    <img src="../assets/png/user-example.png" alt="">
                 </div>
                     <div class="dropdown" id="dropdownMenu">
                         <div class="flex" style="width: 100%;">
@@ -44,8 +42,7 @@
                         </div>
                         <div class="mn-part2">
                             <ul>
-                                <li><a onclick="modoEscuro()">☀ Modo escuro</a></li>
-                                <li><a href="">☀ Gerenciamento</a></li>
+                                <li><a href="">☀ Configurações</a></li>
                                 <li><a href="">☀ Sair</a></li>
                             </ul>
                         </div>
@@ -56,7 +53,7 @@
 
     <main>
         <section class="home-section1">
-            <h1>Seja bem-vindo!</h1>
+            <h1 style="text-align: center;">Seja bem-vindo!</h1>
 
             <p>Explore nossa plataforma e dê início a sua experiência</p>
 

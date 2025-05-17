@@ -5,6 +5,7 @@
     background-image: var(--gray-bg2);
     padding: 0 30px;
     box-shadow: 0 4px 15px rgba(215, 215, 215, 0.797);
+    position: relative;
     
 }
 
@@ -45,7 +46,7 @@
   }
   
   .icon-menu span {
-    display: block;
+    display: relative;
     height: 2px;
     width: 100%;
     background: var(--orange);
@@ -61,22 +62,8 @@
     box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.164);
     min-width: 260px;
     height: 190px;
-    right: 0%;
-    top: 8.5%;
-    z-index: 0;
-  }
-
-
-
-.nav-responsive{
-    display: none;
-    justify-content: center;
-    align-items: center;
-        & a{
-            line-height: 50px;
-            color: var(--orange);
-            font-family: 'Cocomat Pro Bold';
-        }
+    top: 100%;
+    right: 0;
   }
 
   #containerMenu{
@@ -91,9 +78,9 @@
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.164);
     width: 17%;
     height: 300px;
-    left: -1%;
-    top: 7.5%;
-    z-index: 1;
+    top: 100%;
+    left: 0%;
+    z-index: 0;
 
     & .menu-op a{
         color: var(--orange);
@@ -169,16 +156,23 @@
 }
 
 @media (max-width: 600px){
-    #nav-elements-web{
-        display: none;
-    }
-
-    .nav-responsive{
-        display: flex;
-    }
 
     #dropdownMenu {
         height: 99vh;
         min-width: 100px;
+        left: 40%;
+        gap: 2rem;
       }
+
+    #containerMenu{
+        width: 100%;
+        gap: 0;
+        justify-content: space-around;
+        height: 200px;
+        padding-bottom: 3rem;
+
+        & li a{
+            font-size: 14pt;
+        }
+    }
 }
