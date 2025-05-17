@@ -35,6 +35,19 @@
 
 .suggested-accounts{
     display: flex;
-    width: 200px;
+    width: 230px;
     justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+
+    & .autor{
+        width: 100%;
+        font-size: 9pt;
+    }
+}
+
+.icon-profile-mini{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
 }

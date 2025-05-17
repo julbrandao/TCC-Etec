@@ -34,6 +34,7 @@
     /* Colors */
     --yellow: #e3b055;
     --orange: #f4863e;
+    --green: #638a62;
     --gray-border: #cdcccc;
     --red: #f86d68;
     --gray-bg: #f2f5f5;
@@ -89,8 +90,8 @@ main{
 
 .button{
     background: var(--orange);
-    padding: 0 8px;
-    border-radius: 10px;
+    padding: 3px 6px;
+    border-radius: 5px;
     font-size: 10px;
     font-weight: bold;
     font-family: 'Cocomat Pro Bold';
@@ -197,7 +198,7 @@ main{
     gap: 1rem;
     justify-content: flex-end;
     padding-top: 1.6vh;
-    font-size: 2.5vh;
+    font-size: 15px;
 }
 
 .reaction{
@@ -225,4 +226,28 @@ main{
     box-shadow: 0 3px 10px 1px rgb(215, 215, 215);
     border-radius: 20px;
 }
+
+.sponsor{
+    display: flex;
+    gap: 1rem;
+
+    & img{
+        width: 50px;
+        height: 50px;
+        border: 2px solid var(--orange);
+        border-radius: 8px;
+    }
+
+    & div h4{
+        color: #638a62;
+    }
+
+    & div a {
+        color: #969696;
+        font-family: 'Nunito';
+        font-weight: bold;
+    }
+}
+
+
 

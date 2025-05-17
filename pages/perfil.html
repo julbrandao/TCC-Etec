@@ -12,33 +12,23 @@
 
     <header>
         <nav class="navbar">
-            <div class="flex" style="justify-content: flex-start; width: 100%">
-                <a class="nav-title" href="index.html">UneONG</a>
-
-                <ul class="nav-elements" id="nav-elements-web">
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="">Explorar</a></li>
-                    <li><a href="">ONGs</a></li>
-                    <li><a href="">Sobre nós</a></li>
-                </ul>
-
-                <div class="nav-responsive">
-                    <a onclick="toggleOptions(this)">Páginas</a>
-                    <ul class="content-responsive" style="z-index: 1; top: 5%;">
-                        <li class="nav-responsive-op"><a href="">Início</a></li>
-                        <li class="nav-responsive-op"><a href="">Explorar</a></li>
-                        <li class="nav-responsive-op"><a href="">ONGs</a></li>
-                        <li class="nav-responsive-op"><a href="">Sobre nós</a></li>
+            <div class="flex" style="justify-content: flex-start; width: 100%; gap: 1.5rem;">
+                    <div class="icon-menu" onclick="toggleMenu('containerMenu')">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul id="containerMenu">
+                        <li class="menu-op"><a href="">Início</a></li>
+                        <li class="menu-op"><a href="">Explorar</a></li>
+                        <li class="menu-op"><a href="">ONGs</a></li>
                     </ul>
-                </div>
-            
-            </div>
-
-            <div class="nav-elements" style="width: 100px; justify-content: space-between;padding-left: 1rem;">
                 
-                <div class="src-icon">🔍</div>
+                <a class="nav-title" href="index.html">UneONG</a>
+            </div>
+            <div class="nav-elements" style="width: 100px; justify-content: flex-end;padding-left: 1rem;">
 
-                <div class="icon-menu" onclick="toggleMenu()">
+                <div class="icon-menu" onclick="toggleMenu('dropdownMenu')">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -46,7 +36,6 @@
                     <div class="dropdown" id="dropdownMenu">
                         <div class="flex" style="width: 100%;">
                             <img class="foto-perfil" src="../assets/jpg/foto-perfil-exemplo.jpg" alt="">
-                            <!-- Modificar a borda do circulo de perfil-->
                             <div class="mn-part1">
                                 <p class="name-account">Cartinha Mágica</p>
                                 <p class="email-account">cartinhamagica@gmail.com</p>
@@ -55,8 +44,7 @@
                         </div>
                         <div class="mn-part2">
                             <ul>
-                                <li><a onclick="modoEscuro()">☀ Modo escuro</a></li>
-                                <li><a href="">☀ Gerenciamento</a></li>
+                                <li><a href="">☀ Configurações</a></li>
                                 <li><a href="">☀ Sair</a></li>
                             </ul>
                         </div>
@@ -123,7 +111,7 @@
 
     
             <div class="flex main-right">
-                <div class="flex" style="align-items: center; justify-content: center;">
+                <div class="flex" style="align-items: center; justify-content: center; width: 107%;">
                     <div class="menu-perfil">
                         <article class="option-menu"><a href="">Sobre</a></article>
                         <article class="option-menu"><a href="">Postagens</a></article>
