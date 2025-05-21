@@ -4,7 +4,7 @@
     height: 50px;
     background-image: var(--gray-bg2);
     padding: 0 30px;
-    box-shadow: 0 4px 15px rgba(215, 215, 215, 0.797);
+    box-shadow: 0 4px 15px rgba(14, 14, 14, 0.109);
     position: relative;
     
 }
@@ -75,9 +75,9 @@
     position: absolute;
     background-color: var(--gray-bg2);
     padding: 20px 10px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.164);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.164);
     width: 17%;
-    height: 300px;
+    height: 200px;
     top: 100%;
     left: 0%;
     z-index: 0;
