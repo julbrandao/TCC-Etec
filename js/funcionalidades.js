@@ -5,7 +5,7 @@ function toggleOptions(element) {
 }
 
 document.addEventListener('click', function(e) {
-  document.querySelectorAll('.options-container, .nav-responsive').forEach(container => {
+  document.querySelectorAll('.options-container').forEach(container => {
       if (!container.contains(e.target)) {
           container.classList.remove('active');
       }
@@ -13,11 +13,13 @@ document.addEventListener('click', function(e) {
 });
   
 
-function toggleMenu(elemento) {
+function toggleMenu(elemento, icone) {
     var menu = document.getElementById(elemento);
+    var icone = document.getElementById(icone)
     if (menu.style.display === "flex") {
       menu.style.display = "none";
     } else {
       menu.style.display = "flex";
+
     }
 }

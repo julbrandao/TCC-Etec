@@ -64,6 +64,7 @@
     height: 190px;
     top: 100%;
     right: 0;
+    z-index: 1;
   }
 
   #containerMenu{
@@ -80,7 +81,7 @@
     height: 200px;
     top: 100%;
     left: 0%;
-    z-index: 0;
+    z-index: 1;
 
     & .menu-op a{
         color: var(--orange);
@@ -88,18 +89,9 @@
     }
   }
 
-  .nav-responsive.active .content-responsive {
-    display: block;
+#icon2:active #barra2 {
+    display: none;
 }
-
-  .dropdown li {
-    margin: 10px 0;
-  }
-  
-  .dropdown li a {
-    color: #333;
-    text-decoration: none;
-  }
 
 .mn-part1{
     width: 100%;

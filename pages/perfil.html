@@ -13,8 +13,8 @@
     <header>
 <nav class="navbar">
             <div class="flex" style="justify-content: flex-start; width: 100%; gap: 1.5rem;">
-                    <div class="icon-menu" onclick="toggleMenu('containerMenu')">
-                        <span></span>
+                    <div class="icon-menu" onclick="toggleMenu('containerMenu', 'icon2')">
+                        <span id="barra1"></span>
                         <span></span>
                         <span></span>
                     </div>
@@ -28,7 +28,7 @@
             </div>
             <div class="nav-elements" style="width: 100px; justify-content: flex-end;padding-left: 1rem;">
 
-                <div class="icon-menu" onclick="toggleMenu('dropdownMenu')">
+                <div class="icon-menu" id="icon2" onclick="toggleMenu('dropdownMenu', 'icon2')">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -58,14 +58,17 @@
     </div>
     <div class="info-perfil">
         <div class="perfil-containt">
-            <div class="flex-1">
+            <div class="div-1">
                 <div class="icon-profile"><img src="../assets/jpg/foto-perfil-exemplo.jpg"></div>
-                <h4 class="name-profile">Cartinha Mágica</h4>
+                <h4 class="name-profile" style="color:#352c28">Cartinha Mágica</h4>
             </div>
-            <div class="flex-2" >
+            <div class="div-2" >
                 <p>Publicações 10</p>
                 <p>•</p>
                 <p>Seguidores 230</p>
+            </div>
+            <div class="div-3">
+                <a href="" class="button" style="padding: 6px; height: 15px; font-size: 13px; border-radius: 10px;">Deixar de seguir</a>
             </div>
         </div>
 
@@ -101,16 +104,22 @@
                         <p>Ver mais tarde</p>
                     </article>
 
-                    <div class="ver-tudo">
-                        <a href="">Ver tudo ></a>
+                    <div style="width: 95%; display: flex; flex-direction: row; justify-content: flex-end;">
+                        <a class="ver-tudo" href="">Ver tudo ></a>
                     </div>
                 </div>
             </div>
 
             <div class="container" style="width: 350px; height: 20px; display: flex; padding: 1rem; flex-direction: row; align-items:center; justify-content: space-between;">
                 <h4 style="color: #969696;">Vídeos</h4>
-                        <a href="">Ver tudo ></a>
+                        <a class="ver-tudo" href="">Ver tudo ></a>
             </div>
+
+            <div class="container" style="width: 350px; height: 20px; display: flex; padding: 1rem; flex-direction: row; align-items:center; justify-content: space-between;">
+                <h4 style="color: #969696;">Vídeos</h4>
+                        <a class="ver-tudo" href="">Ver tudo ></a>
+            </div>
+
             </div>
 
     
