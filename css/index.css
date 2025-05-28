@@ -249,5 +249,34 @@ main{
     }
 }
 
+.create-post{
+    width: 92%;
+    height: 55px;
+    padding:  0 1rem;
+    gap: 1rem;
+    border: 1px solid var(--gray-border);
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px 1px rgb(215, 215, 215);
+
+    & img{
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+    }
+
+    & #txtpost {
+        width: 650px;
+        height: 35px;
+        padding-left: 15px;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        background-color: #f5f5f5;
+    }
+}
+
 
 

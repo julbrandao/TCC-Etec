@@ -13,23 +13,18 @@
     <header>
         <nav class="navbar">
             <div class="flex" style="justify-content: flex-start; width: 100%; gap: 1.5rem;">
-                    <div class="icon-menu" onclick="toggleMenu('containerMenu')">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <ul id="containerMenu">
-                        <li class="menu-op"><a href="">Início</a></li>
-                        <li class="menu-op"><a href="">Explorar</a></li>
-                        <li class="menu-op"><a href="">ONGs</a></li>
-                    </ul>
-                
+                <div style="line-height: 50px;"><button class="hamburger" id="hamburger"></button></div>
+                <ul class="nav-links" id="navlinks">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="feed.html">Explorar</a></li>
+                    <li><a href="">ONG's</a></li>
+                </ul>
                 <a class="nav-title" href="index.html">UneONG</a>
             </div>
             <div class="nav-elements" style="width: 100px; justify-content: flex-end;padding-left: 1rem;">
 
-                <div class="icon-menu" onclick="toggleMenu('dropdownMenu')">
-                    <img src="../assets/png/user-example.png" alt="">
+                <div class="icon-menu">
+                    <img src="../assets/png/user-example.png" alt="" id="dropdown-perfil">
                 </div>
                     <div class="dropdown" id="dropdownMenu">
                         <div class="flex" style="width: 100%;">
@@ -50,6 +45,8 @@
             </div>
         </nav>
     </header>
+
+    <div id="overlay"></div>
 
     <main>
         <section class="home-section1">

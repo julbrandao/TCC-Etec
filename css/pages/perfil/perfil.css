@@ -193,6 +193,33 @@
     padding-right: 30px;
 }
 
+.post-salvo{
+    background-color: #FFF;
+    border: 1px solid var(--gray-border);
+    border-radius: 15px;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+    width: 400px;
+
+    & .cabecalho-info, .info-post-container {
+        display: flex;
+        align-items: center;
+
+        & p {
+            font-size: 12px;
+            color: #969696;
+        }
+
+    }
+
+    & .info-post-salvo span{
+        color: var(--orange);
+    }
+}
 
 @media (max-width: 1200px){
     .perfil-containt{
