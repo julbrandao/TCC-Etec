@@ -221,6 +221,21 @@
     }
 }
 
+.fotos-container{
+    display: flex;
+    width: 90%;
+    height: 150px;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    & .foto{
+        width: 100px;
+        height: 100px;
+        background-color: #708372;
+    }
+}
+
 @media (max-width: 1200px){
     .perfil-containt{
         flex-direction: column;
