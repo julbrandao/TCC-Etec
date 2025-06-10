@@ -12,12 +12,7 @@
 }
 
 .nav-title{
-    line-height: 50px;
-    font-family: 'Cocomat Pro Bold';
-    float: left;
-    padding-right: 2rem;
-    font-size: 15pt;
-    color: var(--orange);
+    margin-top: -10px;
 }
 
 .nav-elements{
@@ -214,4 +209,5 @@
         left: 40%;
         gap: 2rem;
       }
+
 }
