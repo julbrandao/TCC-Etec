@@ -20,7 +20,7 @@
                     <li><a href="feed.html">Explorar</a></li>
                     <li><a href="">ONG's</a></li>
                 </ul>
-                <a class="nav-title" href="index.html"><object data="../assets/svg/Logo UneONG FINAL.svg" type="image/svg+xml" width="80px" height="80px"></object></a>
+                <a class="nav-title" href="index.html"><img src="../assets/svg/Logo UneONG FINAL.svg" alt="" width="80" height="80"></a>
             </div>
             <div class="nav-elements" style="width: 100px; justify-content: flex-end;padding-left: 1rem;">
 
@@ -64,16 +64,13 @@
                 <p>•</p>
                 <p>Seguidores 230</p>
             </div>
-            <div class="div-3">
-                <a href="" class="button" style="padding: 6px; height: 15px; font-size: 13px; border-radius: 10px;">Deixar de seguir</a>
-            </div>
         </div>
 
         <!-- Aqui terá as informações como nome, publicações, e seguidores -->
     </div>
     <div class="main-perfil">
         <section class="feed-profile">
-            <div class="flex main-left" >
+            <div class="flex main-left">
             <div class="itens-salvos">
                 <div class="title-itens">
                     <h4>Itens salvos</h4>
@@ -107,64 +104,40 @@
                 </div>
             </div>
 
-            <div class="container" style="width: 350px; height: 20px; display: flex; padding: 1rem; flex-direction: row; align-items:center; justify-content: space-between;">
-                <h4 style="color: #969696;">Fotos</h4>
-                        <a class="ver-tudo" href="">Ver tudo ></a>
-            </div>
-
-            <div class="container" style="width: 350px; height: 20px; display: flex; padding: 1rem; flex-direction: row; align-items:center; justify-content: space-between;">
-                <h4 style="color: #969696;">Vídeos</h4>
-                        <a class="ver-tudo" href="">Ver tudo ></a>
-            </div>
-
             </div>
 
     
-            <div class="flex main-right">
-                <div class="flex" style="align-items: center; justify-content: center; width: 107%;">
+            <div class="flex main-right" style="flex-direction: column;">
                     <div class="menu-perfil">
                         <article class="option-menu"><a href="">Sobre</a></article>
                         <article class="option-menu"><a href="">Postagens</a></article>
                     </div>
-                </div>
 
+                <!-- mesmo nome de elemento, mas muda a lógica pra alojar videos-->
+                <article class="container" style=" border: 1px solid #cdcccc; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding-bottom: 12px;">
+                    <h4 style="width: 100%; padding: 10px;">Vídeos</h4>
+                    <hr style="width: 100%; background-color:#cdcccc;">
 
-                <article class="post">
-                    <div class="autor-post">
-                        <div class="flex" style="flex-direction: column;">
-                            <div class="flex">
-                                <div class="autor-photo">
-                                    <img src="../assets/jpg/foto-perfil-exemplo.jpg" alt="">
-                                </div>
-                                <a class="autor" href="">Cartinha Mágica</a>
-                            </div>
-                            <span class="horario">Fev 26 às 19h19</span>
+                    <section class="fotos-container">
+                        <div class="foto">
+
                         </div>
-                        <div>
-                            <div class="options-container">
-                                <a class="options-post" onclick="toggleOptions(this)">...</a>
-                                <div class="dropdown-options">
-                                    <a href="#">Salvar post</a>
-                                    <a href="#">Compartilhar</a>
-                                </div>
-                            </div>
-                    </div>
-                    
-                    </div>
-                    <div class="corpo-post">
-                        <p>
-                            Esse projeto tem o intuito de levar alegria e esperança para crianças que muitas vezes não têm condições de ter um Natal tão especial. A cada ano, voluntários se unem para arrecadar doações e organizar essa festa inesquecível.
-                        </p>
-                    </div>
-
-                    <div class="reactions-post">
-                        <a class="reaction" href="">Curtir</a>
-                        <a class="reaction" href="">Compartilhar</a>
+                        <div class="foto">
+                            
+                        </div>
+                        <div class="foto">
+                            
+                        </div>
+                    </section>
+                    <div style="width: 95%; display: flex; flex-direction: row; justify-content: flex-end;">
+                        <a class="ver-tudo" href="">Ver tudo ></a>
                     </div>
                 </article>
-                
             </div>
+
         </section>
+
+
     </div>
 
 

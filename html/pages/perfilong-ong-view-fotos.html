@@ -20,7 +20,7 @@
                     <li><a href="feed.html">Explorar</a></li>
                     <li><a href="">ONG's</a></li>
                 </ul>
-                <a class="nav-title" href="index.html"><object data="../assets/svg/Logo UneONG FINAL.svg" type="image/svg+xml" width="80px" height="80px"></object></a>
+                <a class="nav-title" href="index.html"><img src="../assets/svg/Logo UneONG FINAL.svg" alt="" width="80" height="80"></a>
             </div>
             <div class="nav-elements" style="width: 100px; justify-content: flex-end;padding-left: 1rem;">
 
@@ -107,65 +107,27 @@
             </div>
 
     
-            <div class="flex main-right">
-                <article class="post-salvo">
-                    <div style=" display: flex; gap: 1rem; align-items: center; justify-content: space-between; width: 100%;">
-                    <div class="flex" style="align-items: center; gap: 1rem;">
-                        <div class="icon-colecao">V</div>
-                        <h4>Publicação 1</h4>
-                    </div>   
-                    <div>
-                        <div class="options-container">
-                            <a class="options-post" onclick="toggleOptions(this)">...</a>
-                            <div class="dropdown-options" style="right: 15%;">
-                                <a href="#">Remover</a>
-                            </div>
-                        </div>
-                    </div>                     
+            <div class="flex main-right" style="flex-direction: column;">
+                <div class="menu-perfil">
+                        <article class="option-menu"><a href="">Sobre</a></article>
+                        <article class="option-menu"><a href="">Postagens</a></article>
                     </div>
-                    <div>
-                        <div class="cabecalho-info">
-                            <div class="autor-photo"><img src="../assets/jpg/foto-perfil-exemplo.jpg" alt=""></div>
-                            <p>Publicação de Cartinha Mágica</p>
-
-                    </div>
-                        <div class="info-post-container">
-                            <p class="info-post-salvo">Post salvo em • <span>Ver mais tarde</span></p>
-                        </div>
-                        
-                    </div>
-                </article>
-
-                <article class="post-salvo">
-                    <div style=" display: flex; gap: 1rem; align-items: center; justify-content: space-between; width: 100%;">
-                    <div class="flex" style="align-items: center; gap: 1rem;">
-                        <div class="icon-colecao">V</div>
-                        <h4>Publicação 1</h4>
-                    </div>   
-                    <div>
-                        <div class="options-container">
-                            <a class="options-post" onclick="toggleOptions(this)">...</a>
-                            <div class="dropdown-options" style="right: 15%;">
-                                <a href="#">Remover</a>
-                            </div>
-                        </div>
-                    </div>                     
-                    </div>
-                    <div>
-                        <div class="cabecalho-info">
-                            <div class="autor-photo"><img src="../assets/jpg/foto-perfil-exemplo.jpg" alt=""></div>
-                            <p>Publicação de Cartinha Mágica</p>
-
-                    </div>
-                        <div class="info-post-container">
-                            <p class="info-post-salvo">Post salvo em • <span>Ver mais tarde</span></p>
-                        </div>
-                        
-                    </div>
-                </article>
                 
-            </div>
 
+                <article class="container" style=" border: 1px solid #cdcccc; width: 70%; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding-bottom: 12px;">
+                    <h4 style="width: 100%; padding: 10px;">Fotos</h4>
+                    <hr style="width: 100%; background-color:#cdcccc;">
+
+                    <section class="fotos-container">
+                        <div class="foto" style="background: url(../assets/jpg/foto-post.jpg); background-size: cover;"></div>
+                        <div class="foto"></div>
+                        <div class="foto"></div>
+                    </section>
+                    <div style="width: 95%; display: flex; flex-direction: row; justify-content: flex-end; height: 100%; align-items: flex-end;">
+                        <a class="ver-tudo" href="">Ver tudo ></a>
+                    </div>
+                </article>
+            </div>
 
         </section>
 
