@@ -75,7 +75,7 @@
     position: absolute;
     padding: 20px 0 0 30px;
     top: 100%;
-    left: -305px;
+    left: -400px;
     width: 20vw;    
     height: calc(100vh - 50px);
     background: var(--gray-bg2);
@@ -199,6 +199,15 @@
 #overlay.show {
   opacity: 1;
   visibility: visible;
+}
+
+.buscar {
+    height: 26px;
+    width: 350px;
+    margin-top: 12px;
+    border: 1px solid #cdcccc;
+    border-radius: 15px;
+    padding-left: 1rem;
 }
 
 @media (max-width: 600px){
