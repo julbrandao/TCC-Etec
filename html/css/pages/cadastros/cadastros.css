@@ -73,6 +73,7 @@ main{
     border-radius: 15px;
     color: whitesmoke;
     border: none;
+    text-align: center;
     font-family: 'Nunito';
     background-color: #f4863e;
 }
