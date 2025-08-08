@@ -38,6 +38,10 @@ export default app;
 
 // npm install express dotenv @supabase/supabase-js  -> se alguma estiver dando errado
 
+// quando abaixar não esquecer de criar um arquivo .env com as seguintes informações
+//PORT=3000
+// SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind1em92amplbnNzdWxqcWVmZ3VsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDgyNjcyMjksImV4cCI6MjA2Mzg0MzIyOX0.NNggvdFz7ZS-EqN7IiqRgTflLXtnA3Ne48NGNyHRT7k
+// SUPABASE_URL=https://wuzovjjenssuljqefgul.supabase.co
 
 
 //add logica da page de cadastro, e page base para add a navbar.
