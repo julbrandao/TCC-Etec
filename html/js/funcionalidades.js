@@ -7,11 +7,17 @@ const btnMenuList = document.getElementById('hamburger')
 const profileBtn = document.getElementById('dropdown-perfil')
 const dropdownMenu = document.getElementById('dropdownMenu')
 
+const modalPost = document.getElementById("modalPost");
+const closeBtn = modalPost.querySelector(".sair");
+const btnMPost = document.querySelector('[data-modal="btnModalPost"]')
+
+
 
 btnMenuList.addEventListener('click', () => {
   menuList.classList.toggle('open')
   hamburger.classList.toggle('open')
   overlay.classList.toggle('show')
+  overlay.style.zIndex = "999"
 })
 
 overlay.addEventListener('click', () => {
@@ -41,5 +47,20 @@ profileBtn.addEventListener('click', () => {
   overlay.classList.toggle('show')
 })
 
+
+//Modal Post
+
+btnMPost.addEventListener('click', () => {
+  overlay.classList.toggle('show')
+  overlay.style.zIndex = "1099"
+  modalPost.classList.add('show')
+})
+
+closeBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  modalPost.classList.remove('show')
+  overlay.classList.remove('show')
+
+}); 
 
 
