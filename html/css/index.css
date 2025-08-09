@@ -76,6 +76,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 50px;
 }
 
 .flex{
@@ -290,7 +291,7 @@ main{
     border: none;
     border-radius: 20px;
     background-color: white;
-    z-index: 1999;
+    z-index: 1003;
 
     & .autor{
         font-size: 10pt;
@@ -353,8 +354,20 @@ main{
     }
 }
 
-
-#modalPost.show{
-    display: flex;
+#overlay2{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+    display: none;
 }
+
+#overlay2.show{
+    display: block;
+}
+
+
 

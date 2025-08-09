@@ -238,14 +238,7 @@ main{
 }
 
 .postagens{
-    width: 72%;
-    min-height: 200px;
-    max-height: 550px;
-    background-color: white;
-    border: 1px solid #cdcccc;
-    border-radius: 20px;
-    padding: 1.5rem;
-    box-shadow: 0 3px 10px 1px rgb(215, 215, 215);
+
 }
 
 .autor-post{

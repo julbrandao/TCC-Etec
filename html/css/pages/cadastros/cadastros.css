@@ -73,7 +73,6 @@ main{
     border-radius: 15px;
     color: whitesmoke;
     border: none;
-    text-align: center;
     font-family: 'Nunito';
     background-color: #f4863e;
 }
@@ -89,6 +88,25 @@ main{
     color: black;
     transition: border-bottom 0.4s ease;
     box-sizing: border-box;
+}
+
+.inputtxt:focus{
+    border-bottom: 1.3px solid #e3b055;
+}
+
+.input-container:focus-within .lbllogin {
+    color: #e3b055; 
+}
+
+.inputselect{
+    width: 300px;
+    height: 30px;
+    margin-top: 5px;
+    transition: border 0.4s ease;
+}
+
+.inputselect:focus{
+    border: 1.3px solid #e3b055;
 }
 
 .checkbox-container{
@@ -161,13 +179,7 @@ main{
     display: flex;
 }
 
-.inputtxt:focus{
-    border-bottom: 1.3px solid #e3b055;
-}
 
-.input-container:focus-within .lbllogin {
-    color: #e3b055; 
-}
 
 @media only screen and (max-width: 900px){
 

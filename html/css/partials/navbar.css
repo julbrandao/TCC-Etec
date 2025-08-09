@@ -2,11 +2,12 @@
     display: flex;
     justify-content: space-between;
     height: 50px;
+    width: 95%;
     background-image: var(--gray-bg2);
-    padding: 0 30px;
+    padding: 0 3%;
     box-shadow: 0 4px 15px rgba(14, 14, 14, 0.109);
     background-color: var(--gray-bg2);
-    position: relative;
+    position: fixed;
     z-index: 1003;
     
 }
