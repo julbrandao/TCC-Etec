@@ -1,15 +1,23 @@
 const modalPost = document.getElementById("modalPost");
 const openBtn = document.querySelector(".foto");
-const overlay2 = document.getElementById('overlay2')
+const overlay = document.getElementById('overlay')
 const closeBtn = modalPost.querySelector(".sair");
 
 openBtn.addEventListener("click", () => {
   modalPost.style.display = "flex";
-  overlay2.classList.toggle('show')
+  overlay.classList.toggle('show')
+  overlay.style.zIndex = '1098'
 });
 
 closeBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  modalPost.style.display = "none";
-  overlay2.classList.remove('show')
+  modalPost.style.display = "none"
+  overlay.classList.remove('show')
+  overlay.style.zIndex = '999'
 });
+
+overlay.addEventListener('click', () => {
+  modalPost.style.display = "none";
+  overlay.classList.remove('show')
+  overlay.style.zIndex = '999'
+})

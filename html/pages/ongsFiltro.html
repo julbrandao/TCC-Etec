@@ -15,14 +15,14 @@
 </head>
 
 <body>
-<header>
+    <header>
         <nav class="navbar" style="width: 100%;">
             <div class="flex" style="justify-content: flex-start; width: 100%; gap: 1.5rem;">
                 <div style="line-height: 50px;"><button class="hamburger" id="hamburger"></button></div>
                 <ul class="nav-links" id="navlinks">
                     <li><a href="index.html">Início</a></li>
                     <li><a href="feed.html">Explorar</a></li>
-                    <li><a href="ongsFiltro.html">ONG's</a></li>
+                    <li><a href="ongsFiltro.html">ONGs</a></li>
                 </ul>
                 <a class="nav-title" href="index.html"><img src="../assets/svg/Logo UneONG FINAL.svg" alt="" width="80"
                         height="80"></a>
@@ -57,6 +57,7 @@
     </header>
 
 
+
     <div id="overlay"></div>
 
     <main>
@@ -69,14 +70,16 @@
                     <div class="modal-header">
                         <h1 class="modal-title">Selecionar filtro</h1>
                         <button class="close-modal" data-close="modal-az">
-                        <i class="fa-solid fa-xmark"></i>
+                            <i class="fa-solid fa-xmark"></i>
                         </button>
                     </div>
 
                     <div class="modal-body">
                         <div class="buttons-filtro">
-                            <button class="btn-crescente" id="btn_crescente" role="radio" aria-checked="true" tabindex="0">De A a Z</button>
-                            <button class="btn-decrescente" id="btn_decrescente" role="radio" aria-checked="false" tabindex="-1">De Z a A</button>
+                            <button class="btn-crescente" id="btn_crescente" role="radio" aria-checked="true"
+                                tabindex="0">De A a Z</button>
+                            <button class="btn-decrescente" id="btn_decrescente" role="radio" aria-checked="false"
+                                tabindex="-1">De Z a A</button>
                         </div>
 
                         <div class="atention">
@@ -97,36 +100,46 @@
                     <div class="modal-header">
                         <h1 class="modal-title">Selecionar filtro</h1>
                         <button class="close-modal" data-close="modal-localizacao">
-                        <i class="fa-solid fa-xmark"></i>
+                            <i class="fa-solid fa-xmark"></i>
                         </button>
                     </div>
 
                     <div class="modal-body">
                         <div class="buttons-filtro">
-                            <button class="btn-filtro" id="btn_itu" role="radio" aria-checked="true" tabindex="0" data-filtro="Itu">Itu</button>
-                            <button class="btn-filtro" id="btn_indaiatuba" role="radio" aria-checked="false" tabindex="-1" data-filtro="Indaiatuba">Indaiatuba</button>
-                            <button class="btn-filtro" id="btn_sorocaba" role="radio" aria-checked="false" tabindex="-1" data-filtro="Sorocaba">Sorocaba</button>
-                            <button class="btn-filtro" id="btn_salto" role="radio" aria-checked="false" tabindex="-1" data-filtro="Salto">Salto</button>
-                            <button class="btn-filtro" id="btn_jundiai" role="radio" aria-checked="false" tabindex="-1" data-filtro="Jundiai">Jundiaí</button>
-                            <button class="btn-filtro" id="btn_boituva" role="radio" aria-checked="false" tabindex="-1" data-filtro="Boituva">Boituva</button>
-                            <button class="btn-filtro" id="btn_portofeliz" role="radio" aria-checked="false" tabindex="-1" data-filtro="Porto Feliz">Porto Feliz</button>
-                            <button class="btn-filtro" id="btn_tiete" role="radio" aria-checked="false" tabindex="-1" data-filtro="Tiete">Tietê</button>
-                            <button class="btn-filtro" id="btn_cabreuva" role="radio" aria-checked="false" tabindex="-1" data-filtro="Cabreuva">Cabreúva</button>
-                            <button class="btn-filtro" id="btn_outracidade" role="radio" aria-checked="false" tabindex="-1" data-filtro="Outros">Outros</button> 
+                            <button class="btn-filtro" id="btn_itu" role="radio" aria-checked="true" tabindex="0"
+                                data-filtro="Itu">Itu</button>
+                            <button class="btn-filtro" id="btn_indaiatuba" role="radio" aria-checked="false"
+                                tabindex="-1" data-filtro="Indaiatuba">Indaiatuba</button>
+                            <button class="btn-filtro" id="btn_sorocaba" role="radio" aria-checked="false" tabindex="-1"
+                                data-filtro="Sorocaba">Sorocaba</button>
+                            <button class="btn-filtro" id="btn_salto" role="radio" aria-checked="false" tabindex="-1"
+                                data-filtro="Salto">Salto</button>
+                            <button class="btn-filtro" id="btn_jundiai" role="radio" aria-checked="false" tabindex="-1"
+                                data-filtro="Jundiai">Jundiaí</button>
+                            <button class="btn-filtro" id="btn_boituva" role="radio" aria-checked="false" tabindex="-1"
+                                data-filtro="Boituva">Boituva</button>
+                            <button class="btn-filtro" id="btn_portofeliz" role="radio" aria-checked="false"
+                                tabindex="-1" data-filtro="Porto Feliz">Porto Feliz</button>
+                            <button class="btn-filtro" id="btn_tiete" role="radio" aria-checked="false" tabindex="-1"
+                                data-filtro="Tiete">Tietê</button>
+                            <button class="btn-filtro" id="btn_cabreuva" role="radio" aria-checked="false" tabindex="-1"
+                                data-filtro="Cabreuva">Cabreúva</button>
+                            <button class="btn-filtro" id="btn_outracidade" role="radio" aria-checked="false"
+                                tabindex="-1" data-filtro="Outros">Outros</button>
                         </div>
-                        </div>
+                    </div>
 
-                        <div class="atention">
-                            <h4>Atenção:</h4>
-                            <span>Essa ação limpará os campos preenchidos anteriormente.</span>
-                        </div>
+                    <div class="atention">
+                        <h4>Atenção:</h4>
+                        <span>Essa ação limpará os campos preenchidos anteriormente.</span>
+                    </div>
 
-                        <div class="modificar-filtro">
-                            <button class="btn-cancelar" data-cancel="modal-localizacao">Cancelar</button>
-                            <button class="btn-alterar" data-aplicar="cidade">Alterar</button>
-                     </div>
-            </dialog>                     
-                    
+                    <div class="modificar-filtro">
+                        <button class="btn-cancelar" data-cancel="modal-localizacao">Cancelar</button>
+                        <button class="btn-alterar" data-aplicar="cidade">Alterar</button>
+                    </div>
+                </dialog>
+
                 <!-- Modal de categorias -->
                 <button class="filter-btn" data-open="modal-categoria">Categoria</button>
                 <dialog id="modal-categoria">
@@ -139,20 +152,33 @@
 
                     <div class="modal-body">
                         <div class="buttons-filtro" role="radiogroup" aria-label="Selecionar categoria">
-                            <button class="btn-filtro" id="btn_Cultura" data-filtro="Cultura" role="radio" aria-checked="false" tabindex="-1">Cultura</button>
-                            <button class="btn-filtro" id="btn_Educacao" data-filtro="Educação" role="radio" aria-checked="false" tabindex="-1">Educação</button>
-                            <button class="btn-filtro" id="btn_MeioAmbiente" data-filtro="Meio Ambiente" role="radio" aria-checked="false" tabindex="-1">Meio Ambiente</button>
-                            <button class="btn-filtro" id="btn_LGBT+" data-filtro="LGBT+" role="radio" aria-checked="false" tabindex="-1">LGBT+</button>
-                            <button class="btn-filtro" id="btn_Saude" data-filtro="Saúde" role="radio" aria-checked="false" tabindex="-1">Saúde</button>
-                            <button class="btn-filtro" id="btn_Animal" data-filtro="Animal" role="radio" aria-checked="false" tabindex="-1">Animal</button>
-                            <button class="btn-filtro" id="btn_BaixaRenda" data-filtro="Baixa Renda" role="radio" aria-checked="false" tabindex="-1">Baixa Renda</button>
-                            <button class="btn-filtro" id="btn_Indigenas" data-filtro="Indígenas" role="radio" aria-checked="false" tabindex="-1">Indígenas</button>
-                            <button class="btn-filtro" id="btn_PCD" data-filtro="PCD" role="radio" aria-checked="false" tabindex="-1">PCD</button>
-                            <button class="btn-filtro" id="btn_Idosos" data-filtro="Idosos" role="radio" aria-checked="false" tabindex="-1">Idosos</button>
-                            <button class="btn-filtro" id="btn_DireitosHumanos" data-filtro="Direitos Humanos" role="radio" aria-checked="false" tabindex="-1">Direitos Humanos</button>
-                            <button class="btn-filtro" id="btn_EsporteLazer" data-filtro="Esporte e Lazer" role="radio" aria-checked="false" tabindex="-1">Esporte e Lazer</button>
-                            <button class="btn-filtro" id="btn_Outros" data-filtro="Outros" role="radio" aria-checked="false" tabindex="-1">Outros</button>
-                            
+                            <button class="btn-filtro" id="btn_Cultura" data-filtro="Cultura" role="radio"
+                                aria-checked="false" tabindex="-1">Cultura</button>
+                            <button class="btn-filtro" id="btn_Educacao" data-filtro="Educação" role="radio"
+                                aria-checked="false" tabindex="-1">Educação</button>
+                            <button class="btn-filtro" id="btn_MeioAmbiente" data-filtro="Meio Ambiente" role="radio"
+                                aria-checked="false" tabindex="-1">Meio Ambiente</button>
+                            <button class="btn-filtro" id="btn_LGBT+" data-filtro="LGBT+" role="radio"
+                                aria-checked="false" tabindex="-1">LGBT+</button>
+                            <button class="btn-filtro" id="btn_Saude" data-filtro="Saúde" role="radio"
+                                aria-checked="false" tabindex="-1">Saúde</button>
+                            <button class="btn-filtro" id="btn_Animal" data-filtro="Animal" role="radio"
+                                aria-checked="false" tabindex="-1">Animal</button>
+                            <button class="btn-filtro" id="btn_BaixaRenda" data-filtro="Baixa Renda" role="radio"
+                                aria-checked="false" tabindex="-1">Baixa Renda</button>
+                            <button class="btn-filtro" id="btn_Indigenas" data-filtro="Indígenas" role="radio"
+                                aria-checked="false" tabindex="-1">Indígenas</button>
+                            <button class="btn-filtro" id="btn_PCD" data-filtro="PCD" role="radio" aria-checked="false"
+                                tabindex="-1">PCD</button>
+                            <button class="btn-filtro" id="btn_Idosos" data-filtro="Idosos" role="radio"
+                                aria-checked="false" tabindex="-1">Idosos</button>
+                            <button class="btn-filtro" id="btn_DireitosHumanos" data-filtro="Direitos Humanos"
+                                role="radio" aria-checked="false" tabindex="-1">Direitos Humanos</button>
+                            <button class="btn-filtro" id="btn_EsporteLazer" data-filtro="Esporte e Lazer" role="radio"
+                                aria-checked="false" tabindex="-1">Esporte e Lazer</button>
+                            <button class="btn-filtro" id="btn_Outros" data-filtro="Outros" role="radio"
+                                aria-checked="false" tabindex="-1">Outros</button>
+
                         </div>
 
                         <div class="atention">
@@ -165,7 +191,7 @@
                             <button class="btn-alterar" data-aplicar="categoria">Alterar</button>
                         </div>
                     </div>
-                </dialog> 
+                </dialog>
             </div>
             <!-- Lista de ONGs -->
             <div class="ongs-container">
@@ -205,7 +231,7 @@
 
     <script src="../js/modalsFiltro.js"></script>
     <script src="../js/funcionalidades.js"></script>
-    
+
 </body>
 
 </html>

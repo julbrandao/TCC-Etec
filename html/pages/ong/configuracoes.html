@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início</title>
+    <link rel="stylesheet" href="../../css/partials/navbar.css">
+    <link rel="stylesheet" href="../../css/index.css">
+    <link rel="stylesheet" href="../../css/pages/configuracoes/config.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="flex" style="justify-content: flex-start; width: 100%; gap: 1.5rem;">
+                <div style="line-height: 50px;"><button class="hamburger" id="hamburger"></button></div>
+                <ul class="nav-links" id="navlinks">
+                    <li><a href="../../index.html">Início</a></li>
+                    <li><a href="../../feed.html">Explorar</a></li>
+                    <li><a href="../../ongsFiltro.html">ONGs</a></li>
+                </ul>
+                <a class="nav-title" href="../../index.html"><img src="../../assets/svg/Logo UneONG FINAL.svg" alt="" width="80"
+                        height="80"></a>
+            </div>
+            <div class="nav-elements" style="width: 100px; justify-content: flex-end;padding-left: 1rem;">
+
+                <div class="icon-menu">
+                    <img src="../../assets/png/user-example.png" alt="" id="dropdown-perfil">
+                </div>
+                <div class="dropdown" id="dropdownMenu">
+                    <div class="flex" style="width: 100%;">
+                        <img class="foto-perfil" src="../../assets/jpg/foto-perfil-exemplo.jpg" alt="">
+                        <div class="mn-part1">
+                            <p class="name-account">Cartinha Mágica</p>
+                            <p class="email-account">cartinhamagica@gmail.com</p>
+                            <a class="perfil-account" href="../../perfilong-ong-view.html">Seu perfil ➞</a>
+                        </div>
+                    </div>
+                    <div class="mn-part2">
+                        <ul>
+                            <li><a href="">☀ Configurações</a></li>
+                            <li><a href="">☀ Sair</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div id="overlay"></div>
+
+    <main>
+        <section class="fixed-settings-sidebar">
+            <div class="title">
+                <h1>Configurações</h1>
+            </div>
+            <div class="elementos-config">
+                <ul>
+                    <li><a href="">Perfil</a></li>
+                    <li><a href="">Endereço</a></li>
+                    <li><a href="">Outras Informações</a></li>
+                    <li><a href="">Sair</a></li>
+                </ul>
+            </div>
+        </section>
+        <section class="display-config">
+            <div class="informacoes-perfil">
+                <div class="fundo-header-perfil"></div>
+                <div class="icone-perfil"></div>
+
+                <div class="info-editar">
+                    <div class="linha">
+                        <div>
+                            <h2>Nome</h2>
+                            <input type="text">
+                        </div>
+
+                        <div>
+                            <h2>Email</h2>
+                            <input type="text">
+                        </div>
+                    </div>
+
+                    <div class="linha">
+                        <div>
+                            <h2>Data de fundação</h2>
+                            <input type="text">
+                        </div>
+
+                        <div>
+                            <h2>Estado</h2>
+                            <input type="text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../../js/funcionalidades.js"></script>
+    <script src="../../js/modals.js"></script>
+
+</body>
+
+</html>

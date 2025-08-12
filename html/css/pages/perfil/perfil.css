@@ -1,4 +1,4 @@
-.main-perfil{
+.main-perfil {
     margin: 1.6vh;
     padding: 1rem;
     min-height: 100vh;
@@ -6,7 +6,7 @@
     contain: layout;
 }
 
-.main-left{
+.main-left {
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -14,7 +14,7 @@
     gap: 1rem;
 }
 
-.main-right{
+.main-right {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -24,7 +24,7 @@
     margin-right: 0.8vh;
 }
 
-.icon-profile{
+.icon-profile {
     margin-top: -75px;
     margin-bottom: 0.5vh;
     width: 110px;
@@ -37,43 +37,43 @@
     justify-content: center;
 }
 
-.icon-profile img{
+.icon-profile img {
     width: 85px;
     height: 85px;
     border-radius: 100%;
     object-fit: cover;
 }
 
-.name-profile{
+.name-profile {
     font-size: 13pt
 }
 
-.info-perfil{
+.info-perfil {
     width: 100%;
     border-top: 1px solid var(--gray-border);
 }
 
-.perfil-containt{
+.perfil-containt {
     display: flex;
     justify-content: space-between;
     line-height: 55px;
     background-color: #f7f1f1;
-    box-shadow: 0 5px 15px 1px rgb(215, 215, 215)
+    box-shadow: 0 5px 15px 1px rgb(215, 215, 215);
 }
 
-.header-perfil{
+.header-perfil {
     width: 100%;
     height: 100px;
 }
 
-.header-image{
+.header-image {
     width: 100%;
     height: auto;
-    max-height: 150px;
+    max-height: 100px;
     object-fit: cover;
 }
 
-.itens-salvos{
+.itens-salvos {
     width: 350px;
     padding: 2vh;
     background-color: #ffff;
@@ -83,19 +83,19 @@
     flex-shrink: 1;
 }
 
-.title-itens{
+.title-itens {
     width: 100%;
     border-bottom: 5px solid var(--gray-bg);
 }
 
-.title-itens h4{
-    padding:  1rem 1rem 0.5rem 0.5rem;
+.title-itens h4 {
+    padding: 1rem 1rem 0.5rem 0.5rem;
     color: #708372;
     font-size: var(--large);
     font-family: 'Open Sans';
 }
 
-.elementos-salvos{
+.elementos-salvos {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -103,20 +103,29 @@
     align-items: center;
     margin-top: 3.2vh;
     gap: 0.5rem;
-    
+
 }
 
-.ver-tudo{
+.nova-colecao{
+    color: var(--orange);
+    font-family: 'Nunito';
+    font-weight: bold;
+    padding: 5px 10px;
+    background-color: #dfa4365c;
+    border-radius: 20px;
+}
+
+.ver-tudo {
     color: var(--orange);
     font-family: 'Nunito';
     font-weight: bold;
 }
 
-.ver-tudo:hover{
+.ver-tudo:hover {
     color: var(--red)
 }
 
-.item-colecao{
+.item-colecao {
     display: flex;
     width: 100%;
     height: 40px;
@@ -125,12 +134,12 @@
     gap: 10px;
 }
 
-.item-colecao p{
+.item-colecao p {
     font-size: 11pt;
 }
 
 
-.icon-colecao{
+.icon-colecao {
     width: 35px;
     height: 35px;
     background-color: var(--orange);
@@ -143,8 +152,8 @@
     justify-content: center;
 }
 
-.menu-perfil{
-    width: 75%;
+.menu-perfil {
+    width: 90%;
     height: 40px;
     background-color: white;
     border: 1px solid var(--gray-border);
@@ -155,7 +164,7 @@
     box-shadow: 0 3px 10px 1px #d7d7d7
 }
 
-.option-menu{
+.option-menu {
     font-family: 'Open Sans';
     font-weight: bold;
     width: 70%;
@@ -164,7 +173,7 @@
 
 }
 
-.feed-profile{
+.feed-profile {
     display: flex;
     width: 100%;
     height: 100%;
@@ -173,41 +182,44 @@
 }
 
 
-.div-1{
+.div-1 {
     display: flex;
-    gap: 2.5rem; margin: 0 0 0 65px;
+    gap: 2.5rem;
+    margin: 0 0 0 65px;
 }
 
-.div-2{
+.div-2 {
     display: flex;
     gap: 1rem;
     justify-content: center;
     width: 60%;
 }
 
-.div-2 p{
-    font-weight: bold; font-size: 12pt;
+.div-2 p {
+    font-weight: bold;
+    font-size: 12pt;
 }
 
-.div-3{
+.div-3 {
     display: flex;
     align-items: center;
     padding-right: 30px;
 }
 
-.post-salvo{
+.post-salvo {
     background-color: #FFF;
     border: 1px solid var(--gray-border);
     border-radius: 15px;
     padding: 1.5rem;
     display: flex;
-    justify-content: space-between ;
+    justify-content: space-between;
     align-items: flex-start;
     flex-direction: row;
     gap: 1rem;
     width: 400px;
 
-    & .cabecalho-info, .info-post-container {
+    & .cabecalho-info,
+    .info-post-container {
         display: flex;
         align-items: center;
 
@@ -218,12 +230,12 @@
 
     }
 
-    & .info-post-salvo span{
+    & .info-post-salvo span {
         color: var(--orange);
     }
 }
 
-.fotos-container{
+.fotos-container {
     display: flex;
     width: 100%;
     height: 150px;
@@ -241,102 +253,104 @@
     }
 }
 
-@media (max-width: 1200px){
-    .perfil-containt{
+@media (max-width: 1200px) {
+    .perfil-containt {
         flex-direction: column;
         align-items: center;
     }
 
-    .postagens{
+    .postagens {
         max-width: 330px;
         min-width: none;
-        
+
     }
 
-    .corpo-post p{
+    .corpo-post p {
         font-size: 12pt;
     }
 
-    .name-profile{
+    .name-profile {
         font-size: var(--medium);
     }
 
-    .flex-2 p{
-        font-weight: bold; font-size: var(--medium);
+    .flex-2 p {
+        font-weight: bold;
+        font-size: var(--medium);
     }
 
-    .title-itens h4{
+    .title-itens h4 {
         font-size: 2vh;
     }
 
-    .item-colecao{
+    .item-colecao {
         gap: 0.4rem;
     }
 
-    .elementos-salvos{
+    .elementos-salvos {
         gap: 0.2rem;
     }
 
-    .ver-tudo a{
+    .ver-tudo a {
         font-size: var(--medium);
     }
-    .div-1{
+
+    .div-1 {
         flex-direction: column;
-        align-items:center;
+        align-items: center;
         gap: 0;
         margin: 0;
         margin-bottom: -12px;
         justify-content: center;
     }
 
-    .div-2{
+    .div-2 {
         width: 100%;
     }
 
-    .itens-salvos{
+    .itens-salvos {
         width: 100%;
         border-radius: 0;
         margin-top: 5px;
     }
 
-    .main-left{
+    .main-left {
         width: 100%;
         flex-direction: row;
     }
 
-    .main-right{
+    .main-right {
         width: 100vh;
         margin-top: 2rem;
         align-items: center;
         justify-content: center;
     }
 
-    .icon-colecao{
+    .icon-colecao {
         width: 20px;
         height: 20px;
         font-size: 10px;
         border-radius: 5px;
-        
+
     }
 
 
-    .main-perfil{
+    .main-perfil {
         margin: 0;
         padding: 0;
     }
 
-    .feed-profile{
+    .feed-profile {
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
 
-    .post{
+    .post {
         width: 70%;
         max-width: 300px;
     }
 
-    .menu-perfil{
+    .menu-perfil {
         width: 350px;
     }
 }
