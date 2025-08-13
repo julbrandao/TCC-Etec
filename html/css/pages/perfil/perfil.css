@@ -58,7 +58,7 @@
     justify-content: space-between;
     line-height: 55px;
     background-color: #f7f1f1;
-    box-shadow: 0 5px 15px 1px rgb(215, 215, 215);
+   box-shadow: 0 3px 10px 1px #0000001f
 }
 
 .header-perfil {
@@ -79,7 +79,7 @@
     background-color: #ffff;
     border: 1px solid var(--gray-border);
     border-radius: 20px;
-    box-shadow: 3px 3px 10px 1px rgb(215, 215, 215);
+    box-shadow: 0 3px 10px 1px #0000001f;
     flex-shrink: 1;
 }
 
@@ -161,7 +161,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    box-shadow: 0 3px 10px 1px #d7d7d7
+    box-shadow: 0 3px 10px 1px #0000001f
 }
 
 .option-menu {
@@ -250,6 +250,47 @@
         background-color: #cdcccc;
         background-position: center;
         background-size: cover;
+    }
+}
+
+.sobreContainer{
+    background-color: white;
+    padding: 22px;
+    border: 1px solid #cdcccc;
+    border-radius: 10px;
+    width: 90%;
+    box-shadow: 0 3px 10px 1px #0000001f;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    & .sobreCorpo {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        font-weight: bold;
+
+        & h3 {
+            color: var(--red);
+            font-size: 13pt;
+        }
+
+        & p {
+            color: #2c2f2c;
+            font-size: 10pt;
+        }
+    }
+    
+    & .sobreFooter {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & span {
+            color: #a6a6a6;
+            font-size: 9pt;
+            font-weight: bold;
+        }
     }
 }
 

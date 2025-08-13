@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <header>
+   <header>
         <nav class="navbar">
             <div class="flex" style="justify-content: flex-start; width: 100%; gap: 1.5rem;">
                 <div style="line-height: 50px;"><button class="hamburger" id="hamburger"></button></div>
@@ -89,10 +89,6 @@
                             <a class="icon-colecao">V</a>
                             <p>Ver mais tarde</p>
                         </article>
-                        <br>
-                    <div style="padding: 15px; width: 100%;">
-                        <a href="../../" class="criar-colecao">Criar nova coleção</a>
-                    </div>
 
                         <div style="width: 95%; display: flex; flex-direction: row; justify-content: flex-end;">
                             <a class="ver-tudo" href="../../">Ver tudo &gt;</a>
@@ -120,48 +116,27 @@
             <div class="flex main-right">
                 <div class="flex" style="align-items: center; justify-content: center; width: 107%;">
                     <div class="menu-perfil">
-                        <article class="option-menu"><a href="perfilong-ong-view-sobre.html">Sobre</a></article>
-                        <article class="option-menu"><a href="perfilong-ong-view.html" style="border-bottom: 2px solid var(--orange);">Postagens</a></article>
+                        <article class="option-menu"><a href="perfilong-ong-view-sobre.html" style="border-bottom: 2px solid var(--orange);">Sobre</a></article>
+                        <article class="option-menu"><a href="perfilong-ong-view.html">Postagens</a></article>
                     </div>
                 </div>
 
-                <div class="create-post">
-                    <img src="../../assets/jpg/foto-perfil-exemplo.jpg" alt="" />
-                    <input type="text" name="abrirModalCriarPost" id="abrirModalCriarPost" placeholder="Fazer publicação..." /><img class="iconPlus" src="../../assets/png/icones/icone_adicionar+.png" alt="">
-                </div>  
-
-                <article class="post">
-                    <div class="autor-post">
-                        <div class="flex" style="flex-direction: column;">
-                            <div class="flex">
-                                <div class="autor-photo">
-                                    <img src="../../assets/jpg/foto-perfil-exemplo.jpg" alt="" />
-                                </div>
-                                <a class="autor" href="../../">Cartinha Mágica</a>
-                            </div>
-                            <span class="horario">Fev 26 às 19h19</span>
-                        </div>
-                        <div>
-                            <div class="options-container">
-                                <a class="options-post" onclick="toggleOptions(this)">...</a>
-                                <div class="dropdown-options">
-                                    <a id="">Editar post</a>
-                                    <a id="">Fixar post</a>
-                                    <a class="btnSalvarPost" style="cursor: pointer;">Salvar post</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="corpo-post">
+                <article class="sobreContainer">
+                    <div class="sobreCorpo">
+                        <h3>Causa social: Infantil</h3>
+                        <p>essa ong é para blalala Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                            descricao Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        </p>
                         <p>
-                            Esse projeto tem o intuito de levar alegria e esperança para crianças que muitas vezes não têm condições de ter um Natal tão especial. A cada ano, voluntários se unem para arrecadar doações e organizar essa festa inesquecível.
+                            descricao Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                         </p>
                     </div>
-
-                    <div class="reactions-post">
-                        <a class="reaction" href="../../">Curtir</a>
-                        <a class="reaction" href="../../">Compartilhar</a>
+                    <div class="sobreFooter">
+                        <div style="display: flex; align-items: center; gap: 8px;"><img src="../../assets/png/icones/icone_calendario-fundacao-sobre.png" alt="" height="20px" width="20px"><span>Fundada em 99/99/9999</span></div>
+                        <div style="display: flex; align-items: center; gap: 8px;"><img src="../../assets/png/icones/icone_localizacao-sobre.png" alt="" height="20px" width="20px"><span>Localizada em Porto Feliz</span></div>
                     </div>
+                </article>
                 </article>
             </div>
         </section>
