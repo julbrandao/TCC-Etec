@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../../css/index.css">
     <link rel="stylesheet" href="../../css/pages/cadastros/cadastros.css">
 </head>
-<body>
+<body style="overflow: hidden;">
 
 <div class="flex" style="gap: 1rem; justify-content: space-between;">
     <main>
@@ -52,7 +52,18 @@
                 <div class="input-container">
                     <label class="lbllogin" for="txtcidade">Cidade</label>
                     <br>
-                    <input class="inputtxt" type="text" name="txtcidade" id="txtcidade" placeholder="">
+                    <select name="cidade" id="cidade" class="inputselect">
+                        <option value="itu">Itu</option>
+                        <option value="indaiatuba">Indaiatuba</option>
+                        <option value="sorocaba">Sorocaba</option>
+                        <option value="salto">Salto</option>
+                        <option value="jundiai">Jundiaí</option>
+                        <option value="boituva">Boituva</option>
+                        <option value="porto-feliz">Porto Feliz</option>
+                        <option value="tiete">Tietê</option>
+                        <option value="cabreuva">Cabreúva</option>
+                        <option value="outros">Outros</option>
+                    </select>
                 </div>
 
                 <div class="input-container">
@@ -105,17 +116,39 @@
                     <input class="inputtxt" type="text" name="txtrazao" id="txtrazao" placeholder="">
                 </div>
                 
-                
                 <div class="input-container">
                     <label class="lbllogin" for="txtcategoria">Categoria</label>
                     <br>
-                    <input class="inputtxt" type="text" name="txtcategoria" id="txtcategoria" placeholder="">
+                    <select name="categoria" id="categoria" class="inputselect">
+                        <option value="cultura">Cultura</option>
+                        <option value="educacao">Educação</option>
+                        <option value="meio-ambiente">Meio ambiente</option>
+                        <option value="lgbt">LGBT+</option>
+                        <option value="saude">Saúde</option>
+                        <option value="animal">Animal</option>
+                        <option value="baixa-renda">Baixa renda</option>
+                        <option value="indigenas">Indígenas</option>
+                        <option value="pcd">PCD</option>
+                        <option value="idosos">Idosos</option>
+                        <option value="direitos-humanos">Direitos humanos</option>
+                        <option value="esporte-lazer">Esporte e lazer</option>
+                        <option value="outros">Outros</option>
+                    </select>
                 </div>
 
                 <div class="input-container">
-                    <label class="lbllogin" for="txtclassificacao">Classificação</label>
+                    <label class="lbllogin" for="txtcidade">Classificação</label>
                     <br>
-                    <input class="inputtxt" type="text" name="txtclassificacao" id="txtclassificacao" placeholder="">
+                    <select name="cidade" id="Classificacao" class="inputselect">
+                        <option value="Fundacao">Fundação</option>
+                        <option value="Organização da sociedade civil">Organização da sociedade civil</option>
+                        <option value="Cooperativa ">Cooperativa </option>
+                        <option value="Instituto-empresarial">Instituto empresarial</option>
+                        <option value="OSCIP">OSCIP</option>
+                        <option value="OS">Boituva</option>
+                        <option value="Entidade beneficente de assistência social">Entidade beneficente de assistência social</option>
+                        <option value="Negocio-social">Negócio social</option>
+                    </select>
                 </div>
 
                 <div class="input-container">
@@ -132,10 +165,8 @@
 
             </div>
             <br>
-            <input type="submit" value="Cadastrar" class="button">
-            <p id="response"></p>
+           <button class="button" type="submit">Cadastrar-se</button>
         </form>
-        <script src="../../js/ong.js"></script>
     </main>
 
         <div class="container-lateral-desktop" style="border-radius: 100% 0 0 100% ; width: 38%">
@@ -152,6 +183,6 @@
             <!-- Versão responsiva do container de escolha de cadastro/login -->
         </div>
     </div>
-    
+     <script src="../../js/ong.js"></script>
 </body>
 </html>

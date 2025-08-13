@@ -20,4 +20,5 @@ router.post('/login', async (req, res) => {
   res.json({ mensagem: 'Login realizado com sucesso', usuario: resultado.usuario });
 });
 
+
 export default router;

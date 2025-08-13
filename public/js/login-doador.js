@@ -8,12 +8,16 @@ document.getElementById('form-cadastro').addEventListener('submit', async functi
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ Email_user, Senha_user }),
- })
+  })
 
- const result = await res.json();
+  const result = await res.json();
 
-  document.getElementById('response').textContent = result.message || result.error || 'Teste1';
-    const dados = await resposta.json();
-  console.log(dados);
+  if (res.ok) {
+    // redireciona para o dashboard
+    window.location.href = '/feed.html';
+  } else {
+    
+    alert('Email ou senha inválidos');
+  }
 
 });

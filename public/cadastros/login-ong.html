@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../../css/index.css">
     <link rel="stylesheet" href="../../css/pages/cadastros/cadastros.css">
 </head>
-<body>
+<body style="overflow: hidden;">
 
 <div class="flex" style="gap: 1rem; justify-content: space-between;">
     <main>
@@ -17,7 +17,7 @@
             <h1 class="title">Login</h1>
             <p class="info-form">Não possui uma conta? <span><a href="cadastro-ong.html">Cadastre-se</a></span></p>
 
-                <div class="input-container">
+<div class="input-container">
                     <label class="lbllogin" for="txtemail">Email</label>
                     <br>
                     <input class="inputtxt" type="text" name="txtcnpj" id="txtemail" placeholder="">
@@ -36,7 +36,7 @@
                 </div>
 
             <br>
-            <input type="submit" value="Entrar" class="button">
+            <button class="button" type="submit">Entrar</button>
         </form>
     </main>
 
@@ -47,13 +47,13 @@
                 <p>Deseja fazer login como doador?</p>
     
                 <a href="login-doador.html" style="width: 100px; text-align: center;">Entrar</a>
-                
             </div>
         </div>
 
+        <div class="container-inferior-mobile">
+            <!-- Versão responsiva do container de escolha de cadastro/login -->
+        </div>
     </div>
-    <p id="response"></p>
-        <script src="../js/login-ong.js"></script>
-
+     <script src="../js/login-ong.js"></script>
 </body>
 </html>

@@ -12,7 +12,5 @@ document.getElementById('form-cadastro').addEventListener('submit', async functi
     
   });
  console.log('Body recebido:', Nome_user);
-  const result = await res.json();
 
-  document.getElementById('response').textContent = result.message || result.error || '';
 });

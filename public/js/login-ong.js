@@ -13,9 +13,11 @@
      })
     
   });
-  const result = await res.json();
 
-  document.getElementById('response').textContent = result.message || result.error || 'Teste1';
-    const dados = await resposta.json();
-  console.log(dados);
+
+   if (res.ok) {
+    window.location.href = '/feed.html';
+  } else {
+    alert('Credenciais incorretas, tente novamente ');
+  }
 });

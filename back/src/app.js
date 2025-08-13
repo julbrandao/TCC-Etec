@@ -1,4 +1,5 @@
 import express from 'express';
+import session from 'express-session';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import usuarioRoutes from './routes/usuario.routes.js';
@@ -24,8 +25,15 @@ app.use('/api/ongs', lOngRoutes);
 
 // Página principal
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../public/index.html'));
+  res.sendFile(path.join(__dirname, '../../public/index.html'));
 });
+
+app.use(session({
+  secret: 'UneOng', // Troque por algo seguro
+  resave: false,
+  saveUninitialized: false,
+  cookie: { maxAge: 1000 * 60 * 30 } // 30 minutos
+}));
 
 export default app;
 
@@ -43,6 +51,8 @@ export default app;
 // npm install dotenv
 // npm install bcrypt -> Abaixei para testar uma coisa, mas nao consegui e não to usando por enquanto
 // npm install express dotenv @supabase/supabase-js  -> se alguma estiver dando errado
+// npm i memorystorage -> Vinicius fez o storage com ele, mas nao achei informações o suficiente para min fazer
+// npm install express-session
 
 
 
