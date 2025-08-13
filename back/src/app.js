@@ -2,6 +2,9 @@ import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import usuarioRoutes from './routes/usuario.routes.js';
+import ongRoutes from './routes/ong.routes.js';
+import lOngRoutes from './routes/authOng.routes.js';
+import lUserOngRoutes from './routes/authUsuario.routes.js';
 
 const app = express();
 
@@ -15,6 +18,9 @@ app.use(express.static(path.join(__dirname, '../../public')));
 
 // Rotas da API
 app.use('/api/usuarios', usuarioRoutes);
+app.use('/api/ongs', ongRoutes);
+app.use('/api/usuarios', lUserOngRoutes);
+app.use('/api/ongs', lOngRoutes);
 
 // Página principal
 app.get('/', (req, res) => {
@@ -35,13 +41,9 @@ export default app;
 // npm install @supabase/supabase-js
 // npm i postgres
 // npm install dotenv
-
+// npm install bcrypt -> Abaixei para testar uma coisa, mas nao consegui e não to usando por enquanto
 // npm install express dotenv @supabase/supabase-js  -> se alguma estiver dando errado
 
-// quando abaixar não esquecer de criar um arquivo .env com as seguintes informações
-//PORT=3000
-// SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Ind1em92amplbnNzdWxqcWVmZ3VsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDgyNjcyMjksImV4cCI6MjA2Mzg0MzIyOX0.NNggvdFz7ZS-EqN7IiqRgTflLXtnA3Ne48NGNyHRT7k
-// SUPABASE_URL=https://wuzovjjenssuljqefgul.supabase.co
 
 
 //add logica da page de cadastro, e page base para add a navbar.
