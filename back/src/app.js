@@ -53,8 +53,3 @@ export default app;
 // npm install express dotenv @supabase/supabase-js  -> se alguma estiver dando errado
 // npm i memorystorage -> Vinicius fez o storage com ele, mas nao achei informações o suficiente para min fazer
 // npm install express-session
-
-
-
-//add logica da page de cadastro, e page base para add a navbar.
-//mover arquivos de cadastro e login para a pasta que desejar
