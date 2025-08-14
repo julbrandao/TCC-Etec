@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const sairCriarPost = document.getElementById('sairCriarPost');
   const salvarPostagem = document.getElementById('salvarPublicacao');
   const sairSalvarPublicacao = document.getElementById('sairSalvarPublicacao');
-  const btnSalvarPost = document.querySelector('.btnSalvarPost')
+  const btnSalvarPost = document.querySelectorAll('.btnSalvarPost');
 
   // SIDEBAR DA BARRA DE NAVEGAÇÃO
   if (btnMenuList) {
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // MODAL CRIAR POSTAGEM (abre ao clicar no input/button)
+  // MODAL CRIAR POSTAGEM
   if (criarPost && modalCriarPost && overlay) {
     criarPost.addEventListener('click', (e) => {
       if (e && e.preventDefault) e.preventDefault();
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // fechar modal criar post
+  // FECHAR MODAL CRIAR POST
   if (sairCriarPost && modalCriarPost && overlay) {
     sairCriarPost.addEventListener('click', (e) => {
       e.preventDefault();
@@ -38,14 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  if (btnSalvarPost){
-    btnSalvarPost.addEventListener('click', () => {
-      salvarPostagem.classList.toggle('show')
-      overlay.classList.toggle('show')
-    })
-  }
-
-  // sair salvar publicação (se existir)
+  // SAIR SALVAR PUBLICAÇÃO
   if (sairSalvarPublicacao && salvarPostagem && overlay) {
     sairSalvarPublicacao.addEventListener('click', (e) => {
       e.preventDefault();
@@ -54,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // OVERLAY -> remove elementos abertos (apenas se existir overlay)
+  // OVERLAY
   if (overlay) {
     overlay.addEventListener('click', () => {
       if (menuList) menuList.classList.remove('open');
@@ -66,15 +59,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // DROPDOWN DO MENU DE PERFIL
+  // DROPDOWN PERFIL
   if (profileBtn && dropdownMenu) {
     profileBtn.addEventListener('click', (e) => {
-      e.stopPropagation(); // evita que o clique se propague e feche algo externo
+      e.stopPropagation();
       dropdownMenu.classList.toggle('show');
       if (overlay) overlay.classList.toggle('show');
     });
 
-    // evita que clique dentro do dropdown feche via outros handlers
     dropdownMenu.addEventListener('click', (e) => e.stopPropagation());
   }
 
@@ -83,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (container) container.classList.toggle('active');
   };
 
-  // Fecha as opções quando clicar fora
+  // FECHAR OPTIONS AO CLICAR FORA
   document.addEventListener('click', function(e) {
     document.querySelectorAll('.options-container').forEach(container => {
       if (!container.contains(e.target)) {
@@ -91,4 +83,14 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // SALVAR POSTAGEM (corrigido para vários botões)
+  if (btnSalvarPost.length > 0) {
+    btnSalvarPost.forEach(botao => {
+      botao.addEventListener('click', () => {
+        salvarPostagem.classList.toggle('show');
+        overlay.classList.toggle('show');
+      });
+    });
+  }
 });

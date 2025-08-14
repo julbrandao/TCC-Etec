@@ -106,14 +106,7 @@
 
 }
 
-.nova-colecao{
-    color: var(--orange);
-    font-family: 'Nunito';
-    font-weight: bold;
-    padding: 5px 10px;
-    background-color: #dfa4365c;
-    border-radius: 20px;
-}
+
 
 .ver-tudo {
     color: var(--orange);

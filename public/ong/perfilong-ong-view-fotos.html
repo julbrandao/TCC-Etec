@@ -5,9 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Perfil</title>
-    <link rel="stylesheet" href="../../css/index.css" />
-    <link rel="stylesheet" href="../../css/pages/perfil/perfil.css" />
-    <link rel="stylesheet" href="../../css/partials/navbar.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/pages/perfil/perfil.css" />
+    <link rel="stylesheet" href="../css/partials/navbar.css" />
 </head>
 
 <body>
@@ -21,27 +21,27 @@
                     <li><a href="../feed.html">Explorar</a></li>
                     <li><a href="../ongsFiltro.html">ONGs</a></li>
                 </ul>
-                <a class="nav-title" href="../feed.html"><img src="../../assets/svg/Logo UneONG FINAL.svg" alt="" width="80" height="80" /></a>
+                <a class="nav-title" href="../feed.html"><img src="../assets/svg/Logo UneONG FINAL.svg" alt="" width="80" height="80" /></a>
             </div>
 
             <input type="text" name="" id="" class="buscar" />
 
             <div class="nav-elements" style="width: 100px; justify-content: flex-end;padding-left: 1rem;">
                 <div class="icon-menu">
-                    <img src="../../assets/png/user-example.png" alt="" id="dropdown-perfil" />
+                    <img src="../assets/png/user-example.png" alt="" id="dropdown-perfil" />
                 </div>
                 <div class="dropdown" id="dropdownMenu">
                     <div class="flex" style="width: 100%;">
-                        <img class="foto-perfil" src="../../assets/jpg/foto-perfil-exemplo.jpg" alt="" />
+                        <img class="foto-perfil" src="../assets/jpg/foto-perfil-exemplo.jpg" alt="" />
                         <div class="mn-part1">
                             <p class="name-account">Cartinha Mágica</p>
                             <p class="email-account">cartinhamagica@gmail.com</p>
-                            <a class="perfil-account" href="../../perfilong-ong-view.html">Seu perfil ➞</a>
+                            <a class="perfil-account" href="perfilong-ong-view.html">Seu perfil ➞</a>
                         </div>
                     </div>
                     <div class="mn-part2">
                         <ul>
-                            <li><a href="../../configuracoes.html" style="display: flex; gap: 5px; align-items: center;"><img src="../../assets/png/icones/icone_configuracoes.png" height="15px" width="15px" alt=""> Configurações</a></li>
+                            <li><a href="configuracoes.html" style="display: flex; gap: 5px; align-items: center;"><img src="../assets/png/icones/icone_configuracoes.png" height="15px" width="15px" alt=""> Configurações</a></li>
                             <li><a href="">☀ Sair</a></li>
                         </ul>
                     </div>
@@ -53,12 +53,12 @@
     <div id="overlay"></div>
 
     <div class="header-perfil" style="padding-top: 50px;">
-        <img class="header-image" src="../../assets/jpg/teste-header-perfil.jpeg" alt="" />
+        <img class="header-image" src="../assets/jpg/teste-header-perfil.jpeg" alt="" />
     </div>
     <div class="info-perfil">
         <div class="perfil-containt">
             <div class="div-1">
-                <div class="icon-profile"><img src="../../assets/jpg/foto-perfil-exemplo.jpg" /></div>
+                <div class="icon-profile"><img src="../assets/jpg/foto-perfil-exemplo.jpg" /></div>
                 <h4 class="name-profile" style="color:#352c28">Cartinha Mágica</h4>
             </div>
             <div class="div-2">
@@ -67,7 +67,6 @@
                 <p>Seguidores 230</p>
             </div>
         </div>
-        <!-- Aqui terá as informações como nome, publicações, e seguidores -->
     </div>
     <div class="main-perfil">
         <section class="feed-profile">
@@ -93,6 +92,11 @@
                             <p>Ver mais tarde</p>
                         </article>
 
+                                                <div style="width: 95%; display: flex; flex-direction: row; justify-content: center; margin: 1.5rem 0;">
+                            <a class="nova-colecao" href="">Nova coleção</a>
+                        </div>
+                        
+
                         <div style="width: 95%; display: flex; flex-direction: row; justify-content: flex-end;">
                             <a class="ver-tudo" href="">Ver tudo &gt;</a>
                         </div>
@@ -113,11 +117,11 @@
 
                     <section class="fotos-container">
                         <div class="foto">
-                            <img src="../../assets/png/icones/icone_adicionar+.png" alt="" width="75%" height="75%">
+                            <img src="../assets/png/icones/icone_adicionar+.png" alt="" width="75%" height="75%">
                         </div>
 
                         <div data-modal="btnModalPost" class="foto"
-                            style="background: url(../../assets/jpg/foto-post.jpg); background-size: cover;">
+                            style="background: url(../assets/jpg/foto-post.jpg); background-size: cover;">
                         </div>
                     </section>
                     <div
@@ -137,7 +141,7 @@
                 <a href="" class="sair">X</a>
             </div>
 
-            <div style="background: url(../../assets/jpg/foto-post.jpg); background-repeat:no-repeat; background-size: cover;"
+            <div style="background: url(../assets/jpg/foto-post.jpg); background-repeat:no-repeat; background-size: cover;"
                 class="photo-post"></div>
         </div>
         <div
@@ -146,20 +150,18 @@
             <div class=""
                 style="border-bottom: 3px solid #f5f5f5;display: flex;align-items: center;padding: 1rem;">
                 <div class="autor-photo" style="line-height: 5px;">
-                    <img src="../../assets/jpg/foto-perfil-exemplo.jpg" alt="" />
+                    <img src="../assets/jpg/foto-perfil-exemplo.jpg" alt="" />
                 </div>
                 <div style="display: flex; flex-direction: column;">
                     <a class="autor">Cartinha Mágica</a>
                     <a class="info">Itu - SP</a>
                 </div>
-                <!-- Informação do autor -->
             </div>
             <article class="postInfo">
                 <div
                     style="display: flex; width: 100%; padding-left: 2.5rem ; height: 40px; align-items: flex-start;">
                     <a class="info">Out 12 às 19h19</a>
                 </div>
-                <!-- Data e Hora -->
                 <p class="txtPost">
                     🌟 Feliz Dia das Crianças! 🌟
                     <br /><br />
@@ -167,18 +169,16 @@
                     <br /><br />
                     <span class="hashtags">#DiaDasCrianças #InfânciaComAmor #TransformandoVidas</span>
                 </p>
-                <!-- Texto da Postagem -->
             </article>
             <div style="border-top: 3px solid #f5f5f5; display: flex; padding: 1rem;">
-                <!-- Curtidas, Curtir e Compartilhar-->
                 <p>AAAAAA</p>
             </div>
         </div>
     </div>
     <!-- Fim do Modal-->
 
-    <script src="../../js/modalPost.js"></script>
-    <script src="../../js/funcionalidades.js"></script>
+    <script src="../js/modalPost.js"></script>
+    <script src="../js/funcionalidades.js"></script>
 
 </body>
 

@@ -89,6 +89,15 @@ main{
     border: 1px solid black;
 }
 
+.nova-colecao{
+    color: var(--orange);
+    font-family: 'Nunito';
+    font-weight: bold;
+    padding: 5px 10px;
+    background-color: #dfa4365c;
+    border-radius: 20px;
+}
+
 .button{
     background: var(--orange);
     padding: 3px 6px;
@@ -479,7 +488,7 @@ main{
     align-items: flex-start;
     padding-top: 10px;
     position: fixed;
-    top: 30%;
+    top: 20%;
     left: 30%;
     background-color: #ffffff;
     z-index: 1099;

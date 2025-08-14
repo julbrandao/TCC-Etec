@@ -5,9 +5,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Perfil</title>
-    <link rel="stylesheet" href="../../css/index.css" />
-    <link rel="stylesheet" href="../../css/pages/perfil/perfil.css" />
-    <link rel="stylesheet" href="../../css/partials/navbar.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/pages/perfil/perfil.css" />
+    <link rel="stylesheet" href="../css/partials/navbar.css" />
 </head>
 
 <body>
@@ -20,27 +20,27 @@
                     <li><a href="../feed.html">Explorar</a></li>
                     <li><a href="../ongsFiltro.html">ONGs</a></li>
                 </ul>
-                <a class="nav-title" href="../feed.html"><img src="../../assets/svg/Logo UneONG FINAL.svg" alt="" width="80" height="80" /></a>
+                <a class="nav-title" href="../feed.html"><img src="../assets/svg/Logo UneONG FINAL.svg" alt="" width="80" height="80" /></a>
             </div>
 
             <input type="text" name="" id="" class="buscar" />
 
             <div class="nav-elements" style="width: 100px; justify-content: flex-end;padding-left: 1rem;">
                 <div class="icon-menu">
-                    <img src="../../assets/png/user-example.png" alt="" id="dropdown-perfil" />
+                    <img src="../assets/png/user-example.png" alt="" id="dropdown-perfil" />
                 </div>
                 <div class="dropdown" id="dropdownMenu">
                     <div class="flex" style="width: 100%;">
-                        <img class="foto-perfil" src="../../assets/jpg/foto-perfil-exemplo.jpg" alt="" />
+                        <img class="foto-perfil" src="../assets/jpg/foto-perfil-exemplo.jpg" alt="" />
                         <div class="mn-part1">
                             <p class="name-account">Cartinha Mágica</p>
                             <p class="email-account">cartinhamagica@gmail.com</p>
-                            <a class="perfil-account" href="../../perfilong-ong-view.html">Seu perfil ➞</a>
+                            <a class="perfil-account" href="perfilong-ong-view.html">Seu perfil ➞</a>
                         </div>
                     </div>
                     <div class="mn-part2">
                         <ul>
-                            <li><a href="../../configuracoes.html" style="display: flex; gap: 5px; align-items: center;"><img src="../../assets/png/icones/icone_configuracoes.png" height="15px" width="15px" alt=""> Configurações</a></li>
+                            <li><a href="configuracoes.html" style="display: flex; gap: 5px; align-items: center;"><img src="../assets/png/icones/icone_configuracoes.png" height="15px" width="15px" alt=""> Configurações</a></li>
                             <li><a href="">☀ Sair</a></li>
                         </ul>
                     </div>
@@ -51,11 +51,13 @@
 
     <div id="overlay"></div>
 
-    <div class="header-perfil" style="padding-top: 50px;"></div>
+    <div class="header-perfil" style="padding-top: 50px;">
+        <img class="header-image" src="../assets/jpg/teste-header-perfil.jpeg" alt="" />
+    </div>
     <div class="info-perfil">
         <div class="perfil-containt">
             <div class="div-1">
-                <div class="icon-profile"><img src="../../assets/jpg/foto-perfil-exemplo.jpg" /></div>
+                <div class="icon-profile"><img src="../assets/jpg/foto-perfil-exemplo.jpg" /></div>
                 <h4 class="name-profile" style="color:#352c28">Cartinha Mágica</h4>
             </div>
             <div class="div-2">
@@ -64,8 +66,8 @@
                 <p>Seguidores 230</p>
             </div>
         </div>
-        <!-- Aqui terá as informações como nome, publicações, e seguidores -->
     </div>
+
     <div class="main-perfil">
         <section class="feed-profile">
             <div class="flex main-left">
@@ -79,12 +81,10 @@
                             <a class="icon-colecao">V</a>
                             <p>Ver mais tarde</p>
                         </article>
-
                         <article class="item-colecao">
                             <a class="icon-colecao">V</a>
                             <p>Ver mais tarde</p>
                         </article>
-
                         <article class="item-colecao">
                             <a class="icon-colecao">V</a>
                             <p>Ver mais tarde</p>
@@ -92,27 +92,20 @@
                         <div style="width: 95%; display: flex; flex-direction: row; justify-content: center; margin: 1.5rem 0;">
                             <a class="nova-colecao" href="">Nova coleção</a>
                         </div>
-
                         <div style="width: 95%; display: flex; flex-direction: row; justify-content: flex-end;">
-                            <a class="ver-tudo" href="../../">Ver tudo &gt;</a>
+                            <a class="ver-tudo" href="../">Ver tudo &gt;</a>
                         </div>
                     </div>
                 </div>
 
-                <div
-                    class="container"
-                    style="width: 350px; height: 20px; display: flex; padding: 1rem; flex-direction: row; align-items:center; justify-content: space-between;"
-                >
+                <div class="container" style="width: 350px; height: 20px; display: flex; padding: 1rem; flex-direction: row; align-items:center; justify-content: space-between;">
                     <h4 style="color: #969696;">Fotos</h4>
-                    <a class="ver-tudo" href="../../">Ver tudo &gt;</a>
+                    <a class="ver-tudo" href="../">Ver tudo &gt;</a>
                 </div>
 
-                <div
-                    class="container"
-                    style="width: 350px; height: 20px; display: flex; padding: 1rem; flex-direction: row; align-items:center; justify-content: space-between;"
-                >
+                <div class="container" style="width: 350px; height: 20px; display: flex; padding: 1rem; flex-direction: row; align-items:center; justify-content: space-between;">
                     <h4 style="color: #969696;">Vídeos</h4>
-                    <a class="ver-tudo" href="../../">Ver tudo &gt;</a>
+                    <a class="ver-tudo" href="../">Ver tudo &gt;</a>
                 </div>
             </div>
 
@@ -125,18 +118,19 @@
                 </div>
 
                 <div class="create-post">
-                    <img src="../../assets/jpg/foto-perfil-exemplo.jpg" alt="" />
-                    <input type="text" name="abrirModalCriarPost" id="abrirModalCriarPost" placeholder="Fazer publicação..." /><img class="iconPlus" src="../../assets/png/icones/icone_adicionar+.png" alt="">
-                </div>  
+                    <img src="../assets/jpg/foto-perfil-exemplo.jpg" alt="" />
+                    <input type="text" name="abrirModalCriarPost" id="abrirModalCriarPost" placeholder="Fazer publicação..." />
+                    <img class="iconPlus" src="../assets/png/icones/icone_adicionar+.png" alt="">
+                </div>
 
                 <article class="post">
                     <div class="autor-post">
                         <div class="flex" style="flex-direction: column;">
                             <div class="flex">
                                 <div class="autor-photo">
-                                    <img src="../../assets/jpg/foto-perfil-exemplo.jpg" alt="" />
+                                    <img src="../assets/jpg/foto-perfil-exemplo.jpg" alt="" />
                                 </div>
-                                <a class="autor" href="../../">Cartinha Mágica</a>
+                                <a class="autor" href="../">Cartinha Mágica</a>
                             </div>
                             <span class="horario">Fev 26 às 19h19</span>
                         </div>
@@ -156,10 +150,9 @@
                             Esse projeto tem o intuito de levar alegria e esperança para crianças que muitas vezes não têm condições de ter um Natal tão especial. A cada ano, voluntários se unem para arrecadar doações e organizar essa festa inesquecível.
                         </p>
                     </div>
-
                     <div class="reactions-post">
-                        <a class="reaction" href="../../">Curtir</a>
-                        <a class="reaction" href="../../">Compartilhar</a>
+                        <a class="reaction" href="../">Curtir</a>
+                        <a class="reaction" href="../">Compartilhar</a>
                     </div>
                 </article>
             </div>
@@ -171,14 +164,11 @@
             <div style="width: 95%; display: flex; justify-content: center; align-items: center;">
                 <h3>Criar Post</h3>
             </div>
-            <a href="../../" class="sair" id="sairCriarPost">X</a>
+            <a href="../" class="sair" id="sairCriarPost">X</a>
         </div>
         <div class="corpo-post">
             <div class="informacoes-pessoais">
-                <div
-                    class="perfilIcon"
-                    style="background-image: url(../../assets/jpg/foto-perfil-exemplo.jpg);"
-                ></div>
+                <div class="perfilIcon" style="background-image: url(../assets/jpg/foto-perfil-exemplo.jpg);"></div>
                 <p>Cartinha Mágica</p>
             </div>
             <textarea name="" id="textPost" placeholder="No que você está pensando?"></textarea>
@@ -186,7 +176,7 @@
             <label for="imagemPost" class="add-file-post">Adicionar ao Post</label>
         </div>
         <div style="width: 100%; display: flex; justify-content: center;">
-            <a href="../../" class="btn-publicar">Publicar</a>
+            <a href="../" class="btn-publicar">Publicar</a>
         </div>
     </div>
 
@@ -195,7 +185,7 @@
             <div style="width: 95%; display: flex; justify-content: center; align-items: center;">
                 <h3 style="font-size: 12pt; color: #2c2f2c;">Salvar em:</h3>
             </div>
-            <a href="../../" class="sair" id="sairSalvarPublicacao">X</a>
+            <a href="../" class="sair" id="sairSalvarPublicacao">X</a>
         </div>
 
         <div class="corpo-post">
@@ -203,7 +193,6 @@
                 <label for="vermaistarde1">Ver mais tarde</label>
                 <input type="checkbox" name="vermaistarde" id="vermaistarde1" style="border-radius: 50%;" />
             </div>
-
             <div class="subcontainer">
                 <label for="vermaistarde2">Ver mais tarde</label>
                 <input type="checkbox" name="vermaistarde" id="vermaistarde2" style="border-radius: 50%;" />
@@ -212,12 +201,10 @@
                 <label for="vermaistarde3">Ver mais tarde</label>
                 <input type="checkbox" name="vermaistarde" id="vermaistarde3" style="border-radius: 50%;" />
             </div>
-
             <div class="subcontainer">
                 <label for="vermaistarde4">Ver mais tarde</label>
                 <input type="checkbox" name="vermaistarde" id="vermaistarde4" style="border-radius: 50%;" />
             </div>
-
             <div class="subcontainer">
                 <label for="vermaistarde5">Ver mais tarde</label>
                 <input type="checkbox" name="vermaistarde" id="vermaistarde5" style="border-radius: 50%;" />
@@ -227,19 +214,16 @@
                 <input type="checkbox" name="vermaistarde" id="vermaistarde6" style="border-radius: 50%;" />
             </div>
         </div>
-        <br />
-        <br />
-        <div style="padding: 15px; width: 100%;">
-            <a href="../../" class="criar-colecao">Criar nova coleção</a>
+        <br /><br />
+        <div style="width: 95%; display: flex; flex-direction: row; justify-content: center; margin: 1.5rem 0;">
+            <a class="nova-colecao" href="">Nova coleção</a>
         </div>
-
         <div style="width: 100%; display: flex; justify-content: flex-end; padding: 1rem 0 0 0">
-            <a href="../../" class="btn-confirmar">Concluir</a>
+            <a href="../" class="btn-confirmar">Concluir</a>
         </div>
     </div>
 
-    <script src="../../js/funcionalidades.js"></script>
-    <script src="../../js/modalPost.js"></script>
+    <script src="../js/funcionalidades.js"></script>
+    <script src="../js/modalPost.js"></script>
 </body>
-
 </html>
