@@ -1,0 +1,77 @@
+main {
+    background-image: url("../../../assets/png/fundo-filltro.png");
+    background-color: #f0f0f0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.filtro-container {
+    width: 72%;
+    min-height: 200px;
+    max-height: 550px;
+    background-color: white;
+    border: 1px solid #cdcccc;
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 3px 10px 1px rgb(0, 0, 0, 0.20);
+}
+
+/* Botões de filtro */
+.filter-tabs {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.filter-btn {
+    background: none;
+    border: none;
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+}
+
+.filter-btn.active {
+    color: #f25c05;
+}
+
+.filter-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #f25c05;
+}
+
+/* Lista de ONGs */
+.ongs-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    max-height: 350px;
+    overflow-y: auto;
+    padding-right: 8px;
+
+}
+
+.ongs-list p {
+    font-size: 20px;
+    margin: 40px 0;
+    color: #333;
+}
+
+.highlight {
+    color: #f25c05;
+    text-decoration: none;
+    font-weight: bold;
+}
