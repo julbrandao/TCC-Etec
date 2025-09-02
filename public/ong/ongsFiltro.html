@@ -11,10 +11,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="css/partials/navbar.css" />
-    <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="css/pages/filtro/filtro.css" />
-    <link rel="stylesheet" href="css/pages/filtro/modal-filtro.css" />
+    <link rel="stylesheet" href="../css/partials/navbar.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/pages/filtro/filtro.css" />
+    <link rel="stylesheet" href="../css/pages/filtro/modal-filtro.css" />
   </head>
 
   <body>
@@ -28,20 +28,20 @@
             <button class="hamburger" id="hamburger"></button>
           </div>
           <ul class="nav-links" id="navlinks">
-            <li><a href="index.html">Início</a></li>
             <li><a href="feed.html">Explorar</a></li>
             <li><a href="ongsFiltro.html">ONGs</a></li>
           </ul>
-          <a class="nav-title" href="index.html"
+          <a class="nav-title" href="../ong/feed.html"
             ><img
-              src="assets/svg/Logo UneONG FINAL.svg"
+              src="../assets/svg/Logo UneONG FINAL.svg"
               alt=""
               width="80"
               height="80"
           /></a>
         </div>
 
-        <input type="text" name="" id="" class="buscar" />
+        <input type="text" name="txtbuscar" id="txtbuscar" class="buscar" placeholder="Procure uma ong..." />
+        <label for="txtbuscar"><img src="../assets/png/icones/icone_buscar.png" class="buscarIcon" alt=""></label>
 
         <div
           class="nav-elements"
@@ -49,7 +49,7 @@
         >
           <div class="icon-menu">
             <img
-              src="assets/png/user-example.png"
+              src="../assets/png/user-example.png"
               alt=""
               id="dropdown-perfil"
             />
@@ -58,22 +58,19 @@
             <div class="flex" style="width: 100%">
               <img
                 class="foto-perfil"
-                src="assets/jpg/foto-perfil-exemplo.jpg"
+                src="../assets/jpg/foto-perfil-exemplo.jpg"
                 alt=""
               />
               <div class="mn-part1">
                 <p class="name-account">Cartinha Mágica</p>
                 <p class="email-account">cartinhamagica@gmail.com</p>
-                <a class="perfil-account" href="./ong/perfilong-ong-view.html"
-                  >Seu perfil ➞</a
-                >
+                <a class="perfil-account" href="perfil.html">Seu perfil ➞</a>
               </div>
             </div>
             <div class="mn-part2">
-              <ul>
-                <li><a href="configuracoes.html">☀ Configurações</a></li>
-                <li><a href="">☀ Sair</a></li>
-              </ul>
+                        <ul>
+                            <li><a href="configuracoes.html"><img src="../assets/png/icones/icone_configuracoes.png" alt="" style="width: 25px; margin-right: 7px; vertical-align: middle;">Configurações</a></li>
+                        </ul>
             </div>
           </div>
         </div>
@@ -91,7 +88,7 @@
           <dialog id="modal-az">
             <div class="modal-header">
               <h1 class="modal-title">Selecionar filtro</h1>
-              <button class="close-modal" data-close="modal-az">
+              <button class="close-modal-filtro" data-close="modal-az">
                 <i class="fa-solid fa-xmark"></i>
               </button>
             </div>
@@ -141,7 +138,7 @@
           <dialog id="modal-localizacao">
             <div class="modal-header">
               <h1 class="modal-title">Selecionar filtro</h1>
-              <button class="close-modal" data-close="modal-localizacao">
+              <button class="close-modal-filtro" data-close="modal-localizacao">
                 <i class="fa-solid fa-xmark"></i>
               </button>
             </div>
@@ -273,7 +270,7 @@
           <dialog id="modal-categoria">
             <div class="modal-header">
               <h1 class="modal-title">Selecionar filtro</h1>
-              <button class="close-modal" data-close="modal-categoria">
+              <button class="close-modal-filtro" data-close="modal-categoria">
                 <i class="fa-solid fa-xmark"></i>
               </button>
             </div>
@@ -488,7 +485,7 @@
       });
     </script>
 
-    <script src="js/modalsFiltro.js"></script>
-    <script src="js/funcionalidades.js"></script>
+    <script src="../js/modals/modalsFiltro.js"></script>
+    <script src="../js/funcionalidades.js"></script>
   </body>
 </html>

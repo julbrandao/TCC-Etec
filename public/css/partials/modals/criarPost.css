@@ -1,0 +1,113 @@
+/* ==============================
+   MODAL criarPost
+   ============================== */
+#criarPost {
+  border: none;
+  border-radius: 15px;
+  min-width: 40%;
+  min-height: 75%;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 10px;
+  position: fixed;
+  top: 10%;
+  left: 30%;
+  background-color: #ffffff;
+  z-index: 1099;
+}
+
+#criarPost .cabecalho-post {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 8%;
+  border-bottom: 2px solid #dddddd;
+}
+
+#criarPost .add-file-post {
+  cursor: pointer;
+  color: #708372;
+  font-weight: bold;
+  border: 1px solid #cdcccc;
+  border-radius: 10px;
+  padding: 10px;
+  width: 90%;
+}
+
+#criarPost .add-file-post:hover { background-color: #e9e9e9; }
+#criarPost .add-file-post:active { background-color: #dadada; }
+
+#criarPost .btn-publicar {
+  background-color: #f4863e;
+  color: #f5f5f5;
+  padding: 5px 10px;
+  width: 200px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
+}
+
+.preview img{
+  max-width:160px;
+  max-height:120px;
+  object-fit:cover;
+  border-radius:8px;
+  margin-top:8px;
+}
+
+#criarPost .sair {
+  margin-right: 30px;
+  font-weight: bold;
+  color: var(--orange);
+}
+
+#criarPost .corpo-post {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+#criarPost .corpo-post .informacoes-pessoais {
+  display: flex;
+  gap: 1rem;
+  height: 15%;
+  align-items: center;
+}
+
+#criarPost .corpo-post .informacoes-pessoais p {
+  color: var(--orange);
+  font-size: 12pt;
+}
+
+#criarPost .corpo-post .perfilIcon {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+#criarPost .corpo-post #textPost {
+  width: 90%;
+  height: 45%;
+  border: none;
+  color: #2c2f2c;
+  font-weight: bold;
+  font-size: 12pt;
+  padding: 10px;
+}
+
+#criarPost .corpo-post #textPost:focus {
+  border: 1px solid #2c2f2c;
+}
+
+#criarPost.show {
+  display: flex;
+}

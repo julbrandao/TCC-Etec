@@ -20,13 +20,14 @@ document.getElementById('form-cadastro').addEventListener('submit', async functi
   const razao_social = document.getElementById('txtrazao').value.trim(); //Mudar depois do teste 
   const bairro = document.getElementById('txtbairro').value.trim(); //Mudar depois do teste 
   const classificacao = document.getElementById('Classificacao').value.trim(); //Mudar depois do teste 
+  const AdF = document.getElementById('txtAdF').value.trim();
 
   const res = await fetch('/api/ongs', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ nome_ong, cnpj,email_ong,rua,cidade,n_localizacao,estado,complemento,telefone,nome_representante,cpf_representante,
     objetivo,categoria_ong,descrição,senha_ong,razao_social,bairro,classificacao
-     })
+    ,AdF})
     
   });
  console.log('Body recebido:', nome_ong);
@@ -35,7 +36,7 @@ if (res.ok) {
     alert('Cadastrado com sucesso');
   }
   else{
-    alert(message)
+    alert(error)
   }
 
 });

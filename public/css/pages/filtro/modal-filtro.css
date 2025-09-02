@@ -27,7 +27,7 @@ dialog {
   transform: translate(-50%, -50%);
 }
 
-.modal-header {
+.modal-header{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,19 +35,17 @@ dialog {
   position: relative;
 }
 
-.modal-title {
+.modal-title{
   flex: 1;
   font-size: 20px;
   font-weight: bold;
   color: #2c2f2c;
   text-align: center;
+  align-items: center;
+  
 }
 
-.close-modal {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
+.close-modal-filtro {
   cursor: pointer;
   border: 1px solid #d8d8d8;
   width: 25px;

@@ -1,0 +1,111 @@
+/* ==============================
+   MODAL modalsairconta
+   ============================== */
+#modalsairconta {
+  border: none;
+  display: none;
+  background-color: #ffffff;
+  width: 300px;
+  border-radius: 6px;
+  padding: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 40%;
+  left: 40%;
+  z-index: 1100;
+}
+
+#modalsairconta.show {
+  display: block;
+}
+
+#modalsairconta .modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 120px;
+  margin-bottom: 50px;
+}
+
+#modalsairconta .modal-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #2c2f2c;
+  text-align: center;
+}
+
+#modalsairconta .close-modal {
+  cursor: pointer;
+  border: 1px solid #d8d8d8;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #ecebeb;
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+#modalsairconta .close-modal-btn:hover,
+.close-modal-btn:focus {
+  background-color: #eee;
+  color: #666;
+  outline: none;
+}
+
+#modalsairconta .modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#modalsairconta .opcoes-sairconta {
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  gap: 25px;
+}
+
+#modalsairconta .opcoes-sairconta button {
+  padding: 4px 22px;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+#modalsairconta .desc-sairconta span {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+  padding-bottom: 8px;
+  color: #70837e;
+}
+
+#modalsairconta .btn-cancelar-sairconta {
+  background-color: #f5f5f5;
+  color: #708372;
+  transition: background-color 0.3s ease;
+}
+
+#modalsairconta .btn-cancelar-sairconta:hover,
+.btn-cancelar-sairconta:focus {
+  background-color: #e0e9e4;
+  outline: none;
+}
+
+#btn-sair-sairconta {
+  background-color: #f4863e;
+  color: #f5f5f5;
+  transition: background-color 0.3s ease;
+}
+
+#btn_sair-sairconta:hover,
+#btn_sair-sairconta:focus {
+  background-color: #d9762d;
+  outline: none;
+}

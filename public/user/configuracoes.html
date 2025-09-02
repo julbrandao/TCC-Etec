@@ -1,108 +1,257 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Configurações</title>
+    <title>Início</title>
     <link rel="stylesheet" href="../css/partials/navbar.css" />
     <link rel="stylesheet" href="../css/index.css" />
-    <link rel="stylesheet" href="../css/pages/configuracoes/config.css" />
-</head>
+    <link rel="stylesheet" href="../css/pages/configuracoes/config-doador.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div
+          class="flex"
+          style="justify-content: flex-start; width: 100%; gap: 1.5rem"
+        >
+          <div style="line-height: 50px">
+            <button class="hamburger" id="hamburger"></button>
+          </div>
+          <ul class="nav-links" id="navlinks">
+            <li><a href="feed.html">Explorar</a></li>
+            <li><a href="ongsFiltro.html">ONGs</a></li>
+          </ul>
+          <a class="nav-title" href="../user/feed.html"
+            ><img
+              src="../assets/svg/Logo UneONG FINAL.svg"
+              alt=""
+              width="80"
+              height="80"
+          /></a>
+        </div>
 
-<body>
+        <input type="text" name="txtbuscar" id="txtbuscar" class="buscar" placeholder="Procure uma ong..." />
+        <label for="txtbuscar"><img src="../assets/png/icones/icone_buscar.png" class="buscarIcon" alt=""></label>
 
-   <header>
-        <nav class="navbar">
-            <div class="flex" style="justify-content: flex-start; width: 100%; gap: 1.5rem;">
-                <div style="line-height: 50px;"><button class="hamburger" id="hamburger"></button></div>
-                <ul class="nav-links" id="navlinks">
-                    <li><a href="../index.html">Início</a></li>
-                    <li><a href="../feed.html">Explorar</a></li>
-                    <li><a href="../ongsFiltro.html">ONGs</a></li>
-                </ul>
-                <a class="nav-title" href="../feed.html"><img src="../assets/svg/Logo UneONG FINAL.svg" alt="" width="80" height="80" /></a>
-            </div>
-
-            <input type="text" name="" id="" class="buscar" />
-
-            <div class="nav-elements" style="width: 100px; justify-content: flex-end;padding-left: 1rem;">
-                <div class="icon-menu">
-                    <img src="../assets/png/user-example.png" alt="" id="dropdown-perfil" />
-                </div>
-                <div class="dropdown" id="dropdownMenu">
+        <div
+          class="nav-elements"
+          style="width: 100px; justify-content: flex-end; padding-left: 1rem"
+        >
+          <div class="icon-menu">
+            <img
+              src="../assets/png/user-example.png"
+              alt=""
+              id="dropdown-perfil"
+            />
+          </div>
+                          <div class="dropdown" id="dropdownMenu">
                     <div class="flex" style="width: 100%;">
-                        <img class="foto-perfil" src="../assets/jpg/foto-perfil-exemplo.jpg" alt="" />
+                        <img class="foto-perfil" src="../assets/jpg/foto-perfil-exemplo.jpg" alt="">
                         <div class="mn-part1">
-                            <p class="name-account">Cartinha Mágica</p>
-                            <p class="email-account">cartinhamagica@gmail.com</p>
-                            <a class="perfil-account" href="../perfilong-ong-view.html">Seu perfil ➞</a>
+                            <p class="name-account">Juscelino Lima</p>
+                            <p class="email-account">juscelinolima@gmail.com</p>
+                            <a class="perfil-account" href="perfil.html">Seu perfil ➞</a>
                         </div>
                     </div>
                     <div class="mn-part2">
                         <ul>
-                            <li><a href="../configuracoes.html" style="display: flex; gap: 5px; align-items: center;"><img src="../assets/png/icones/icone_configuracoes.png" height="15px" width="15px" alt=""> Configurações</a></li>
-                            <li><a href="">☀ Sair</a></li>
+                            <li><a href="configuracoes.html"><img src="../assets/png/icones/icone_configuracoes.png" alt="" style="width: 25px; margin-right: 7px; vertical-align: middle;">Configurações</a></li>
                         </ul>
                     </div>
                 </div>
-            </div>
-        </nav>
+        </div>
+      </nav>
     </header>
 
     <div id="overlay"></div>
 
     <main>
-        <section class="fixed-settings-sidebar">
-            <div class="title">
-                <h1>Configurações</h1>
+      <!--seção fixa de configurações-->
+      <section class="fixed-settings-sidebar">
+        <div class="title-container">
+          <img
+            src="../assets/png/icones/icone_configuracoes.png"
+            alt="icone configuracoes"
+          />
+          <h1>Configurações</h1>
+        </div>
+        <div class="elementos-config">
+          <ul>
+            <li>
+              <img src="../assets/png/icones/icone_perfil.png" alt="perfil" /><a
+                id="link-perfil"
+                style="color: #e74c3c; font-weight: bold"
+                >Perfil</a
+              >
+            </li>
+            <li>
+              <img
+                src="../assets/png/icones/icone_sair.png"
+                alt="outras informacoes"
+              /><a class="link-sair">Sair</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!--seção de perfil -->
+      <section class="display-config" id="secao-perfil">
+        <div class="informacoes-perfil">
+          <div
+            class="imagem-fundo"
+            tabindex="0"
+            id="imagem-fundo"
+            onclick="AcionarFundo()"
+          >
+            <input
+              type="file"
+              accept="image/*"
+              class="input-imagem-fundo"
+              id="input-imagem-fundo"
+            />
+            <span class="span-imagem-fundo"></span>
+          </div>
+
+          <div
+            class="icone-perfil"
+            tabindex="0"
+            id="icone-perfil"
+            onclick="AcionarIcone()"
+          >
+            <input
+              type="file"
+              accept="image/*"
+              class="input-icone-perfil"
+              id="input-icone-perfil"
+            />
+            <span class="span-icone-perfil"></span>
+          </div>
+
+          <div class="info-editar">
+            <div class="linha">
+              <div class="campo-editar-container">
+                <h2>Nome:</h2>
+                <input type="text" id="txtnome" />
+                <img src="../assets/png/icones/icone_editar.png" alt="Editar" />
+              </div>
+
+              <div class="campo-editar-container">
+                <h2>Email:</h2>
+                <input type="email" id="txtemail" />
+                <img src="../assets/png/icones/icone_editar.png" alt="Editar" />
+              </div>
             </div>
-            <div class="elementos-config">
-                <ul>
-                    <li><a href="">Perfil</a></li>
-                    <li><a href="">Endereço</a></li>
-                    <li><a href="">Outras Informações</a></li>
-                    <li><a href="">Sair</a></li>
-                </ul>
+
+            <div class="linha">
+              <div class="campo-editar-container">
+                <h2>Senha:</h2>
+                <input type="text" id="txtsenha" />
+                <img src="../assets/png/icones/icone_editar.png" alt="Editar" />
+              </div>
             </div>
-        </section>
-        <section class="display-config">
-            <div class="informacoes-perfil">
-                <div class="fundo-header-perfil"></div>
-                <div class="icone-perfil"></div>
-
-                <div class="info-editar">
-                    <div class="linha">
-                        <div>
-                            <h2>Nome</h2>
-                            <input type="text" />
-                        </div>
-
-                        <div>
-                            <h2>Email</h2>
-                            <input type="text" />
-                        </div>
-                    </div>
-
-                    <div class="linha">
-                        <div>
-                            <h2>Data de fundação</h2>
-                            <input type="text" />
-                        </div>
-
-                        <div>
-                            <h2>Estado</h2>
-                            <input type="text" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+          </div>
+        </div>
+        <div class="botao-salvarAlteracoes" id="Alterar">
+          <button>Salvar Alterações</button>
+        </div>
+      </section>
     </main>
 
+    <div id="modalsairconta" Open>
+      <div class="modal-header">
+        <h1 class="modal-title">Sair</h1>
+        <button class="close-modal" id="fecharSaida">X</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="desc-sairconta">
+          <span>Você tem certeza que deseja sair da conta? </span>
+        </div>
+
+        <div class="opcoes-sairconta">
+          <button id="btn-cancelar-sairconta">Cancelar</button>
+
+          <button id="btn-sair-sairconta">Sair</button>
+        </div>
+      </div>
+    </div>
+    <script>    
+     window.onload = async () => {
+      try {
+        const res = await fetch("/api/configUser", {
+          method: "GET",
+          credentials: "include" // necessário para enviar o cookie da sessão
+        });
+
+        if (!res.ok) {
+          alert("Você não está logado!");
+          // redireciona
+          
+          return;
+        }
+
+        const data = await res.json();
+
+        document.getElementById("txtnome").value = data.Nome_user;
+        document.getElementById("txtemail").value = data.Email_user;
+        document.getElementById("txtsenha").value = data.Senha_user;
+        console.log(data);
+      } catch (err) {
+        console.error("Erro ao carregar dados:", err);
+      }
+    };
+    
+    let form = document.getElementById("Alterar")
+    form.addEventListener('click', async function (e) {
+      e.preventDefault();
+
+      const Nome_user = document.getElementById('txtnome').value;
+      const Email_user = document.getElementById('txtemail').value;
+      const Senha_user = document.getElementById('txtsenha').value;
+      const res = await fetch("/api/user/atualizar", {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          Nome_user, Email_user, Senha_user
+        })
+      
+      });
+      
+
+      if (res.ok) {
+        alert('Editado com sucesso');
+      }
+      if(!res.ok) {
+        alert('ErrorLegal')
+      }
+
+    });
+
+    let form1 = document.getElementById("btn-sair-sairconta")
+    form1.addEventListener('click', async function (e) {
+      e.preventDefault();
+
+    try {
+    const response = await fetch("/logout", {
+      method: "POST",
+      credentials: "include" // importante para enviar o cookie da sessão
+    });
+
+    const result = await response.json();
+    console.log(result.message);
+
+    if (response.ok) {
+      // redirecionar para login
+      window.location.href = "../index.html";
+    }
+  } catch (error) {
+    console.error("Erro no logout:", error);
+  }
+
+    });
+</script>
     <script src="../js/funcionalidades.js"></script>
-    <script src="../js/modals.js"></script>
-
-</body>
-
+    <script src="../js/configuracao.js"></script>
+  </body>
 </html>

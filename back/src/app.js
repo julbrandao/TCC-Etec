@@ -1,11 +1,17 @@
 import express from 'express';
-import session from 'express-session';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import session from "express-session";
+
 import usuarioRoutes from './routes/usuario.routes.js';
 import ongRoutes from './routes/ong.routes.js';
-import lOngRoutes from './routes/authOng.routes.js';
-import lUserOngRoutes from './routes/authUsuario.routes.js';
+import authRoutes from './routes/auth.routes.js';
+import configRoutes from './routes/config.routes.js';
+import configUserRoutes from './routes/configUser.routes.js';
+import editOngRoutes from './routes/editOng.routes.js';
+import editUserRoutes from './routes/editUser.routes.js';
+
+
 
 const app = express();
 
@@ -17,23 +23,66 @@ app.use(express.json());
 // Servir arquivos estáticos (HTML, CSS, JS)
 app.use(express.static(path.join(__dirname, '../../public')));
 
+app.use(
+  session({
+    secret: "segredo-super-seguro",
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+    httpOnly: true,
+    secure: false,   // true apenas em produção com HTTPS
+    sameSite: "lax",
+    path: "/"
+  }
+  })
+);
+
+app.post("/logout", (req, res) => {
+  req.session.destroy((err) => {
+    if (err) {
+      console.error("Erro ao encerrar sessão:", err);
+      return res.status(500).json({ error: "Erro ao encerrar sessão" });
+    }
+
+    res.clearCookie("connect.sid", { path: "/" }); // mesmo path do session
+    return res.status(200).json({ message: "Logout realizado com sucesso" });
+  });
+});
+
+
 // Rotas da API
 app.use('/api/usuarios', usuarioRoutes);
 app.use('/api/ongs', ongRoutes);
-app.use('/api/usuarios', lUserOngRoutes);
-app.use('/api/ongs', lOngRoutes);
+app.use('/api/', authRoutes);
+app.use('/api', configRoutes);
+app.use('/api', configUserRoutes);
+app.use('/api/ong/', editOngRoutes);
+app.use('/api/user/', editUserRoutes);
 
-// Página principal
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../../public/index.html'));
+
+app.get("/public", (req, res) => {
+  res.send("Qualquer um pode ver isso");
+});
+app.get("/index.html", (req, res) => {
+  res.send(`Bem-vindo, ${req.session.user.email}`);
+});
+app.get("/ong/feed",(req, res) => {
+  res.send("Área restrita para ONGs");
 });
 
-app.use(session({
-  secret: 'UneOng', // Troque por algo seguro
-  resave: false,
-  saveUninitialized: false,
-  cookie: { maxAge: 1000 * 60 * 30 } // 30 minutos
-}));
+app.get("/sessao", (req, res) => {
+  if (req.session.user) {
+    res.json({
+      logado: true,
+      usuario: req.session.user
+    });
+  } else {
+    res.json({
+      logado: false,
+      mensagem: "Nenhum usuário autenticado"
+    });
+  }
+});
 
 export default app;
 
@@ -53,3 +102,4 @@ export default app;
 // npm install express dotenv @supabase/supabase-js  -> se alguma estiver dando errado
 // npm i memorystorage -> Vinicius fez o storage com ele, mas nao achei informações o suficiente para min fazer
 // npm install express-session
+// npm install cookie-parser
