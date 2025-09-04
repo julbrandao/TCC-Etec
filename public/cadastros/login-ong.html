@@ -14,7 +14,7 @@
     <main>
         <form action="" id="form-cadastro">
             
-            <h1 class="title">Login</h1>
+            <h1 class="title">Entre como ONG</h1>
             <p class="info-form">Não possui uma conta? <span><a href="cadastro-ong.html">Cadastre-se</a></span></p>
 
 <div class="input-container">
@@ -35,7 +35,13 @@
                     <input class="inputtxt" type="password" name="txtsenha" id="txtsenha">
                 </div>
 
-            <br>
+                <!-- checkbox com opção de lembrar do login -->
+                <div class="checkbox-container">
+                    <input class="checkbox" type="checkbox" name="rememberme" id="rememberme">
+                    <label for="rememberme" class="lblcheckbox">Lembre-se de mim</label>
+                    <br>
+                </div>
+
             <button class="button" type="submit">Entrar</button>
         </form>
     </main>
@@ -50,9 +56,16 @@
             </div>
         </div>
 
-        <div class="container-inferior-mobile">
+        <div class="container-inferior-mobile " style="border-radius: 100% 100% 0 0;">
             <!-- Versão responsiva do container de escolha de cadastro/login -->
+            <div>
+                <h1 style="font-family: 'Poppins Bold'">Olá, amigo!</h1>
+                <p>Deseja fazer login como doador?</p>
+    
+                <a href="login-doador.html" style="width: 100px; text-align: center;">Entrar</a>
+            </div>
         </div>
+
     </div>
      <script src="../js/login-ong.js"></script>
 </body>

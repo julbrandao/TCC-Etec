@@ -228,6 +228,8 @@ if (fileInputPost) {
       configAbertura(btn, document.getElementById("modalsairconta"));
     });
     configFechamento(document.getElementById("btn-cancelar-sairconta"), document.getElementById("modalsairconta"));
+    configFechamento(document.getElementById("fecharSaida"), document.getElementById("modalsairconta"));
+
 
   // ==============================
   // FECHAR TUDO AO CLICAR NO OVERLAY

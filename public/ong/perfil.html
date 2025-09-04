@@ -97,11 +97,11 @@
       </div>
     </div>
 
-     <!--Coleções (fixo)-->
-
     <div class="main-perfil">
       <section class="feed-profile">
         <div class="flex main-left">
+
+        <!--Coleções (fixo)-->
           <div class="itens-salvos">
             <div class="title-itens">
               <h4>Coleções</h4>
@@ -144,48 +144,42 @@
             </div>
           </div>
 
-       <!--Mídia (fixo)-->
+       <!--Mídia (fixo) (desktop)-->
 
-          <div
-            class="container"
-            id="link-midia"
-            style="
-              width: 350px;
-              height: 20px;
-              display: flex;
-              padding: 1rem;
-              flex-direction: row;
-              align-items: center;
-              cursor: pointer;
-              justify-content: space-between;
-            "
-          >
+          <div class="container-midia" id="link-midia">
             <h4>
               <a id="link-midia-text">Mídia</a>
             </h4>
             <a class="ver-tudo"> &gt;</a>
           </div>
-
         </div>
 
         <div class="flex main-right">
-          <div
-            class="flex"
-            style="align-items: center; justify-content: center; width: 107%"
-          >
+          <div class="flex" style="align-items: center; justify-content: center; width: 107%">
 
-          <!--Menu sobre e postagens (fixo)-->
+          <!--Menu sobre e postagens (fixo) (desktop)-->
             <div class="menu-perfil">
               <article class="option-menu">
                 <a id="link-sobre">Sobre</a>
               </article>
               <article class="option-menu">
-                <a
-                  id="link-postagens"
-                  >Postagens</a
-                >
+                <a id="link-postagens">Postagens</a>
               </article>
             </div>
+
+          <!--Menu sobre e postagens (fixo) (mobile)-->
+            <div class="menu-perfil-mobile">
+              <article class="option-menu">
+                <a id="link-sobre-mobile">Sobre</a>
+              </article>
+              <article class="option-menu">
+                <a id="link-postagens-mobile">Postagens</a>
+              </article>
+              <article class="option-menu">
+                <a id="link-midia-mobile">Mídia</a>
+              </article>
+            </div>
+
           </div>
 
           <!-- ********** Seção Postagens ********** -->
@@ -759,8 +753,13 @@
       const linkMidiaText = document.getElementById("link-midia-text");
       const linkColecao = document.querySelectorAll(".item-colecao");
 
+      const linkSobreMobile = document.getElementById("link-sobre-mobile");
+      const linkPostagensMobile = document.getElementById("link-postagens-mobile");
+      const linkMidiaMobile = document.getElementById("link-midia-mobile");
+
       secaoSobre.style.display = "flex";
       linkSobre.style.color = "#e74c3c";
+      linkSobreMobile.style.color = "#e74c3c";
 
       //evento de clicar no botao de postagens
       linkPostagens.addEventListener("click", () => {
@@ -834,8 +833,62 @@ linkColecao.forEach(element => {
     linkMidiaText.style.color = "";
     linkSobre.style.color = "";
     linkPostagens.style.color = "";
+    linkMidiaMobile.style.color = "";
+    linkSobreMobile.style.color = "";
+    linkPostagensMobile.style.color = "";
+    
   });
 });
+
+  //MENU PARA MOBILE
+
+     linkPostagensMobile.addEventListener("click", () => {
+        secaoPostagens.style.display = "flex";
+        secaoSobre.style.display = "none";
+        secaoMidia.style.display = "none";
+        secaoColecao.style.display = "none";
+
+        linkPostagensMobile.style.color = "#e74c3c";
+        linkPostagensMobile.style.fontWeight = "bold";
+        linkSobreMobile.style.color = "";
+        linkMidiaMobile.style.color = "";
+        linkColecao.forEach(el => {
+          el.style.color = "";
+          el.style.fontWeight = "";
+    });
+      });
+
+      linkSobreMobile.addEventListener("click", () => {
+        secaoSobre.style.display = "flex";
+        secaoPostagens.style.display = "none";
+        secaoMidia.style.display = "none";
+        secaoColecao.style.display = "none";
+
+        linkSobreMobile.style.color = "#e74c3c";
+        linkSobreMobile.style.fontWeight = "bold";
+        linkPostagensMobile.style.color = "";
+        linkMidiaMobile.style.color = "";
+        linkColecao.forEach(el => {
+          el.style.color = "";
+          el.style.fontWeight = "";
+    });
+      }); 
+
+      linkMidiaMobile.addEventListener("click", () => {
+        secaoMidia.style.display = "flex";
+        secaoPostagens.style.display = "none";
+        secaoSobre.style.display = "none";
+        secaoColecao.style.display = "none";
+
+        linkMidiaMobile.style.color = "#e74c3c";
+        linkMidiaMobile.style.fontWeight = "bold";
+        linkSobreMobile.style.color = "";
+        linkPostagensMobile.style.color = "";
+        linkColecao.forEach(el => {
+          el.style.color = "";
+          el.style.fontWeight = "";
+    });
+      }); 
 
     </script>
 

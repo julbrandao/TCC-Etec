@@ -16,7 +16,6 @@ body {
   flex-direction: column;
   box-sizing: border-box;
   overflow-y: auto;
-
   z-index: 1;
 }
 
@@ -274,4 +273,45 @@ body {
 .botao-salvarAlteracoes button:active {
   background-color: #f4863e;
   transition: background-color 0.3s ease;
+}
+
+@media only screen and (max-width: 900px){
+
+.fixed-settings-sidebar {
+  position: fixed;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  padding-top: 14%;
+  display: block;
+  flex-direction: row;
+  z-index: 2;
+  top: 0;
+}
+
+.title-container{
+  display: none;
+}
+
+.display-config {
+    width: 100%;
+    margin-left: 0;
+    padding-top: 10vh; 
+    height: auto;
+}
+
+
+.icone-perfil {
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: 1;
+  margin: 0;
+  top: 40%;
+}
+
+.imagem-fundo {
+  position: relative;
+}
+  
 }
