@@ -35,6 +35,7 @@
   text-align: center;
   cursor: pointer;
   display: inline-block;
+  font-weight: 700;
 }
 
 #modalPost .info {
@@ -49,11 +50,10 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 0;
-  align-items: center;
+  padding: 1rem;
   width: 100%;
   height: 65%;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 #modalPost .postInfo .txtPost {
@@ -73,4 +73,75 @@
   width: 90%;
   margin: 2rem;
   height: 90%;
+}
+
+#modalPost .container-foto-modal{
+  display: flex; 
+  width: 70%; 
+  height: 100%; 
+  flex-direction: column; 
+  justify-content: space-between; 
+  align-items: center;
+}
+
+#modalPost .container-legenda-modal{
+  width: 30%;
+  border-left: 3px solid #f5f5f5;
+  border-radius: 0 10px 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#modalPost .topo-legenda-modal{
+  border-bottom: 3px solid #f5f5f5;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+#modalPost .data-legenda-modal{
+  display: flex;
+  width: 100%;
+  height: 20px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+
+#modalPost .texto-legenda-modal{
+  flex: 1;
+  max-height: calc(100% - 60px);
+  overflow-y: auto; /* mantém o scroll funcionando */
+  -ms-overflow-style: none;  /* esconde o scroll no IE/Edge antigo */
+  scrollbar-width: none;     /* escondeo scroll no Firefox */
+
+}
+
+#modalPost .texto-legenda-modal::-webkit-scrollbar {
+  display: none; /* esconde o scroll no Chrome, Safari e Edge moderno */
+}
+
+@media only screen and (max-width: 900px) {
+
+  #modalPost{
+    width: 85%;
+    flex-direction: column;
+
+  }
+
+  #modalPost .container-foto-modal{
+    width: 100%;
+  }
+
+  #modalPost .container-legenda-modal{
+    max-height: 40%;
+    width: 100%;
+    border-left: 0;
+    margin-top: -35px;
+  }
+
+  #modalPost .topo-legenda-modal{
+    display: none;
+  }
 }

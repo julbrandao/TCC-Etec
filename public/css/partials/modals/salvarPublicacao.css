@@ -11,8 +11,9 @@
   align-items: flex-start;
   padding-top: 10px;
   position: fixed;
-  top: 20%;
-  left: 30%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: #ffffff;
   z-index: 1099;
 }
@@ -56,6 +57,13 @@
   gap: 2rem;
   overflow-y: auto;
   padding: 30px 0;
+
+  /* scroll invisível */
+  -ms-overflow-style: none;  /* IE/Edge antigo */
+  scrollbar-width: none;     /* Firefox */
+}
+#salvarPublicacao .corpo-post::-webkit-scrollbar {
+  display: none; /* Chrome, Safari e Edge moderno */
 }
 
 #salvarPublicacao .corpo-post .informacoes-pessoais {
@@ -79,4 +87,10 @@
 
 #salvarPublicacao.show {
   display: flex;
+}
+
+@media only screen and (max-width: 900px) {
+  #salvarPublicacao {
+    width: 80%;
+  }
 }

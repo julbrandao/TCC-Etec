@@ -11,11 +11,11 @@
 
   <body>
       <header>
+      <!--Navbar-->
       <nav class="navbar">
         <div
           class="flex"
-          style="justify-content: flex-start; width: 100%; gap: 1.5rem"
-        >
+          style="justify-content: flex-start; width: 100%; gap: 1.5rem">
           <div style="line-height: 50px">
             <button class="hamburger" id="hamburger"></button>
           </div>
@@ -75,8 +75,7 @@
       <!--Topo do perfil (fixo)-->
 
     <div class="header-perfil" style="padding-top: 50px">
-      <img
-        class="header-image"
+      <img class="header-image"
         src="../assets/jpg/teste-header-perfil.jpeg"
         alt=""
       />
@@ -95,22 +94,31 @@
           <p><span>100</span> seguidores</p>
         </div>
         <div class="div-3">
-          <a href="../user/perfil-ong.html" class="button" style="height: 25px; width: 60px; font-size: 14px; margin-right: 15px;">Seguir</a>
+          <a href="../user/perfil-ong.html" class="button" id="botao-seguir">Seguir</a>
         </div>
       </div>
     </div>
 
-     <!--Coleções (fixo)-->
-
     <div class="main-perfil">
       <section class="feed-profile">
-        <div class="flex main-left">
-          <div class="itens-salvos">
-            <div class="title-itens">
-              <h4>Coleções</h4>
-            </div>
 
-            <div class="elementos-salvos">
+      <div class="flex main-left" style="margin-top: -20px;">
+
+        <!--Coleções (fixo)-->
+         
+        <!--menu coleções para mobile-->
+        <div class="flex main-right">
+              <div class="menu-perfil-mobile" id="abrir-secao-colecoes">
+          <a style="font-weight: 700;" id="txt-abrir-secao-colecoes">Coleções</a>
+            </div>
+        </div>
+        
+        <!--menu coleções desktop-->
+          <div class="itens-salvos" id="secao-colecoes">
+            <div class="title-itens" id="titulo-secao-colecoes" ><h4>Coleções</h4></div>
+
+            <div class="elementos-salvos" >
+              <div class="subcontainer-colecoes">
               <article class="item-colecao">
                 <a class="icon-colecao">V</a>
                 <a >Ver mais tarde</a>
@@ -120,57 +128,58 @@
                 <a class="icon-colecao">V</a>
                 <a>Ver mais tarde</a>
               </article>
+
+              <article class="item-colecao">
+                <a class="icon-colecao">V</a>
+                <a >Ver mais tarde</a>
+              </article>
+
+              <article class="item-colecao">
+                <a class="icon-colecao">V</a>
+                <a>Ver mais tarde</a>
+              </article>
+              </div>
             </div>
           </div>
 
        <!--Mídia (fixo)-->
-
-          <div
-            class="container"
-            id="link-midia"
-            style="
-              width: 350px;
-              height: 20px;
-              display: flex;
-              padding: 1rem;
-              flex-direction: row;
-              align-items: center;
-              cursor: pointer;
-              justify-content: space-between;
-            "
-          >
+          <div class="container-midia" id="link-midia">
             <h4>
               <a id="link-midia-text">Mídia</a>
             </h4>
             <a class="ver-tudo"> &gt;</a>
           </div>
-
-        </div>
+      </div>
 
         <div class="flex main-right">
-          <div
-            class="flex"
-            style="align-items: center; justify-content: center; width: 107%"
-          >
-
-          <!--Menu sobre e postagens (fixo)-->
+          <div class="flex" style="align-items: center; justify-content: center; width: 100%">
+            
+          <!--Menu sobre e postagens (fixo) (desktop)-->
             <div class="menu-perfil">
               <article class="option-menu">
                 <a id="link-sobre">Sobre</a>
               </article>
               <article class="option-menu">
-                <a
-                  id="link-postagens"
-                  >Postagens</a
-                >
+                <a id="link-postagens">Postagens</a>
+              </article>
+            </div>
+
+          <!--Menu sobre e postagens (fixo) (mobile)-->
+            <div class="menu-perfil-mobile">
+              <article class="option-menu">
+                <a id="link-sobre-mobile">Sobre</a>
+              </article>
+              <article class="option-menu">
+                <a id="link-postagens-mobile">Postagens</a>
+              </article>
+              <article class="option-menu">
+                <a id="link-midia-mobile">Mídia</a>
               </article>
             </div>
           </div>
 
           <!-- ********** Seção Postagens ********** -->
-           <div id="secao-postagens" style="display: none; flex-direction: column; gap: 15px; transform: translateX(15px);">
-
-
+        <div id="secao-postagens" style="display: none; flex-direction: column;">
           <article class="post">
             <div class="autor-post">
               <div class="flex" style="flex-direction: column">
@@ -206,11 +215,11 @@
               <a class="reaction" >Compartilhar</a>
             </div>
           </article>  
-           </div>
+        </div>
 
            <!-- ********** Seção Sobre ********** -->
-    <div id="secao-sobre" style="display: none; flex-direction: column; gap: 15px; transform: translateX(20px);">
-      <article class="sobreContainer">
+        <div id="secao-sobre" style="display: none; flex-direction: column;">
+          <article class="sobreContainer">
             <div class="sobreCorpo">
               <h3>Causa social: Infantil</h3>
               <p>
@@ -249,62 +258,29 @@
               </div>
             </div>
           </article>
-    </div>
+        </div>
 
     <!-- ********** Seção Mídia ********** -->
     <div id="secao-midia" style="display: none; flex-direction: column; gap: 15px; transform: translateX(-14px); width: 92%;">
-                <article
-            class="container"
-            style="
-              border: 1px solid #cdcccc;
-              width: 100%;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: space-between;
-              padding-bottom: 12px;
-            "
-          >
-            <h4
-              style="
-                width: 100%;
-                padding-top: 10px;
-                padding-bottom: 15px;
-                border-bottom: 3px solid #dadada;
-              "
-            >
-              Mídia
-            </h4>
+      <article class="container secao-midia">
+        <h4 class="titulo-midia">Mídia</h4>
 
-            <section class="fotos-container">
+        <section class="fotos-container">
 
-              <div
-                data-modal="btnModalPost"
-                class="foto"
-                style="
-                cursor: pointer;
-                  background: url(../assets/jpg/foto-post.jpg);
-                  background-size: cover;
-                "
-              ></div>
-            </section>
-            <div
-              style="
-                width: 95%;
-                display: flex;
-                flex-direction: row;
-                justify-content: flex-end;
-                height: 100%;
-                align-items: flex-end;
-              "
-            >
-            </div>
-          </article>
+          <div data-modal="btnModalPost" class="foto" 
+          style=" cursor: pointer; 
+          background: url(../assets/jpg/foto-post.jpg); 
+          background-size: cover; " >
+          </div>
+        </section>  
+
+        <div class="acoes-midia"></div>
+      </article>
     </div>
 
         <!-- ********** Seção Coleção ********** -->
 
-      <div id="secao-colecao" style="display: none; flex-direction: column; gap: 15px; transform: translateX(-14px); width: 92%;">
+      <div id="secao-colecao" style="display: none; align-items: center; justify-content: center; width: 100%;">
                 <article class="post">
                     <div class="autor-post">
                         <div class="flex" style="flex-direction: column;">
@@ -347,47 +323,6 @@
     </div>
 
 <!-- ********** MODAIS ********** -->
-
-    <!--********** Criar Post modal **********-->
-    <div id="criarPost">
-      <div class="cabecalho-post">
-        <div
-          style="
-            width: 95%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          "
-        >
-          <h3>Criar Post</h3>
-        </div>
-        <a href="" class="sair" id="sairCriarPost">X</a>
-      </div>
-      <div class="corpo-post">
-        <div class="informacoes-pessoais">
-          <div
-            class="perfilIcon"
-            style="background-image: url(../assets/jpg/foto-perfil-exemplo.jpg)"
-          ></div>
-          <p>Cartinha Mágica</p>
-        </div>
-        <textarea style=" resize: none;"
-          name=""
-          id="textPost"
-          placeholder="No que você está pensando?"
-        ></textarea>
-        <input
-          type="file"
-          name="imagemPost"
-          id="imagemPost"
-          style="display: none"
-        />
-        <label for="imagemPost" class="add-file-post">Adicionar ao Post</label>
-      </div>
-      <div style="width: 100%; display: flex; justify-content: center">
-        <a class="btn-publicar">Publicar</a>
-      </div>
-    </div>
 
     <!--********** Salvar Publicação Modal **********-->
     <div id="salvarPublicacao">
@@ -474,94 +409,23 @@
       </div>
     </div>
 
-    <!-- ********** Modal criar Colecao ********** -->
-        <div id="criarColecao">
-      <div class="modal-header">
-        <h1 class="modal-title">Criar nova coleção</h1>
-        <button class="close-modal" id="fecharCriarColecao">X</button>
-      </div>
-
-      <div class="modal-body">
-        <div class="desc-criarcolecao">
-          <span>Crie uma nova coleção para organizar seus itens salvos.</span>
-        </div>
-
-        <div class="form-criarcolecao">
-          <form action="">
-            <label for="nomeColecao">Nome da coleção</label>
-            <input
-              type="text"
-              id="nomeColecao"
-              name="nomeColecao"
-              placeholder="Ex: Pets, Causa Infantil, etc"
-            />
-
-            <div class="botoes-criarcolecao">
-              <button id="btn-cancelar-criarcolecao" type="button">
-                Cancelar
-              </button>
-
-              <button id="btn-criar-criarcolecao" type="submit">
-                Criar
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-
         <!-- Modal Imagem aberta -->
     <div id="modalPost" data-modal="btnModalPost" style="display: none">
-      <div
-        style="
-          display: flex;
-          width: 70%;
-          height: 100%;
-          flex-direction: column;
-          justify-content: space-between;
-          align-items: center;
-        "
-      >
-        <div
-          style="
-            width: 100%;
-            display: flex;
-            align-items: center;
-            padding: 0;
-            height: 10px;
-          "
-        >
+      
+      <div class="container-foto-modal">
+        <div style="width: 100%; display: flex; align-items: center; padding: 0; height: 10px;">
           <a href="" class="sair">X</a>
         </div>
-
-        <div
-          style="
-            background: url(../assets/jpg/foto-post.jpg);
+        <div class="photo-post"
+          style=
+            "background: url(../assets/jpg/foto-post.jpg);
             background-repeat: no-repeat;
-            background-size: cover;
-          "
-          class="photo-post"
-        ></div>
+            background-size: cover;">
+        </div>
       </div>
-      <div
-        style="
-          width: 30%;
-          border-left: 3px solid #f5f5f5;
-          border-radius: 0 10px 10px 0;
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-        "
-      >
-        <div
-          class=""
-          style="
-            border-bottom: 3px solid #f5f5f5;
-            display: flex;
-            align-items: center;
-            padding: 1rem;
-          "
-        >
+
+      <div class="container-legenda-modal">
+        <div class="topo-legenda-modal">
           <div class="autor-photo" style="line-height: 5px">
             <img src="../assets/jpg/foto-perfil-exemplo.jpg" alt="" />
           </div>
@@ -570,57 +434,23 @@
             <a class="info">Itu - SP</a>
           </div>
         </div>
+
         <article class="postInfo">
-          <div
-            style="
-              display: flex;
-              width: 100%;
-              padding-left: 2.5rem;
-              height: 20px;
-              align-items: flex-start;
-              justify-content: flex-start;
-            "
-          >
+          <div class="data-legenda-modal">
             <a class="info">Out 12 às 19h19</a>
           </div>
-          <p class="txtPost">
-            🌟 Feliz Dia das Crianças! 🌟
-            <br /><br />
-            Hoje celebramos os pequenos grandes sonhos que movem o mundo. Que
-            nunca falte sorriso, brincadeira e oportunidades para todas as
-            crianças serem exatamente quem elas desejam ser. 💛
-            <br /><br />
-            <span class="hashtags"
-              >#DiaDasCrianças #InfânciaComAmor #TransformandoVidas</span
-            >
+          <div class="texto-legenda-modal">
+            <p class="txtPost">
+              🌟 Feliz Dia das Crianças! 🌟
+              <br /><br />
+              Hoje celebramos os pequenos grandes sonhos que movem o mundo. Que
+              nunca falte sorriso, brincadeira e oportunidades para todas as
+              crianças serem exatamente quem elas desejam ser. 💛
+              <br /><br />
           </p>
+          </div>
         </article>
       </div>
-    </div>
-
-        <!-- Adicionar Imagem em Mídia -->
-    <div id="adicionarImagemModal">
-      <header class="modal-header">
-        <h2 class="modal-title">Adicionar imagem</h2>
-        <button id="closeModal" class="btn-close">&times;</button>
-      </header>
-
-      <label for="txtlegenda">Adicione uma legenda a imagem</label>
-      <input type="text" id="txtlegenda" name="txtlegenda" placeholder="Legenda..."/> 
-      <section class="modal-body">
-        <label for="fileInput" class="drop-area">
-            <img src="" alt="">
-          <p>Escolha uma imagem</p>
-          <input id="fileInput" type="file" accept="image/*" />
-        </label>
-
-        <div class="preview" id="previewContainer"></div>
-      </section>
-
-      <footer class="modal-footer">
-        <button id="cancelBtn" class="btn-secondary">Cancelar</button>
-        <input type="submit" value="Adicionar" class="btn-add" />
-      </footer>
     </div>
 
  <script>
@@ -638,8 +468,13 @@
       const linkMidiaText = document.getElementById("link-midia-text");
       const linkColecao = document.querySelectorAll(".item-colecao");
 
+      const linkSobreMobile = document.getElementById("link-sobre-mobile");
+      const linkPostagensMobile = document.getElementById("link-postagens-mobile");
+      const linkMidiaMobile = document.getElementById("link-midia-mobile");
+
       secaoSobre.style.display = "flex";
       linkSobre.style.color = "#e74c3c";
+      linkSobreMobile.style.color = "#e74c3c";
 
       //evento de clicar no botao de postagens
       linkPostagens.addEventListener("click", () => {
@@ -713,8 +548,80 @@ linkColecao.forEach(element => {
     linkMidiaText.style.color = "";
     linkSobre.style.color = "";
     linkPostagens.style.color = "";
+    linkMidiaMobile.style.color = "";
+    linkSobreMobile.style.color = "";
+    linkPostagensMobile.style.color = "";
+    
   });
 });
+
+  //MENU PARA MOBILE
+
+     linkPostagensMobile.addEventListener("click", () => {
+        secaoPostagens.style.display = "flex";
+        secaoSobre.style.display = "none";
+        secaoMidia.style.display = "none";
+        secaoColecao.style.display = "none";
+
+        linkPostagensMobile.style.color = "#e74c3c";
+        linkPostagensMobile.style.fontWeight = "bold";
+        linkSobreMobile.style.color = "";
+        linkMidiaMobile.style.color = "";
+        linkColecao.forEach(el => {
+          el.style.color = "";
+          el.style.fontWeight = "";
+    });
+      });
+
+      linkSobreMobile.addEventListener("click", () => {
+        secaoSobre.style.display = "flex";
+        secaoPostagens.style.display = "none";
+        secaoMidia.style.display = "none";
+        secaoColecao.style.display = "none";
+
+        linkSobreMobile.style.color = "#e74c3c";
+        linkSobreMobile.style.fontWeight = "bold";
+        linkPostagensMobile.style.color = "";
+        linkMidiaMobile.style.color = "";
+        linkColecao.forEach(el => {
+          el.style.color = "";
+          el.style.fontWeight = "";
+    });
+      }); 
+
+      linkMidiaMobile.addEventListener("click", () => {
+        secaoMidia.style.display = "flex";
+        secaoPostagens.style.display = "none";
+        secaoSobre.style.display = "none";
+        secaoColecao.style.display = "none";
+
+        linkMidiaMobile.style.color = "#e74c3c";
+        linkMidiaMobile.style.fontWeight = "bold";
+        linkSobreMobile.style.color = "";
+        linkPostagensMobile.style.color = "";
+        linkColecao.forEach(el => {
+          el.style.color = "";
+          el.style.fontWeight = "";
+    });
+      }); 
+
+      //Versão mobile da seção coleções (aparecer/desaparecer)
+        const abrirSecaoColecoes = document.getElementById('abrir-secao-colecoes');
+        const secaoColecoes = document.getElementById('secao-colecoes');
+        const TxtAbrirSecaoColecoes = document.getElementById('txt-abrir-secao-colecoes');
+
+        abrirSecaoColecoes.addEventListener('click', (e) => {
+            e.preventDefault();
+            secaoColecoes.classList.toggle('show');
+
+            TxtAbrirSecaoColecoes.style.color = "#e74c3c";
+
+            if (secaoColecoes.classList.contains('show')) {
+        TxtAbrirSecaoColecoes.style.color = "#e74c3c"; // cor quando está aberto
+    } else {
+        TxtAbrirSecaoColecoes.style.color = ""; // volta à cor padrão quando fechado
+    }
+        });
 
     </script>
 

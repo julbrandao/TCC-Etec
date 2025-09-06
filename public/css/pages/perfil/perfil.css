@@ -7,6 +7,7 @@
 }
 
 .main-left {
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -15,6 +16,7 @@
 }
 
 .main-right {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -23,6 +25,8 @@
   gap: 12px;
   margin-right: 0.8vh;
 }
+
+/*Topo perfil*/
 
 .icon-profile {
   margin-top: -75px;
@@ -73,6 +77,15 @@
   object-fit: cover;
 }
 
+#botao-seguir{
+  height: 25px;
+  width: 60px; 
+  font-size: 14px; 
+  margin-right: 15px;
+}
+
+/*Coleção/Itens salvos*/
+
 .itens-salvos {
   width: 350px;
   padding: 2vh;
@@ -106,7 +119,22 @@
 }
 
 .subcontainer-colecoes{
-  display: flex; flex-direction: column; gap: 15px; max-height: 150px; overflow-y: auto; overflow-x: hidden; width: 100%;
+  display: flex;
+  flex-direction: column; 
+  gap: 15px; max-height: 
+  150px; 
+  overflow-y: auto; 
+  overflow-x: hidden; 
+  width: 100%;
+
+    /* scroll invisível */
+  -ms-overflow-style: none;  /* IE/Edge antigo */
+  scrollbar-width: none;     /* Firefox */
+}
+
+    /* scroll invisível */
+.subcontainer-colecoes::-webkit-scrollbar {
+  display: none; /* Chrome, Safari e Edge moderno */
 }
 
 .ver-tudo {
@@ -143,6 +171,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.botao-nova-colecao {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+
+#abrir-secao-colecoes{
+    display: none;
 }
 
 .menu-perfil {
@@ -200,7 +240,6 @@
 .div-3 {
   display: flex;
   align-items: center;
-  padding-right: 30px;
 }
 
 .post-salvo {
@@ -240,7 +279,7 @@
   justify-content: flex-start;
   gap: 2rem;
 
-  & .foto {
+  .foto {
     width: 130px;
     height: 130px;
     border-radius: 5px;
@@ -251,21 +290,6 @@
     align-items: center;
     justify-content: center;
   }
-}
-
-.container-midia {
-  width: 350px;
-  height: 20px;
-  display: flex;
-  padding: 1rem;
-  flex-direction: row;
-  align-items: center;
-  cursor: pointer;
-  justify-content: space-between;
-  background-color: #fff;
-  border: 1px solid var(--gray-border);
-  border-radius: 15px;
-  box-shadow: 0 3px 10px 1px #0000001f;
 }
 
 .sobreContainer {
@@ -309,9 +333,48 @@
   }
 }
 
+#secao-postagens{
+   flex-direction: column;
+}
+
+.create-post{
+  margin-bottom: 1rem;
+}
+
 .menu-perfil-mobile{
   display: none;
 }
+
+.secao-midia {
+  border: 1px solid #cdcccc;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 12px;
+}
+
+.titulo-midia {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #dadada;
+}
+
+.icone-adicionar {
+  cursor: pointer;
+}
+
+.acoes-midia {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 100%;
+  align-items: flex-end;
+}
+
 
 @media only screen and (max-width: 900px) {
 
@@ -368,21 +431,40 @@
   }
 
   .itens-salvos {
-    width: 100%;
-    border-radius: 0;
+    width: 80%;
+    border-radius: 15px;
     margin-top: 5px;
   }
 
+#secao-colecoes {
+  max-height: 0;
+  opacity: 0;
+  margin-top: -50px;
+  margin-bottom: -30px;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+}
+
+#secao-colecoes.show {
+  max-height: 1000px;
+  margin-top: 0;
+  opacity: 1;
+}
+
   .main-left {
     width: 100%;
-    flex-direction: row;
+    flex-direction: column;
+    margin-top: 20px;
+    justify-content: center;
   }
 
   .main-right {
-    width: 100vh;
+    width: 85%;
     margin-top: 2rem;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    
   }
 
   .icon-colecao {
@@ -403,10 +485,6 @@
     justify-content: center;
   }
 
-  .post {
-    width: 70%;
-    max-width: 300px;
-  }
 
   .menu-perfil {
     width: 350px;
@@ -421,8 +499,8 @@
   }
 
   .menu-perfil-mobile {
-  width: 100%;
-  max-width: 350px; 
+  width: 75vw;
+  margin: 10px auto;
   height: 40px;
   background-color: white;
   border: 1px solid var(--gray-border);
@@ -434,6 +512,35 @@
   margin: 10px auto; 
   flex-shrink: 1;
   box-sizing: border-box;
+}
+
+#abrir-secao-colecoes{
+  display: flex;
+}
+
+#titulo-secao-colecoes{
+  display: none;
+}
+
+.sobreContainer{
+    width: 90vw;
+    max-width: 400px;
+
+}
+
+.create-post{
+    width: 90vw;
+    max-width: 400px;
+}
+
+.post{
+    width: 90vw;
+    max-width: 400px;
+}
+
+#botao-seguir{
+  margin-bottom: 1rem;
+
 }
 
 }
