@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UneONG - Feed</title>
+    <link rel="stylesheet" href="../css/partials/navbar.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/pages/feed/feed.css">
+    <style>
+        
+    </style>
+</head>
+
+<body>
+
+    <header>
+      <nav class="navbar">
+        <div
+          class="flex"
+          style="justify-content: flex-start; width: 100%; gap: 1.5rem"
+        >
+          <div style="line-height: 50px">
+            <button class="hamburger" id="hamburger"></button>
+          </div>
+          <ul class="nav-links" id="navlinks">
+            <li><a href="feed.html">Explorar</a></li>
+            <li><a href="ongsFiltro.html">ONGs</a></li>
+          </ul>
+          <a class="nav-title" href="../ong/feed.html"
+            ><img
+              src="../assets/svg/Logo UneONG FINAL.svg"
+              alt=""
+              width="80"
+              height="80"
+          /></a>
+        </div>
+
+        <input type="text" name="txtbuscar" id="txtbuscar" class="buscar" placeholder="Procure uma ong..." />
+        <label for="txtbuscar"><img src="../assets/png/icones/icone_buscar.png" class="buscarIcon" alt=""></label>
+
+        <div
+          class="nav-elements"
+          style="width: 100px; justify-content: flex-end; padding-left: 1rem"
+        >
+          <div class="icon-menu">
+            <img
+              src="../assets/png/user-example.png"
+              alt=""
+              id="dropdown-perfil"
+            />
+          </div>
+          <div class="dropdown" id="dropdownMenu">
+            <div class="flex" style="width: 100%">
+              <img
+                class="foto-perfil"
+                src="../assets/jpg/foto-perfil-exemplo.jpg"
+                alt=""
+              />
+              <div class="mn-part1">
+                <p class="name-account" id="txtnomeOng">Cartinha Mágica</p>
+                <p class="email-account" id="txtemailOng">cartinhamagica@gmail.com</p>
+                <a class="perfil-account" href="perfil.html">Seu perfil ➞</a>
+              </div>
+            </div>
+            <div class="mn-part2">
+                        <ul>
+                            <li><a href="configuracoes.html"><img src="../assets/png/icones/icone_configuracoes.png" alt="" style="width: 25px; margin-right: 7px; vertical-align: middle;">Configurações</a></li>
+                        </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div id="overlay"></div>
+
+    <main>
+        <div class="feed-section sm1">
+            <h4>Patrocinado</h4>
+
+            <article class="sponsor">
+                <img src="../assets/jpg/teste-sponser.jpeg" alt="">
+                <div>
+                    <h4>PoupeBag</h4>
+                    <a href="">poupebag.com.br</a>
+                </div>
+            </article>
+
+            <article class="sponsor">
+                <img src="../assets/jpg/teste-sponser2.jpeg" alt="">
+                <div>
+                    <h4>PoltronaTati</h4>
+                    <a href="">waydesignnow.com.br</a>
+                </div>
+            </article>
+        </div>
+
+        <div class="feed-section lg">
+
+
+                <article class="post">
+                    <div class="autor-post">
+                        <div class="flex" style="flex-direction: column;">
+                            <div class="flex">
+                                <div class="autor-photo">
+                                    <img src="../assets/jpg/foto-perfil-exemplo.jpg" alt="" />
+                                </div>
+                                <a class="autor" href="../">Cartinha Mágica</a>
+                            </div>
+                            <span class="horario">Fev 26 às 19h19</span>
+                        </div>
+                        <div>
+                            <div class="options-container">
+                                <a class="options-post" onclick="toggleOptions(this)">...</a>
+                                <div class="dropdown-options">
+                    <a class="btnEditarPost" style="cursor: pointer">Editar post</a>
+                    <a class="btnSalvarPost" style="cursor: pointer"
+                      >Salvar post</a
+                    >
+                    <a class="btnExcluirPost" style="cursor: pointer">Excluir post</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="corpo-post">
+                        <p>
+                            Esse projeto tem o intuito de levar alegria e esperança para crianças que muitas vezes não têm condições de ter um Natal tão especial. A cada ano, voluntários se unem para arrecadar doações e organizar essa festa inesquecível.
+                        </p>
+                    </div>
+                    <div class="reactions-post">
+                        <div style="width: 100%; gap: 5px; align-items: center;" class="flex">
+                            <img src="../assets/png/icones/icone_curtir.png" width="16px" height="16px" alt="">
+                            <span style=" color: #a6a6a6; font-weight: bold; font-size: 13px;">100</span>
+                        </div>
+                        
+                        <a class="reaction" >Curtir</a>
+                        <a class="reaction" >Compartilhar</a>
+                    </div>
+                </article>
+
+
+                <article class="post">
+                    <div class="autor-post">
+                        <div class="flex" style="flex-direction: column;">
+                            <div class="flex">
+                                <div class="autor-photo">
+                                    <img src="../assets/jpg/foto-perfil-exemplo.jpg" alt="" />
+                                </div>
+                                <a class="autor" href="../">Cartinha Mágica</a>
+                            </div>
+                            <span class="horario">Fev 26 às 19h19</span>
+                        </div>
+                        <div>
+                            <div class="options-container">
+                                <a class="options-post" onclick="toggleOptions(this)">...</a>
+                                <div class="dropdown-options">
+                    <a class="btnEditarPost" style="cursor: pointer">Editar post</a>
+                    <a class="btnSalvarPost" style="cursor: pointer"
+                      >Salvar post</a
+                    >
+                    <a class="btnExcluirPost" style="cursor: pointer">Excluir post</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="corpo-post">
+                        <p>
+                            Esse projeto tem o intuito de levar alegria e esperança para crianças que muitas vezes não têm condições de ter um Natal tão especial. A cada ano, voluntários se unem para arrecadar doações e organizar essa festa inesquecível.
+                        </p>
+                    </div>
+                    <div class="reactions-post">
+                        <div style="width: 100%; gap: 5px; align-items: center;" class="flex">
+                            <img src="../assets/png/icones/icone_curtir.png" width="16px" height="16px" alt="">
+                            <span style=" color: #a6a6a6; font-weight: bold; font-size: 13px;">100</span>
+                        </div>
+                        
+                        <a class="reaction" >Curtir</a>
+                        <a class="reaction" >Compartilhar</a>
+                    </div>
+                </article>
+
+        </div>
+        <div class="feed-section sm2">
+            <div class="container" style="width: 230px;">
+                <h4>O que está acontecendo:</h4>
+
+                <article class="news">
+                    <h4>Assuntos do Momento em Salto</h4>
+                    <p>Campanha APAE</p>
+                </article>
+
+                <article class="news">
+                    <h4>Amarati • Assunto do momento</h4>
+                    <p>Evento beneficente</p>
+                </article>
+
+                <article class="news">
+                    <h4>Rever Cidadania • Assunto do momento</h4>
+                    <p>Arrecadação</p>
+                </article>
+            </div>
+
+    </main>
+
+    <!-- MODAL SALVAR PUBLICAÇÃO -->
+
+        <div id="salvarPublicacao">
+        <div class="cabecalho-post" style="border-bottom: 2px solid #f5f5f5;">
+            <div style="width: 95%; display: flex; justify-content: center; align-items: center;">
+                <h3 style="font-size: 12pt; color: #2c2f2c;">Salvar em:</h3>
+            </div>
+            <a href="../" class="sair" id="sairSalvarPublicacao">X</a>
+        </div>
+
+        <div class="corpo-post">
+            <div class="subcontainer">
+                <label for="vermaistarde1">Ver mais tarde</label>
+                <input type="checkbox" name="vermaistarde" id="vermaistarde1" style="border-radius: 50%;" />
+            </div>
+            <div class="subcontainer">
+                <label for="vermaistarde2">Ver mais tarde</label>
+                <input type="checkbox" name="vermaistarde" id="vermaistarde2" style="border-radius: 50%;" />
+            </div>
+            <div class="subcontainer">
+                <label for="vermaistarde3">Ver mais tarde</label>
+                <input type="checkbox" name="vermaistarde" id="vermaistarde3" style="border-radius: 50%;" />
+            </div>
+            <div class="subcontainer">
+                <label for="vermaistarde4">Ver mais tarde</label>
+                <input type="checkbox" name="vermaistarde" id="vermaistarde4" style="border-radius: 50%;" />
+            </div>
+            <div class="subcontainer">
+                <label for="vermaistarde5">Ver mais tarde</label>
+                <input type="checkbox" name="vermaistarde" id="vermaistarde5" style="border-radius: 50%;" />
+            </div>
+            <div class="subcontainer">
+                <label for="vermaistarde6">Ver mais tarde</label>
+                <input type="checkbox" name="vermaistarde" id="vermaistarde6" style="border-radius: 50%;" />
+            </div>
+        </div>
+        <br /><br />
+        <div style="width: 100%; display: flex; justify-content: flex-end; padding: 1rem 0 0 0">
+            <a href="../" class="btn-confirmar">Concluir</a>
+        </div>
+    </div>
+
+        <!-- EDITAR POSTAGEM -->
+
+      <div id="editarPost">
+      <div class="cabecalho-post">
+        <div
+          style="
+            width: 95%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <h3>Editar Postagem</h3>
+        </div>
+        <a href="" class="sair" id="sairEditarPost">X</a>
+      </div>
+      <div class="corpo-post">
+        <div class="informacoes-pessoais">
+          <div
+            class="perfilIcon"
+            style="background-image: url(../assets/jpg/foto-perfil-exemplo.jpg)"
+          ></div>
+          <p>Cartinha Mágica</p>
+        </div>
+        <textarea style=" resize: none;"
+          name=""
+          id="textPost"
+          placeholder="No que você está pensando?"
+        ></textarea>
+        <input
+          type="file"
+          name="imagemPost"
+          id="imagemPost"
+          style="display: none"
+        />
+        <label for="imagemPost" class="add-file-post">Adicionar Imagens</label>
+        <div class="previewContainerPost"></div>
+      </div>
+      <div style="width: 100%; display: flex; justify-content: center">
+        <a class="btn-salvar">Salvar</a>
+      </div>
+    </div>
+
+    <!-- EXCLUIR POSTAGEM -->
+
+    <div id="excluirPost">
+      <div class="modal-header">
+        <h1 class="modal-title">Excluir Publicação</h1>
+        <button class="close-modal" id="fecharSaida">X</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="desc-excluirmodal">
+          <span>Você tem certeza que deseja excluir publicação? </span>
+        </div>
+
+        <div class="opcoes-excluirmodal">
+          <button id="btn-cancelar-excluirmodal">Cancelar</button>
+
+          <button id="btn-sair-excluirmodal">Excluir</button>
+        </div>
+      </div>
+    </div>
+
+    <script>window.onload = async () => {
+      try {
+        const res = await fetch("/api/config", {
+          method: "GET",
+          credentials: "include" // necessário para enviar o cookie da sessão
+        });
+        const data = await res.json();
+        if (!res.ok) {
+          alert(data.error);
+          // redireciona
+          window.location.href = "../index.html";
+          return;
+        }
+
+        
+
+       
+        document.getElementById("txtnomeOng").textContent = data.nome_ong;
+       
+        document.getElementById("txtemailOng").textContent = data.email_ong;
+        
+        console.log(data);
+      } catch (err) {
+        console.error("Erro ao carregar dados:", err);
+      }
+    };</script>
+    <script src="../js/funcionalidades.js"></script>
+</body>
+
+</html>

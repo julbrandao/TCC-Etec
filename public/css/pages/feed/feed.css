@@ -1,53 +1,107 @@
-.feed-section{
-    display: flex;
-    align-items: center; flex-direction: column;
-    gap: 1rem;
-    height: 100%;
-    padding-top: 20px;
+.feed-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100%;
+  padding-top: 20px;
 }
 
-.lg{
-    width: 50%;
+.lg {
+  width: 50%;
+  margin-left: 10px;
+  margin-top: 150px;
+
 }
 
-.sm{
-    width: 25%;
-    align-items: flex-start;
-    padding-left: 30px;
-    
-
-    & h4{
-        color: #708372;
-        text-align: left;
-        padding-top: 1rem;
-    }
+.div-post-header{
+  position: fixed;
+  top: 6.8%;
+  left: 23.5%;
+  padding: 10px 6%;
+  z-index: 100;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  background-color: #f2f5f5 ;
 }
 
-.news h4{
-    font-weight: normal;
-    font-size: 11px;
+.post-header{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid #DDD;
+  background-color: #FFF;
+
 }
 
-.news p{
-    font-weight: bold;
-    font-size: 16px;
+.post-header a{
+  color: rgb(71, 71, 71);
+  text-decoration: none;
+  font-weight: bold;
 }
 
-.suggested-accounts{
-    display: flex;
-    width: 230px;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
+.sm1 {
+  width: 25%;
+  align-items: flex-start;
+  padding-left: 30px;
+  position: fixed;
+  top: 40px;
+  left: 0;
 
-    & .autor{
-        width: 100%;
-        font-size: 9pt;
-    }
+  & h4 {
+    color: #708372;
+    text-align: left;
+    padding-top: 1rem;
+  }
 }
 
-.icon-profile-mini{
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
+.sm2 {
+  width: 25%;
+  align-items: flex-start;
+  padding-left: 30px;
+  position: fixed;
+  top: 40px;
+  left: 76%;
+
+  & h4 {
+    color: #708372;
+    text-align: left;
+    padding-top: 1rem;
+  }
+}
+
+.news h4 {
+  font-weight: normal;
+  font-size: 11px;
+}
+
+.news p {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.suggested-accounts {
+  display: flex;
+  width: 230px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+
+  & .autor {
+    width: 100%;
+    font-size: 9pt;
+  }
+}
+
+.icon-profile-mini {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }

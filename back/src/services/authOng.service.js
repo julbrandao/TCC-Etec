@@ -1,6 +1,7 @@
 import supabase from '../config/supabase.js';
  console.log('Services Body recebido:');
  
+ 
 
 export const validarOng = async (cnpj, email_ong,senha_ong) => {
   const { data, error } = await supabase
@@ -14,6 +15,7 @@ export const validarOng = async (cnpj, email_ong,senha_ong) => {
   if (error) {
     return { sucesso: false, mensagem: 'Cnpj, Email ou senha incorretos' };
   }
-
+  else {
   return { sucesso: true, ong: data };
+  }
 };

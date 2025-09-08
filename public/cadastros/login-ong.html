@@ -54,6 +54,25 @@
             <!-- Versão responsiva do container de escolha de cadastro/login -->
         </div>
     </div>
+        <script>window.onload = async () => {
+      try {
+        const res = await fetch("/api/sessao", {
+          method: "GET",
+          credentials: "include" // necessário para enviar o cookie da sessão
+        });
+
+        if (res.ok) {
+          alert("Você já está logado!");
+          
+          window.location.href = "../index.html";
+          return;
+        }
+
+        console.log(data);
+      } catch (err) {
+        console.error("Erro ao carregar dados:", err);
+      }
+    };</script>
      <script src="../js/login-ong.js"></script>
 </body>
 </html>

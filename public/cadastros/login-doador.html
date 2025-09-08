@@ -56,7 +56,25 @@
     </div>
 
 
-    
+        <script>window.onload = async () => {
+      try {
+        const res = await fetch("/api/sessao", {
+          method: "GET",
+          credentials: "include" // necessário para enviar o cookie da sessão
+        });
+
+        if (res.ok) {
+          alert("Você já está logado!");
+          
+          window.location.href = "../index.html";
+          return;
+        }
+
+        console.log(data);
+      } catch (err) {
+        console.error("Erro ao carregar dados:", err);
+      }
+    };</script>
     <script src="../js/login-doador.js"></script>
 </body>
 </html>

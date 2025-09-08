@@ -2,107 +2,534 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8" />
+   <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Configurações</title>
+    <title>Início</title>
     <link rel="stylesheet" href="../css/partials/navbar.css" />
     <link rel="stylesheet" href="../css/index.css" />
-    <link rel="stylesheet" href="../css/pages/configuracoes/config.css" />
+    <link rel="stylesheet" href="../css/pages/configuracoes/config-ong.css" />
 </head>
 
 <body>
+  <header>
+    <nav class="navbar">
+       <div
+          class="flex"
+          style="justify-content: flex-start; width: 100%; gap: 1.5rem"
+        >
+          <div style="line-height: 50px">
+            <button class="hamburger" id="hamburger"></button>
+          </div>
+          <ul class="nav-links" id="navlinks">
+            <li><a href="feed.html">Explorar</a></li>
+            <li><a href="ongsFiltro.html">ONGs</a></li>
+          </ul>
+          <a class="nav-title" href="../ong/feed.html"
+            ><img
+              src="../assets/svg/Logo UneONG FINAL.svg"
+              alt=""
+              width="80"
+              height="80"
+          /></a>
+        </div>
 
-   <header>
-        <nav class="navbar">
-            <div class="flex" style="justify-content: flex-start; width: 100%; gap: 1.5rem;">
-                <div style="line-height: 50px;"><button class="hamburger" id="hamburger"></button></div>
-                <ul class="nav-links" id="navlinks">
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="feed.html">Explorar</a></li>
-                    <li><a href="ongsFiltro.html">ONGs</a></li>
-                </ul>
-                <a class="nav-title" href="feed.html"><img src="../assets/svg/Logo UneONG FINAL.svg" alt="" width="80" height="80" /></a>
+
+       <input type="text" name="txtbuscar" id="txtbuscar" class="buscar" placeholder="Procure uma ong..." />
+        <label for="txtbuscar"><img src="../assets/png/icones/icone_buscar.png" class="buscarIcon" alt=""></label>
+
+ <div
+          class="nav-elements"
+          style="width: 100px; justify-content: flex-end; padding-left: 1rem"
+        >
+          <div class="icon-menu">
+            <img
+              src="../assets/png/user-example.png"
+              alt=""
+              id="dropdown-perfil"
+            />
+          </div>
+          <div class="dropdown" id="dropdownMenu">
+            <div cl8777777777778844ass="flex" style="width: 100%">
+              <img
+                class="foto-perfil"
+                src="../assets/jpg/foto-perfil-exemplo.jpg"
+                alt=""
+              />
+              <div class="mn-part1">
+                <p class="name-account" id="txtnomeOng">Cartinha Mágica</p>
+                <p class="email-account" id="txtemailOng">cartinhamagica@gmail.com</p>
+                <a class="perfil-account" href="perfil.html">Seu perfil ➞</a>
+              </div>
             </div>
-
-            <input type="text" name="" id="" class="buscar" />
-
-            <div class="nav-elements" style="width: 100px; justify-content: flex-end;padding-left: 1rem;">
-                <div class="icon-menu">
-                    <img src="../assets/png/user-example.png" alt="" id="dropdown-perfil" />
-                </div>
-                <div class="dropdown" id="dropdownMenu">
-                    <div class="flex" style="width: 100%;">
-                        <img class="foto-perfil" src="../assets/jpg/foto-perfil-exemplo.jpg" alt="" />
-                        <div class="mn-part1">
-                            <p class="name-account">Cartinha Mágica</p>
-                            <p class="email-account">cartinhamagica@gmail.com</p>
-                            <a class="perfil-account" href="../perfilong-ong-view.html">Seu perfil ➞</a>
-                        </div>
-                    </div>
-                    <div class="mn-part2">
+            <div class="mn-part2">
                         <ul>
-                            <li><a href="../configuracoes.html" style="display: flex; gap: 5px; align-items: center;"><img src="../assets/png/icones/icone_configuracoes.png" height="15px" width="15px" alt=""> Configurações</a></li>
-                            <li><a href="">☀ Sair</a></li>
+                            <li><a href="configuracoes.html"><img src="../assets/png/icones/icone_configuracoes.png" alt="" style="width: 25px; margin-right: 7px; vertical-align: middle;">Configurações</a></li>
                         </ul>
-                    </div>
-                </div>
             </div>
-        </nav>
+          </div>
+        </div>
+      </nav>
     </header>
 
-    <div id="overlay"></div>
+  <div id="overlay"></div>
 
-    <main>
-        <section class="fixed-settings-sidebar">
-            <div class="title">
-                <h1>Configurações</h1>
+  <main>
+    <!--seção fixa de configurações-->
+ <section class="fixed-settings-sidebar">
+        <div class="title-container">
+          <img
+            src="../assets/png/icones/icone_configuracoes.png"
+            alt="icone configuracoes"
+          />
+          <h1>Configurações</h1>
+        </div>
+        <div class="elementos-config">
+          <ul>
+            <li>
+              <img src="../assets/png/icones/icone_perfil.png" alt="perfil" /><a
+                id="link-perfil"
+                style="color: #e74c3c; font-weight: bold"
+                >Perfil</a
+              >
+            </li>
+            <li>
+              <img
+                src="../assets/png/icones/icone_tresPontos.png"
+                alt="outras informacoes"
+              /><a id="link-info">Outras Informações</a>
+            </li>
+            <li>
+              <img
+                src="../assets/png/icones/icone_sair.png"
+                alt="outras informacoes"
+              /><a class="link-sair">Sair</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+    <!--seção de perfil -->
+    <section class="display-config" id="secao-perfil">
+        <div class="informacoes-perfil">
+          <div
+            class="imagem-fundo"
+            tabindex="0"
+            id="imagem-fundo"
+            onclick="AcionarFundo()"
+          >
+            <input
+              type="file"
+              accept="image/*"
+              class="input-imagem-fundo"
+              id="input-imagem-fundo"
+            />
+            <span class="span-imagem-fundo"></span>
+          </div>
+
+          <div
+            class="icone-perfil"
+            tabindex="0"
+            id="icone-perfil"
+            onclick="AcionarIcone()"
+          >
+            <input
+              type="file"
+              accept="image/*"
+              class="input-icone-perfil"
+              id="input-icone-perfil"
+            />
+            <span class="span-icone-perfil"></span>
+          </div>
+
+        <div class="info-editar">
+          <div class="linha">
+            <div class="campo-editar-container">
+              <h2>Nome:</h2>
+              <input type="text" name="txtnome" id="txtnome" placeholder="" />
+              <img src="../assets/png/icones/icone_editar.png" alt="Editar" />
             </div>
-            <div class="elementos-config">
-                <ul>
-                    <li><a href="">Perfil</a></li>
-                    <li><a href="">Endereço</a></li>
-                    <li><a href="">Outras Informações</a></li>
-                    <li><a href="">Sair</a></li>
-                </ul>
+
+            <div class="campo-editar-container">
+              <h2>Email:</h2>
+              <input type="email" name="txtemail" id="txtemail" />
+              <img src="../assets/png/icones/icone_editar.png" alt="Editar" />
             </div>
-        </section>
-        <section class="display-config">
-            <div class="informacoes-perfil">
-                <div class="fundo-header-perfil"></div>
-                <div class="icone-perfil"></div>
+          </div>
 
-                <div class="info-editar">
-                    <div class="linha">
-                        <div>
-                            <h2>Nome</h2>
-                            <input type="text" />
-                        </div>
-
-                        <div>
-                            <h2>Email</h2>
-                            <input type="text" />
-                        </div>
-                    </div>
-
-                    <div class="linha">
-                        <div>
-                            <h2>Data de fundação</h2>
-                            <input type="text" />
-                        </div>
-
-                        <div>
-                            <h2>Estado</h2>
-                            <input type="text" />
-                        </div>
-                    </div>
-                </div>
+          <div class="linha">
+            <div class="campo-editar-container">
+              <h2>Data de fundação:</h2>
+              <input type="date" name="txtAdF" id="txtAdF" />
+              <img src="../assets/png/icones/icone_editar.png" alt="Editar" />
             </div>
-        </section>
-    </main>
 
+            <div class="campo-editar-container">
+              <h2>Categoria:</h2>
+              <select id="categoria" name="categoria">
+                <option value="cultura">Cultura</option>
+                <option value="educacao">Educação</option>
+                <option value="meio-ambiente">Meio Ambiente</option>
+                <option value="lgbt">LGBT+</option>
+                <option value="saude">Saúde</option>
+                <option value="animal">Animal</option>
+                <option value="baixa-renda">Baixa Renda</option>
+                <option value="indigenas">Indígenas</option>
+                <option value="pcd">PCD</option>
+                <option value="idosos">Idosos</option>
+                <option value="direitos-humanos">Direitos Humanos</option>
+                <option value="esporte-lazer">Esporte e Lazer</option>
+                <option value="outros">Outros</option>
+              </select>
+            </div>
+          </div>
+          <div class="linha">
+            <div class="campo-editar-container">
+              <h2>Estado:</h2>
+              <input type="text" name="txtestado" id="txtestado" />
+              <img src="../assets/png/icones/icone_editar.png" alt="Editar" />
+            </div>
+
+            <div class="campo-editar-container">
+              <h2>Cidade:</h2>
+              <select id="cidade" name="cidade">
+                <option value="itu">Itu</option>
+                <option value="indaiatuba">Indaiatuba</option>
+                <option value="sorocaba">Sorocaba</option>
+                <option value="salto">Salto</option>
+                <option value="jundiaí">Jundiaí</option>
+                <option value="boituva">Boituva</option>
+                <option value="porto-feliz">Porto Feliz</option>
+                <option value="tiete">Tietê</option>
+                <option value="cabreuva">Cabreúva</option>
+                <option value="outros">Outros</option>
+              </select>
+            </div>
+          </div>
+          <div class="linha">
+            <div class="campo-editar-container">
+              <h2>N° de localização:</h2>
+              <input type="number" name="txtnumlocal" id="txtnumlocal" />
+              <img src="../assets/png/icones/icone_editar.png" alt="Editar" />
+            </div>
+
+            <div class="campo-editar-container">
+              <h2>Rua:</h2>
+              <input type="text" name="txtrua" id="txtrua" />
+              <img src="../assets/png/icones/icone_editar.png" alt="Editar" />
+            </div>
+          </div>
+          <div class="linha">
+            <div class="campo-editar-container">
+              <h2>Bairro:</h2>
+              <input type="text" name="txtbairro" id="txtbairro" />
+              <img src="../assets/png/icones/icone_editar.png" alt="Editar" />
+            </div>
+          </div>
+          <div class="linha">
+            <div class="campo-editar-container">
+              <h2>Complemento:</h2>
+              <input type="text" name="txtcomplemento" id="txtcomplemento" />
+              <img src="../assets/png/icones/icone_editar.png" alt="Editar" />
+            </div>
+          </div>
+          <div class="linha">
+            <div class="campo-editar-container">
+              <h2>Senha:</h2>
+              <input type="text" name="txtsenha" id="txtsenha" />
+              <img src="../assets/png/icones/icone_editar.png" alt="Editar" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="botao-salvarAlteracoes">
+        <button id="Alterar">Salvar Alterações</button>
+      </div>
+    </section>
+
+    <!--seção de outras informações -->
+    <section class="display-config" id="secao-info">
+      <div class="informacoes-perfil">
+        <div class="info-editar">
+          <div class="linha">
+            <div class="campo-editar-container">
+              <h2>CNPJ:</h2>
+              <input type="number" minlength="14" maxlength="14" name="txtcnpj" id="txtcnpj" />
+              <img src="../assets/png/icones/icone_editar.png" alt="Editar" />
+            </div>
+
+            <div class="campo-editar-container">
+              <h2>Nome do representante:</h2>
+              <input type="text" name="txtreplegal" id="txtreplegal" />
+              <img src="../assets/png/icones/icone_editar.png" alt="Editar" />
+            </div>
+          </div>
+
+          <div class="linha">
+            <div class="campo-editar-container">
+              <h2>CPF do representante:</h2>
+              <input type="number" minlength="11" maxlength="11" name="txtcpf" id="txtcpf" />
+              <img src="../assets/png/icones/icone_editar.png" alt="Editar" />
+            </div>
+            <div class="campo-editar-container">
+              <h2>Telefone:</h2>
+              <input type="tel" name="txttelefone" id="txttelefone" />
+              <img src="../assets/png/icones/icone_editar.png" alt="Editar" />
+            </div>
+          </div>
+          <div class="linha">
+            <div class="campo-editar-container">
+              <h2>Razão Social:</h2>
+              <input type="text" name="txtrazao" id="txtrazao" />
+              <img src="../assets/png/icones/icone_editar.png" alt="Editar" />
+            </div>
+
+            <div class="campo-editar-container">
+              <h2>Classificação:</h2>
+              <select id="Classificacao" name="Classificacao">
+                <option value="1">Fundação</option>
+                <option value="2">Organização da sociedade civil</option>
+                <option value="3">Cooperativa</option>
+                <option value="4">Instituto empresarial</option>
+                <option value="5">
+                  Organização da sociedade civil de interesse público
+                </option>
+                <option value="6">Organização social</option>
+                <option value="7">
+                  Entidade beneficiente de assistência social
+                </option>
+                <option value="8">Negócio Social</option>
+                <option value="9">Outros</option>
+              </select>
+            </div>
+          </div>
+          <div class="linha">
+            <div class="campo-editar-container">
+              <h2>Objetivo:</h2>
+              <input type="text" name="txtobj" id="txtobj" />
+              <img src="../assets/png/icones/icone_editar.png" alt="Editar" />
+            </div>
+          </div>
+          <div class="linha">
+            <div class="campo-editar-container">
+              <h2>Descrição:</h2>
+              <input type="text" name="txtdesc" id="txtdesc" />
+              <img src="../assets/png/icones/icone_editar.png" alt="Editar" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="botao-salvarAlteracoes">
+        <button  id="Alterar2" >Salvar Alterações</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="modalsairconta" Open>
+    <div class="modal-header">
+      <h1 class="modal-title">Sair</h1>
+      <button class="close-modal" id="fecharSaida">X</button>
+    </div>
+
+    <div class="modal-body">
+      <div class="desc-sairconta">
+        <span>Você tem certeza que deseja sair da conta? </span>
+      </div>
+
+      <div class="opcoes-sairconta">
+        <button id="btn-cancelar-sairconta">Cancelar</button>
+
+        <button id="btn-sair-sairconta">Sair</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    window.onload = async () => {
+      try {
+        const res = await fetch("/api/config", {
+          method: "GET",
+          credentials: "include" // necessário para enviar o cookie da sessão
+        });
+        const data = await res.json();
+
+        if (!res.ok) {
+          alert(data.error);
+          // redireciona
+          window.location.href = "../index.html";
+          return;
+        }
+
+        
+
+        document.getElementById("txtnome").value = data.nome_ong;
+        document.getElementById("txtnomeOng").textContent = data.nome_ong;
+        document.getElementById("txtemail").value = data.email_ong;
+        document.getElementById("txtemailOng").textContent = data.email_ong;
+        document.getElementById("txtAdF").value = data.AdF;
+        document.getElementById("categoria").value = data.categoria_ong;
+        document.getElementById("txtestado").value = data.estado;
+        document.getElementById("cidade").value = data.cidade;
+        document.getElementById("txtnumlocal").value = data.n_localizacao;
+        document.getElementById("txtrua").value = data.rua;
+        document.getElementById("txtbairro").value = data.bairro;
+        document.getElementById("txtcomplemento").value = data.complemento;
+        document.getElementById("txtsenha").value = data.senha_ong;
+        document.getElementById("txtreplegal").value = data.nome_representante;
+        document.getElementById("txtcpf").value = data.cpf_representante;
+        document.getElementById("txttelefone").value = data.telefone;
+        document.getElementById("txtrazao").value = data.razao_social;
+        document.getElementById("Classificacao").value = data.classificacao;
+        document.getElementById("txtobj").value = data.objetivo;
+        document.getElementById("txtdesc").value = data.descrição;
+        document.getElementById("txtcnpj").value = data.cnpj;
+        console.log(data);
+      } catch (err) {
+        console.error("Erro ao carregar dados:", err);
+      }
+    };
+    
+    let form = document.getElementById("Alterar")
+    form.addEventListener('click', async function (e) {
+      e.preventDefault();
+
+      const nome_ong = document.getElementById('txtnome').value;
+      const email_ong = document.getElementById('txtemail').value;
+      const rua = document.getElementById('txtrua').value;
+      const cidade = document.getElementById('cidade').value;
+      const n_localizacao = document.getElementById('txtnumlocal').value;
+      const estado = document.getElementById('txtestado').value;
+      const complemento = document.getElementById('txtcomplemento').value;
+      const telefone = document.getElementById('txttelefone').value;
+      const nome_representante = document.getElementById('txtreplegal').value;
+      const cpf_representante = document.getElementById('txtcpf').value;
+      const objetivo = document.getElementById('txtobj').value;
+      const categoria_ong = document.getElementById('categoria').value;
+      const descrição = document.getElementById('txtdesc').value;
+      const senha_ong = document.getElementById('txtsenha').value;
+      const razao_social = document.getElementById('txtrazao').value; //Mudar depois do teste 
+      const bairro = document.getElementById('txtbairro').value; //Mudar depois do teste 
+      const classificacao = document.getElementById('Classificacao').value; //Mudar depois do teste 
+      const AdF = document.getElementById('txtAdF').value;
+      const cnpj = document.getElementById('txtcnpj').value;
+
+      const res = await fetch("/api/ong/atualizar", {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          nome_ong, cnpj, email_ong, rua, cidade, n_localizacao, estado, complemento, telefone, nome_representante, cpf_representante,
+          objetivo, categoria_ong, descrição, senha_ong, razao_social, bairro, classificacao
+          , AdF
+        })
+      
+      });
+      
+
+      if (res.ok) {
+        alert('Editado com sucesso');
+      }
+      if(!res.ok) {
+        alert('ErrorLegal')
+      }
+
+    });
+
+    let form3 = document.getElementById("Alterar2")
+    form3.addEventListener('click', async function (e) {
+      e.preventDefault();
+
+      const nome_ong = document.getElementById('txtnome').value;
+      const email_ong = document.getElementById('txtemail').value;
+      const rua = document.getElementById('txtrua').value;
+      const cidade = document.getElementById('cidade').value;
+      const n_localizacao = document.getElementById('txtnumlocal').value;
+      const estado = document.getElementById('txtestado').value;
+      const complemento = document.getElementById('txtcomplemento').value;
+      const telefone = document.getElementById('txttelefone').value;
+      const nome_representante = document.getElementById('txtreplegal').value;
+      const cpf_representante = document.getElementById('txtcpf').value;
+      const objetivo = document.getElementById('txtobj').value;
+      const categoria_ong = document.getElementById('categoria').value;
+      const descrição = document.getElementById('txtdesc').value;
+      const senha_ong = document.getElementById('txtsenha').value;
+      const razao_social = document.getElementById('txtrazao').value; //Mudar depois do teste 
+      const bairro = document.getElementById('txtbairro').value; //Mudar depois do teste 
+      const classificacao = document.getElementById('Classificacao').value; //Mudar depois do teste 
+      const AdF = document.getElementById('txtAdF').value;
+      const cnpj = document.getElementById('txtcnpj').value;
+
+      const res = await fetch("/api/ong/atualizar", {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          nome_ong, cnpj, email_ong, rua, cidade, n_localizacao, estado, complemento, telefone, nome_representante, cpf_representante,
+          objetivo, categoria_ong, descrição, senha_ong, razao_social, bairro, classificacao
+          , AdF
+        })
+      
+      });
+      
+
+      if (res.ok) {
+        alert('Editado com sucesso');
+        window.location.reload();
+      }
+      if(!res.ok) {
+        alert('ErrorLegal')
+      }
+
+    });
+
+    let form1 = document.getElementById("btn-sair-sairconta")
+    form1.addEventListener('click', async function (e) {
+      e.preventDefault();
+
+    try {
+    const response = await fetch("/logout", {
+      method: "POST",
+      credentials: "include" // importante para enviar o cookie da sessão
+    });
+
+    const result = await response.json();
+    console.log(result.message);
+
+    if (response.ok) {
+      // redirecionar para login
+      window.location.href = "../index.html";
+    }
+  } catch (error) {
+    console.error("Erro no logout:", error);
+  }
+
+    });
+
+
+    //scripts para esconder/aparecer as seções
+    const secaoPerfil = document.getElementById("secao-perfil");
+      const secaoInfo = document.getElementById("secao-info");
+      const linkPerfil = document.getElementById("link-perfil");
+      const linkInfo = document.getElementById("link-info");
+
+      secaoInfo.style.display = "none";
+
+      //evento de clicar no botao de perfil
+      linkPerfil.addEventListener("click", () => {
+        secaoPerfil.style.display = "block";
+        secaoInfo.style.display = "none";
+        linkPerfil.style.color = "#e74c3c";
+        linkPerfil.style.fontWeight = "bold";
+        linkInfo.style.color = "";
+      });
+
+      //evento de clicar no botao de outras informacoes
+      linkInfo.addEventListener("click", () => {
+        secaoInfo.style.display = "block";
+        secaoPerfil.style.display = "none";
+        linkInfo.style.color = "#e74c3c";
+        linkInfo.style.fontWeight = "bold";
+        linkPerfil.style.color = "";
+      });
+    </script>
     <script src="../js/funcionalidades.js"></script>
-    <script src="../js/modals.js"></script>
-
-</body>
-
+    <script src="../js/configuracao.js"></script>
+  </body>
 </html>
