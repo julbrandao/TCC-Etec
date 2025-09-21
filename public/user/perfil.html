@@ -14,8 +14,7 @@
       <nav class="navbar">
         <div
           class="flex"
-          style="justify-content: flex-start; width: 100%; gap: 1.5rem"
-        >
+          style="justify-content: flex-start; width: 100%; gap: 1.5rem">
           <div style="line-height: 50px">
             <button class="hamburger" id="hamburger"></button>
           </div>
@@ -71,6 +70,7 @@
 
     <div id="overlay"></div>
 
+    <!--Topo perfil-->
     <div class="header-perfil" style="padding-top: 50px">
       <img
         class="header-image"
@@ -88,84 +88,99 @@
         </div>
         <div class="div-2">
           <p><span>10</span> seguindo</p>
+          <a class="ver-mais-seguindo" id="link-seguindo"><img src="../assets/png/icones/icone_setaBaixoPreta.png" alt="Ver perfil que segue" title="Ver perfis que segue"></a>
         </div>
       </div>
     </div>
 
     <div class="main-perfil">
-      <section class="feed-profile" style="display: flex;justify-content: flex-start; align-items: flex-start;">
-        <div class="flex main-left">
-          <div class="itens-salvos">
-            <div class="title-itens">
-              <h4>Coleções</h4>
-            </div>
+      <section class="feed-profile">
 
-            <div class="elementos-salvos">
+        <div class="flex main-left" style="margin-top: -20px;">
+
+        <!--Coleções (fixo)-->
+        <!--menu coleções para mobile-->
+        <div class="flex main-right">
+              <div class="menu-perfil-mobile" id="abrir-secao-colecoes">
+          <a style="font-weight: 700;" id="txt-abrir-secao-colecoes">Coleções</a>
+            </div>
+        </div>
+        
+        <!--coleções desktop-->
+          <div class="itens-salvos" id="secao-colecoes">
+            <div class="title-itens" id="titulo-secao-colecoes" ><h4>Coleções</h4></div>
+
+            <div class="elementos-salvos" >
               <div class="subcontainer-colecoes">
+
               <article class="item-colecao">
                 <a class="icon-colecao">V</a>
-                <a href="">Ver mais tarde</a>
+                <a>Ver mais tarde</a>
+                <div class="opcoes-colecao">
+                  <a class="icone-acao-colecao btnEditarColecao" href="#" title="Editar coleção">
+                    <img src="../assets/png/icones/icone_editar.png" alt="Editar coleção">
+                  </a>
+                  <a class="icone-acao-colecao btnExcluirColecao" href="#" title="Excluir coleção">
+                    <img src="../assets/png/icones/icone_excluir.png" alt="Excluir coleção">
+                  </a>
+                </div>
               </article>
 
               <article class="item-colecao">
                 <a class="icon-colecao">V</a>
-                <a href="">Ver mais tarde</a>
+                <a>Ver mais tarde</a>
+
+                <div class="opcoes-colecao">
+                  <a class="icone-acao-colecao btnEditarColecao" href="#" title="Editar coleção">
+                    <img src="../assets/png/icones/icone_editar.png" alt="Editar coleção">
+                  </a>
+                  <a class="icone-acao-colecao btnExcluirColecao" href="#" title="Excluir coleção">
+                    <img src="../assets/png/icones/icone_excluir.png" alt="Excluir coleção">
+                  </a>
+                </div>
+              </article>
+
+              <article class="item-colecao">
+                <a class="icon-colecao">V</a>
+                <a >Ver mais tarde</a>
+
+                <div class="opcoes-colecao">
+                  <a class="icone-acao-colecao btnEditarColecao" href="#" title="Editar coleção">
+                    <img src="../assets/png/icones/icone_editar.png" alt="Editar coleção">
+                  </a>
+                  <a class="icone-acao-colecao btnExcluirColecao" href="#" title="Excluir coleção">
+                    <img src="../assets/png/icones/icone_excluir.png" alt="Excluir coleção">
+                  </a>
+                </div>
+              </article>
+
+              <article class="item-colecao">
+                <a class="icon-colecao">V</a>
+                <a>Ver mais tarde</a>
+
+                <div class="opcoes-colecao">
+                  <a class="icone-acao-colecao btnEditarColecao" href="#" title="Editar coleção">
+                    <img src="../assets/png/icones/icone_editar.png" alt="Editar coleção">
+                  </a>
+                  <a class="icone-acao-colecao btnExcluirColecao" href="#" title="Excluir coleção">
+                    <img src="../assets/png/icones/icone_excluir.png" alt="Excluir coleção">
+                  </a>
+                </div>
               </article>
               </div>
-
-
-              <div
-                style="
-                  width: 95%;
-                  display: flex;
-                  flex-direction: row;
-                  justify-content: center;
-                  margin: 1.5rem 0;
-                "
-              >
+              
+              <div class="botao-nova-colecao">
                 <a class="nova-colecao" href="" id="abrirCriarColecao">Nova coleção</a>
               </div>
             </div>
           </div>
-        </div>
+        </div> 
 
         <div class="flex main-right">
-                <article class="post">
-                    <div class="autor-post">
-                        <div class="flex" style="flex-direction: column;">
-                            <div class="flex">
-                                <div class="autor-photo">
-                                    <img src="../assets/jpg/foto-perfil-exemplo.jpg" alt="" />
-                                </div>
-                                <a class="autor" href="../">Cartinha Mágica</a>
-                            </div>
-                            <span class="horario">Fev 26 às 19h19</span>
-                        </div>
-                        <div>
-                            <div class="options-container">
-                                <a class="options-post" onclick="toggleOptions(this)">...</a>
-                                <div class="dropdown-options">
-                                    <a class="btnSalvarPost" style="cursor: pointer;">Salvar post</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="corpo-post">
-                        <p>
-                            Esse projeto tem o intuito de levar alegria e esperança para crianças que muitas vezes não têm condições de ter um Natal tão especial. A cada ano, voluntários se unem para arrecadar doações e organizar essa festa inesquecível.
-                        </p>
-                    </div>
-                    <div class="reactions-post">
-                        <div style="width: 100%; gap: 5px; align-items: center;" class="flex">
-                            <img src="../assets/png/icones/icone_curtir.png" width="16px" height="16px" alt="">
-                            <span style=" color: #a6a6a6; font-weight: bold; font-size: 13px;">100</span>
-                        </div>
-                        
-                        <a class="reaction" >Curtir</a>
-                        <a class="reaction" >Compartilhar</a>
-                    </div>
-                </article>
 
+        <!-- ********** Seção Coleção ********** -->
+
+      <div class="flex" id="secao-colecao" style="display: none; align-items: center; justify-content: center; width: 100%">
                 <article class="post">
                     <div class="autor-post">
                         <div class="flex" style="flex-direction: column;">
@@ -181,7 +196,7 @@
                             <div class="options-container">
                                 <a class="options-post" onclick="toggleOptions(this)">...</a>
                                 <div class="dropdown-options">
-                                    <a class="btnSalvarPost" style="cursor: pointer;">Salvar post</a>
+                    <a class="btnSalvarPost" style="cursor: pointer">Salvar post</a>
                                 </div>
                             </div>
                         </div>
@@ -192,6 +207,11 @@
                         </p>
                     </div>
                     <div class="reactions-post">
+
+                        <a class="btn-remover-post-colecao" id="btn-remover-post-colecao" title="Remover da coleção">
+                          <img src="../assets/png/icones/icone_salvar-duplo.png" alt="">
+                        </a>
+
                         <div style="width: 100%; gap: 5px; align-items: center;" class="flex">
                             <img src="../assets/png/icones/icone_curtir.png" width="16px" height="16px" alt="">
                             <span style=" color: #a6a6a6; font-weight: bold; font-size: 13px;">100</span>
@@ -201,30 +221,49 @@
                         <a class="reaction" >Compartilhar</a>
                     </div>
                 </article>
+          </div> 
+
+  <!-- ********** Seção ver ongs seguindo ********** -->
+
+      <div class="flex" id="secao-seguindo" style="align-items: center; justify-content: center; width: 100%">
+    
+        <div class="container container-seguindo">
+          <div class="title-itens" style="margin-bottom: 5px;"><h4>Contas que você segue</h4></div>
+          <article class="conta-seguindo">
+            <img
+              class="icone-conta-seguindo"
+              src="../assets/jpg/foto-perfil-exemplo.jpg"
+              alt=""
+            />
+            <a class="autor-conta-seguindo">Cartinha Mágica</a>
+            <a href="../user/perfil-ong.html" class="button-ver-perfil">Visitar</a>
+          </article>
+          <article class="conta-seguindo">
+            <img
+              class="icone-conta-seguindo"
+              src="../assets/jpg/foto-perfil-exemplo.jpg"
+              alt=""
+            />
+            <a class="autor-conta-seguindo">Cartinha Mágica</a>
+            <a href="../user/perfil-ong.html" class="button-ver-perfil">Visitar</a>
+          </article>
+          <article class="conta-seguindo">
+            <img
+              class="icone-conta-seguindo"
+              src="../assets/jpg/foto-perfil-exemplo.jpg"
+              alt=""
+            />
+            <a class="autor-conta-seguindo">Cartinha Mágica</a>
+            <a href="../user/perfil-ong.html" class="button-ver-perfil">Visitar</a>
+          </article>
         </div>
+        </div> 
 
-
+        </div>
       </section>
     </div>
 
-    <div id="modalsairconta">
-      <div class="modal-header">
-        <h1 class="modal-title">Sair</h1>
-        <button class="close-modal" id="fecharSaida">X</button>
-      </div>
-
-      <div class="modal-body">
-        <div class="desc-sairconta">
-          <span>Você tem certeza que deseja sair da conta? </span>
-        </div>
-
-        <div class="opcoes-sairconta">
-          <button id="btn-cancelar-sairconta">Cancelar</button>
-
-          <button id="btn-sair-sairconta">Sair</button>
-        </div>
-      </div>
-    </div>
+    <!--MODAIS-->
 
     <!-- MODAL CRIAR COLECAO-->
     <div id="criarColecao">
@@ -264,7 +303,7 @@
 
     <!-- MODAL SALVAR POST -->
 
-            <div id="salvarPublicacao">
+    <div id="salvarPublicacao">
       <div class="cabecalho-post" style="border-bottom: 2px solid #f5f5f5">
         <div
           style="
@@ -349,6 +388,119 @@
         <a href="" class="btn-confirmar">Concluir</a>
       </div>
     </div>
+
+    <!-- EXCLUIR COLEÇÃO -->
+    <div id="excluirColecao">
+      <div class="modal-header">
+        <h1 class="modal-title">Excluir Coleção</h1>
+        <a href="" class="sair" style="color:#f4863e; font-weight: 700;">X</a>
+      </div>
+
+      <div class="modal-body">
+        <div class="desc-excluirmodal">
+          <span>Você tem certeza que deseja excluir coleção? </span>
+        </div>
+
+        <div class="opcoes-excluirmodal">
+          <button id="cancelarExcluirColecao">Cancelar</button>
+
+          <button id="btn-sair-excluirmodal">Excluir</button>
+        </div>
+      </div>
+    </div>
+
+            <!-- REMOVER POSTAGEM DA COLEÇÃO -->
+
+    <div id="removerPostColecao">
+      <div class="modal-header">
+        <h1 class="modal-title">Remover publicação da coleção</h1>
+        <a href="" class="sair" style="color:#f4863e; font-weight: 700;">X</a>
+      </div>
+
+      <div class="modal-body">
+        <div class="desc-excluirmodal">
+          <span>Você tem certeza que deseja removar a publicação da coleção? </span>
+        </div>
+
+        <div class="opcoes-excluirmodal">
+          <button id="btn-cancelar-remover-post-modal">Cancelar</button>
+
+          <button id="btn-sair-excluirmodal">Remover</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCRIPTS-->
+<script>
+
+  //scripts para esconder/aparecer seções
+
+  const secaoColecao = document.getElementById('secao-colecao');
+  const secaoSeguindo = document.getElementById('secao-seguindo');
+
+  const linkColecao = document.querySelectorAll(".item-colecao");
+  const linkSeguindo = document.getElementById('link-seguindo');
+
+  secaoSeguindo.style.display = "flex";
+
+  //evento de clicar no botao de colecao
+linkColecao.forEach(element => {
+  element.addEventListener("click", function () {
+    secaoColecao.style.display = "flex";
+    secaoSeguindo.style.display = "none";
+
+
+    // Remove destaque de todos
+    linkColecao.forEach(el => {
+      el.style.color = "";
+      el.style.fontWeight = "";
+    });
+
+    // Destaca apenas o clicado
+    element.style.fontWeight = "bold";
+    element.style.color = "#e74c3c";    
+
+    linkMidiaText.style.color = "";
+    linkSobre.style.color = "";
+    linkPostagens.style.color = "";
+    linkMidiaMobile.style.color = "";
+    linkSobreMobile.style.color = "";
+    linkPostagensMobile.style.color = "";
+    
+  });
+});
+
+      //evento de clicar no botao de seguindo
+      linkSeguindo.addEventListener("click", () => {
+        secaoSeguindo.style.display = "flex";
+        secaoColecao.style.display = "none";
+
+        linkColecao.forEach(el => {
+          el.style.color = "";
+          el.style.fontWeight = "";
+    });
+      });
+
+      //Versão mobile da seção coleções (aparecer/desaparecer)
+        const abrirSecaoColecoes = document.getElementById('abrir-secao-colecoes');
+        const secaoColecoes = document.getElementById('secao-colecoes');
+        const TxtAbrirSecaoColecoes = document.getElementById('txt-abrir-secao-colecoes');
+
+        abrirSecaoColecoes.addEventListener('click', (e) => {
+            e.preventDefault();
+            secaoColecoes.classList.toggle('show');
+
+            TxtAbrirSecaoColecoes.style.color = "#e74c3c";
+
+            if (secaoColecoes.classList.contains('show')) {
+        TxtAbrirSecaoColecoes.style.color = "#e74c3c"; // cor quando está aberto
+    } else {
+        TxtAbrirSecaoColecoes.style.color = ""; // volta à cor padrão quando fechado
+    }
+        });      
+
+</script>
+
 
     <script src="../js/funcionalidades.js"></script>
   </body>

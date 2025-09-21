@@ -34,6 +34,36 @@ if (btnCategoriaInicial) {
   filtroCategoriaSelecionado = btnCategoriaInicial.dataset.filtro;
 }
 
+// ============ modificação julia
+
+// Botões principais que abrem os modais
+const btnAbrirAZ = document.getElementById('btn-open-az');            // === ALTERAÇÃO AQUI ===
+const btnAbrirCidade = document.getElementById('btn-open-cidade');    // === ALTERAÇÃO AQUI ===
+const btnAbrirCategoria = document.getElementById('btn-open-categoria'); // === ALTERAÇÃO AQUI ===
+
+// ===========================
+// FUNÇÃO: Atualiza visual dos botões principais
+// ===========================
+function atualizarEstadoBotoesPrincipais() {  // === ALTERAÇÃO AQUI ===
+  if (filtroAlfabeticoSelecionado) {
+    btnAbrirAZ.classList.add('active');
+  } else {
+    btnAbrirAZ.classList.remove('active');
+  }
+
+  if (filtroCidadeSelecionado) {
+    btnAbrirCidade.classList.add('active');
+  } else {
+    btnAbrirCidade.classList.remove('active');
+  }
+
+  if (filtroCategoriaSelecionado) {
+    btnAbrirCategoria.classList.add('active');
+  } else {
+    btnAbrirCategoria.classList.remove('active');
+  }
+}
+
 // ===========================
 // FUNÇÕES GENÉRICAS
 // ===========================
@@ -54,6 +84,8 @@ function cancelarModalPorBotao(event) {
   const modalId = event.currentTarget.getAttribute('data-cancel');
   const modal = document.getElementById(modalId);
   if (modal) modal.close();
+  
+  atualizarEstadoBotoesPrincipais(); // === ALTERAÇÃO AQUI ===
 }
 
 function aplicarFiltroPorBotao(event) {
@@ -85,53 +117,93 @@ function aplicarFiltroPorBotao(event) {
     }
     modalCategoria.close();
   }
+
+    atualizarEstadoBotoesPrincipais();  // === ALTERAÇÃO AQUI ===
+
 }
 
 // ===========================
 // FUNÇÕES ESPECÍFICAS
 // ===========================
 
+
+// ========== MODIFICADO - JULIa
 function selecionarFiltroAlfabetico(botao) {
-  [btnCrescente, btnDecrescente].forEach(b => {
-    b.classList.remove('selected');
-    b.setAttribute('aria-checked', 'false');
-    b.tabIndex = -1;
-  });
+  // Verifica se o botão já está selecionado. Caso esteja, desmarque.
+  if (botao.classList.contains('selected')) {
+    botao.classList.remove('selected');
+    botao.setAttribute('aria-checked', 'false');
+    botao.tabIndex = -1;
+    filtroAlfabeticoSelecionado = null;  // Limpa o filtro
+  } else {
+    // Remove a seleção dos outros botões
+    [btnCrescente, btnDecrescente].forEach(b => {
+      b.classList.remove('selected');
+      b.setAttribute('aria-checked', 'false');
+      b.tabIndex = -1;
+    });
+    // Marca o botão selecionado
+    botao.classList.add('selected');
+    botao.setAttribute('aria-checked', 'true');
+    botao.tabIndex = 0;
+    filtroAlfabeticoSelecionado = (botao === btnCrescente) ? 'AZ' : 'ZA';  // Define o filtro
+  }
 
-  botao.classList.add('selected');
-  botao.setAttribute('aria-checked', 'true');
-  botao.tabIndex = 0;
+    atualizarEstadoBotoesPrincipais();  // === ALTERAÇÃO AQUI ===
 
-  filtroAlfabeticoSelecionado = (botao === btnCrescente) ? 'AZ' : 'ZA';
 }
 
 function selecionarFiltroCidade(botao) {
-  botoesFiltroCidade.forEach(b => {
-    b.classList.remove('selected');
-    b.setAttribute('aria-checked', 'false');
-    b.tabIndex = -1;
-  });
+  // Verifica se o botão já está selecionado. Caso esteja, desmarque.
+  if (botao.classList.contains('selected')) {
+    botao.classList.remove('selected');
+    botao.setAttribute('aria-checked', 'false');
+    botao.tabIndex = -1;
+    filtroCidadeSelecionado = null;  // Limpa o filtro
+  } else {
+    // Remove a seleção dos outros botões
+    botoesFiltroCidade.forEach(b => {
+      b.classList.remove('selected');
+      b.setAttribute('aria-checked', 'false');
+      b.tabIndex = -1;
+    });
+    // Marca o botão selecionado
+    botao.classList.add('selected');
+    botao.setAttribute('aria-checked', 'true');
+    botao.tabIndex = 0;
+    filtroCidadeSelecionado = botao.dataset.filtro;  // Define o filtro
+  }
 
-  botao.classList.add('selected');
-  botao.setAttribute('aria-checked', 'true');
-  botao.tabIndex = 0;
+    atualizarEstadoBotoesPrincipais();  // === ALTERAÇÃO AQUI ===
 
-  filtroCidadeSelecionado = botao.dataset.filtro;
 }
 
 function selecionarFiltroCategoria(botao) {
-  botoesFiltroCategoria.forEach(b => {
-    b.classList.remove('selected');
-    b.setAttribute('aria-checked', 'false');
-    b.tabIndex = -1;
-  });
+  // Verifica se o botão já está selecionado. Caso esteja, desmarque.
+  if (botao.classList.contains('selected')) {
+    botao.classList.remove('selected');
+    botao.setAttribute('aria-checked', 'false');
+    botao.tabIndex = -1;
+    filtroCategoriaSelecionado = null;  // Limpa o filtro
+  } else {
+    // Remove a seleção dos outros botões
+    botoesFiltroCategoria.forEach(b => {
+      b.classList.remove('selected');
+      b.setAttribute('aria-checked', 'false');
+      b.tabIndex = -1;
+    });
+    // Marca o botão selecionado
+    botao.classList.add('selected');
+    botao.setAttribute('aria-checked', 'true');
+    botao.tabIndex = 0;
+    filtroCategoriaSelecionado = botao.dataset.filtro;  // Define o filtro
+  }
 
-  botao.classList.add('selected');
-  botao.setAttribute('aria-checked', 'true');
-  botao.tabIndex = 0;
+    atualizarEstadoBotoesPrincipais();  // === ALTERAÇÃO AQUI ===
 
-  filtroCategoriaSelecionado = botao.dataset.filtro;
 }
+// ========== TERMINO DA MODIFICAÇÃO
+
 
 // ===========================
 // EVENTOS

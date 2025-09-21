@@ -75,3 +75,59 @@ main {
     text-decoration: none;
     font-weight: bold;
 }
+
+@media only screen and (max-width: 900px) {
+    
+    main {
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden; /* Impede a rolagem horizontal */
+    }
+
+    .filtro-container {
+        max-width: 330px;
+        width: 100%; /* Garante que o container ocupe toda a largura disponível */
+        min-width: 0; /* Evita que a largura mínima seja forçada */
+    }
+
+    .ongs-container {
+        display: flex;
+        flex-direction: column;  /* Alterando para coluna para melhor visualização em mobile */
+        justify-content: flex-start; /* Organiza o conteúdo na parte superior */
+        max-height: 350px;
+        overflow-y: auto;  /* Permite rolagem vertical na lista de ONGs */
+        padding-right: 8px;
+        width: 100%;  /* Garante que o container ocupe toda a largura disponível */
+        margin-top: 10px;
+    }
+  
+     /* Botões de filtro empilhados */
+    .filter-tabs {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0;
+        margin-bottom: 0px;
+    }
+
+    .filter-btn {
+        text-align: left;
+        width: 100%;
+        position: relative;
+        border: none;
+    }
+
+     /* Último botão com borda cinza */
+    .filter-btn:last-child {
+        border-bottom: 2px solid #ddd; /* linha cinza */
+        padding-bottom: 12px; /* para dar espaçamento e a linha ficar visível */
+        margin-bottom: 15px; /* espaço entre os botões e a lista */
+    }
+
+
+    .filter-btn.active::after {
+        content: none;
+    }
+}

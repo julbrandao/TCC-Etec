@@ -108,29 +108,65 @@
         </div>
         
         <!--coleções desktop-->
-          <div class="itens-salvos" id="secao-colecoes">
+          <div class="itens-salvos" id="menu-colecoes">
             <div class="title-itens" id="titulo-secao-colecoes" ><h4>Coleções</h4></div>
 
             <div class="elementos-salvos" >
               <div class="subcontainer-colecoes">
+
               <article class="item-colecao">
                 <a class="icon-colecao">V</a>
-                <a >Ver mais tarde</a>
+                <a>Ver mais tarde</a>
+                <div class="opcoes-colecao">
+                  <a class="icone-acao-colecao btnEditarColecao" href="#" title="Editar coleção">
+                    <img src="../assets/png/icones/icone_editar.png" alt="Editar coleção">
+                  </a>
+                  <a class="icone-acao-colecao btnExcluirColecao" href="#" title="Excluir coleção">
+                    <img src="../assets/png/icones/icone_excluir.png" alt="Excluir coleção">
+                  </a>
+                </div>
               </article>
 
               <article class="item-colecao">
                 <a class="icon-colecao">V</a>
                 <a>Ver mais tarde</a>
+
+                <div class="opcoes-colecao">
+                  <a class="icone-acao-colecao btnEditarColecao" href="#" title="Editar coleção">
+                    <img src="../assets/png/icones/icone_editar.png" alt="Editar coleção">
+                  </a>
+                  <a class="icone-acao-colecao btnExcluirColecao" href="#" title="Excluir coleção">
+                    <img src="../assets/png/icones/icone_excluir.png" alt="Excluir coleção">
+                  </a>
+                </div>
               </article>
 
               <article class="item-colecao">
                 <a class="icon-colecao">V</a>
                 <a >Ver mais tarde</a>
+
+                <div class="opcoes-colecao">
+                  <a class="icone-acao-colecao btnEditarColecao" href="#" title="Editar coleção">
+                    <img src="../assets/png/icones/icone_editar.png" alt="Editar coleção">
+                  </a>
+                  <a class="icone-acao-colecao btnExcluirColecao" href="#" title="Excluir coleção">
+                    <img src="../assets/png/icones/icone_excluir.png" alt="Excluir coleção">
+                  </a>
+                </div>
               </article>
 
               <article class="item-colecao">
                 <a class="icon-colecao">V</a>
                 <a>Ver mais tarde</a>
+
+                <div class="opcoes-colecao">
+                  <a class="icone-acao-colecao btnEditarColecao" href="#" title="Editar coleção">
+                    <img src="../assets/png/icones/icone_editar.png" alt="Editar coleção">
+                  </a>
+                  <a class="icone-acao-colecao btnExcluirColecao" href="#" title="Excluir coleção">
+                    <img src="../assets/png/icones/icone_excluir.png" alt="Excluir coleção">
+                  </a>
+                </div>
               </article>
               </div>
               
@@ -309,7 +345,8 @@
         <!-- ********** Seção Coleção ********** -->
 
       <div class="flex" id="secao-colecao" style="display: none; align-items: center; justify-content: center; width: 100%">
-                <article class="post">
+        <!--Postagem salva numa coleção-->        
+        <article class="post">
                     <div class="autor-post">
                         <div class="flex" style="flex-direction: column;">
                             <div class="flex">
@@ -320,14 +357,12 @@
                             </div>
                             <span class="horario">Fev 26 às 19h19</span>
                         </div>
-                        <div>
+                        <div style="display: flex; align-items: center; gap: 10px; flex-direction: row; justify-content: center;">
                             <div class="options-container">
                                 <a class="options-post" onclick="toggleOptions(this)">...</a>
                                 <div class="dropdown-options">
                     <a class="btnEditarPost" style="cursor: pointer">Editar post</a>
-                    <a class="btnSalvarPost" style="cursor: pointer"
-                      >Salvar post</a
-                    >
+                    <a class="btnSalvarPost" style="cursor: pointer">Salvar post</a>
                     <a class="btnExcluirPost" style="cursor: pointer">Excluir post</a>
                                 </div>
                             </div>
@@ -338,8 +373,13 @@
                             Esse projeto tem o intuito de levar alegria e esperança para crianças que muitas vezes não têm condições de ter um Natal tão especial. A cada ano, voluntários se unem para arrecadar doações e organizar essa festa inesquecível.
                         </p>
                     </div>
-                    <div class="reactions-post">
+                    <div class="reactions-post">                                                                                    
                         <div style="width: 100%; gap: 5px; align-items: center;" class="flex">
+                            
+                            <a class="btn-remover-post-colecao" id="btn-remover-post-colecao" title="Remover da coleção">
+                              <img src="../assets/png/icones/icone_salvar-duplo.png" alt="">
+                            </a>
+
                             <img src="../assets/png/icones/icone_curtir.png" width="16px" height="16px" alt="">
                             <span style=" color: #a6a6a6; font-weight: bold; font-size: 13px;">100</span>
                         </div>
@@ -459,7 +499,47 @@
       </div>
     </div>
 
+     <!-- EXCLUIR COLEÇÃO -->
 
+    <div id="excluirColecao">
+      <div class="modal-header">
+        <h1 class="modal-title">Excluir Coleção</h1>
+        <a href="" class="sair" style="color:#f4863e; font-weight: 700;">X</a>
+      </div>
+
+      <div class="modal-body">
+        <div class="desc-excluirmodal">
+          <span>Você tem certeza que deseja excluir coleção? </span>
+        </div>
+
+        <div class="opcoes-excluirmodal">
+          <button id="cancelarExcluirColecao">Cancelar</button>
+
+          <button id="btn-sair-excluirmodal">Excluir</button>
+        </div>
+      </div>
+    </div>
+
+        <!-- REMOVER POSTAGEM DA COLEÇÃO -->
+
+    <div id="removerPostColecao">
+      <div class="modal-header">
+        <h1 class="modal-title">Remover publicação da coleção</h1>
+        <a href="" class="sair" style="color:#f4863e; font-weight: 700;">X</a>
+      </div>
+
+      <div class="modal-body">
+        <div class="desc-excluirmodal">
+          <span>Você tem certeza que deseja removar a publicação da coleção? </span>
+        </div>
+
+        <div class="opcoes-excluirmodal">
+          <button id="btn-cancelar-remover-post-modal">Cancelar</button>
+
+          <button id="btn-sair-excluirmodal">Remover</button>
+        </div>
+      </div>
+    </div>
 
     <!--********** Salvar Publicação Modal **********-->
     <div id="salvarPublicacao">
@@ -582,6 +662,27 @@
       </div>
     </div>
 
+        <!-- EXCLUIR MIDIA -->
+
+    <div id="excluirMidia">
+      <div class="modal-header">
+        <h1 class="modal-title">Excluir Mídia</h1>
+        <a href="" class="sair" style="color:#f4863e; font-weight: 700;">X</a>
+      </div>
+
+      <div class="modal-body">
+        <div class="desc-excluirmodal">
+          <span>Você tem certeza que deseja excluir esta mídia? </span>
+        </div>
+
+        <div class="opcoes-excluirmodal">
+          <button id="btn-cancelar-excluirmidia">Cancelar</button>
+
+          <button id="btn-sair-excluirmodal">Excluir</button>
+        </div>
+      </div>
+    </div>
+
         <!-- Modal Imagem aberta -->
     <div id="modalPost" data-modal="btnModalPost" style="display: none">
       
@@ -589,6 +690,13 @@
         <div style="width: 100%; display: flex; align-items: center; padding: 0; height: 10px;">
           <a href="" class="sair">X</a>
         </div>
+         <div class="options-container" style="position: absolute; top: 0.5rem; right: 1rem; z-index: 10;">
+                  <a class="options-post" onclick="toggleOptions(this)" style=" cursor: pointer; text-decoration: none;">...</a>
+                  <div class="dropdown-options">
+                    <a class="btnExcluirMidia" style="cursor: pointer">Excluir Mídia</a>
+                </div>
+          </div>
+
         <div class="photo-post"
           style=
             "background: url(../assets/jpg/foto-post.jpg);
@@ -752,6 +860,7 @@ linkColecao.forEach(element => {
   });
 });
 
+
   //MENU PARA MOBILE
 
      linkPostagensMobile.addEventListener("click", () => {
@@ -804,7 +913,7 @@ linkColecao.forEach(element => {
 
       //Versão mobile da seção coleções (aparecer/desaparecer)
         const abrirSecaoColecoes = document.getElementById('abrir-secao-colecoes');
-        const secaoColecoes = document.getElementById('secao-colecoes');
+        const secaoColecoes = document.getElementById('menu-colecoes');
         const TxtAbrirSecaoColecoes = document.getElementById('txt-abrir-secao-colecoes');
 
         abrirSecaoColecoes.addEventListener('click', (e) => {
@@ -819,7 +928,6 @@ linkColecao.forEach(element => {
         TxtAbrirSecaoColecoes.style.color = ""; // volta à cor padrão quando fechado
     }
         });
-
     </script>
 
 

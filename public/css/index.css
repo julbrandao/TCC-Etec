@@ -1,6 +1,6 @@
 /*IMPORTAÇÕES*/
 
-@import url("partials/modals/modalPost.css");
+@import url("partials/modals/modalMidia.css");
 @import url("partials/modals/criarPost.css");
 @import url("partials/modals/editarPost.css");
 @import url("partials/modals/excluirPost.css");
@@ -9,6 +9,9 @@
 @import url("partials/post.css");
 @import url("partials/modals/criarColecao.css");
 @import url("partials/modals/adicionarImagemColecao.css");
+@import url("partials/modals/excluirColecao.css");
+@import url("partials/modals/removerPostColecao.css");
+@import url("partials/modals/excluirMidia.css");
 
 @font-face {
   font-family: "Cocomat Pro Regular";
