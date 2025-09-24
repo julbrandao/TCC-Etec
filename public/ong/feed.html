@@ -57,6 +57,7 @@
                 class="foto-perfil"
                 src="../assets/jpg/foto-perfil-exemplo.jpg"
                 alt=""
+                id="foto_perfil"
               />
               <div class="mn-part1">
                 <p class="name-account" id="txtnomeOng">Cartinha Mágica</p>
@@ -309,32 +310,35 @@
       </div>
     </div>
 
-    <script>window.onload = async () => {
+    <script>
+       window.onload = async () => {
       try {
         const res = await fetch("/api/config", {
           method: "GET",
           credentials: "include" // necessário para enviar o cookie da sessão
         });
         const data = await res.json();
+
         if (!res.ok) {
-          alert(data.error);
+          alert(data.err);
           // redireciona
-          window.location.href = "../index.html";
+          window.location.href = "../cadastros/login-ong.html";
           return;
         }
 
         
 
-       
+        
         document.getElementById("txtnomeOng").textContent = data.nome_ong;
-       
+                document.getElementById("foto_perfil").src = data.foto_perfil_ong;
         document.getElementById("txtemailOng").textContent = data.email_ong;
         
         console.log(data);
       } catch (err) {
         console.error("Erro ao carregar dados:", err);
       }
-    };</script>
+    };
+    </script>
     <script src="../js/funcionalidades.js"></script>
 </body>
 

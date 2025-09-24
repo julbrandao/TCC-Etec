@@ -16,6 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
     overlay?.classList.add("show");
   }
 
+  window.abrir = abrir;
+
+
   function fechar(el) {
     if (el && el.classList.contains("show")) {
       el.classList.remove("show");
@@ -23,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     if (overlay && abertos === 0) overlay.classList.remove("show");
   }
-
+  window.fechar = fechar;
   // ==============================
   // FUNÇÃO PARA CONFIGURAR ABRIR E FECHAR
   // ==============================
@@ -163,15 +166,16 @@ function mostrarPreviewPost() {
 
     wrapper.appendChild(btn);
     previewContainerPost.appendChild(wrapper);
+    
   });
 }
+
 
 function limparPreviewPost() {
   previewContainerPost.innerHTML = "";
 }
-
 function removerArquivo(index) {
-  arquivosSelecionados.splice(index, 1); // remove do array
+  arquivosSelecionados.splice(index, 1);// remove do array
   atualizarInputFiles();
   mostrarPreviewPost();
 }
@@ -196,6 +200,9 @@ if (fileInputPost) {
     mostrarPreviewPost();
   });
 }
+
+
+
     //------------------------------------------------------------------
 
 
@@ -228,6 +235,8 @@ if (fileInputPost) {
       configAbertura(btn, document.getElementById("modalsairconta"));
     });
     configFechamento(document.getElementById("btn-cancelar-sairconta"), document.getElementById("modalsairconta"));
+    configFechamento(document.getElementById("fecharSaida"), document.getElementById("modalsairconta"));
+
 
   // ==============================
   // FECHAR TUDO AO CLICAR NO OVERLAY

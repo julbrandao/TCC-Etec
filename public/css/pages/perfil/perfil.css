@@ -235,23 +235,26 @@
   display: flex;
   width: 100%;
   height: 150px;
-  padding: 2rem;
   align-items: center;
   justify-content: flex-start;
   gap: 2rem;
-
-  & .foto {
-    width: 130px;
-    height: 130px;
-    border-radius: 5px;
-    background-color: #cdcccc;
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  overflow-x: auto; /* mais moderno que scroll */
+  -webkit-overflow-scrolling: touch; /* para mobile */
 }
+
+.fotos-container .foto {
+  width: 130px;
+  height: 130px;
+  border-radius: 5px;
+  background-color: #cdcccc;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto; /* impede que encolham e ativa scroll horizontal */
+}
+
 
 .sobreContainer {
   background-color: white;

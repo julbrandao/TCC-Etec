@@ -52,8 +52,8 @@
                 alt=""
               />
               <div class="mn-part1">
-                <p class="name-account">Juscelino Lima</p>
-                <p class="email-account">juscelinolima@gmail.com</p>
+                <p class="name-account"></p>
+                <p class="email-account"></p>
                 <a class="perfil-account" href="perfil.html">Seu perfil ➞</a>
               </div>
             </div>
@@ -279,7 +279,7 @@
               alt=""
             />
             <a class="autor">Cartinha Mágica</a>
-            <a href="../user/perfil-ong.html" class="button">Seguir</a>
+            <a href="../user/perfil-ong.html?id=30" class="button">Ver </a>
           </article>
           <article class="suggested-accounts">
             <img
@@ -392,5 +392,33 @@
     </div>
 
     <script src="../js/funcionalidades.js"></script>
+    <script>
+          window.onload = async () => {
+      try {
+        const res = await fetch("/api/configUser", {
+          method: "GET",
+          credentials: "include" // necessário para enviar o cookie da sessão
+        });
+        const data = await res.json();
+
+        if (!res.ok) {
+          alert(data.error);
+          // redireciona
+          window.location.href = "../cadastros/login-doador.html";
+          return;
+        }      
+
+        console.log(data)
+        document.querySelector(".name-account").innerHTML = data.Nome_user;
+        document.querySelector(".email-account").innerHTML = data.Email_user;
+
+      } catch (err) {
+        console.error("Erro ao carregar dados:", err);
+      }
+
+      
+    };
+    
+    </script>
   </body>
 </html>

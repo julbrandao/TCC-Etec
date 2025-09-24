@@ -88,7 +88,19 @@
   padding-bottom: 3.2vh;
 }
 
+.corpo-post2 {
+  padding: 0 1rem;
+  padding-bottom: 3.2vh;
+}
+
 .corpo-post p {
+  font-family: "Nunito";
+  font-weight: bold;
+  color: #2c2f2c;
+  font-size: var(--small);
+}
+
+.corpo-post2 p {
   font-family: "Nunito";
   font-weight: bold;
   color: #2c2f2c;

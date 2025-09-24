@@ -1,362 +1,337 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Perfil</title>
-    <link rel="stylesheet" href="../css/index.css" />
-    <link rel="stylesheet" href="../css/pages/perfil/perfil.css" />
-    <link rel="stylesheet" href="../css/partials/navbar.css" />
-  </head>
 
-  <body>
-    <header>
-      <nav class="navbar">
-        <div
-          class="flex"
-          style="justify-content: flex-start; width: 100%; gap: 1.5rem"
-        >
-          <div style="line-height: 50px">
-            <button class="hamburger" id="hamburger"></button>
-          </div>
-          <ul class="nav-links" id="navlinks">
-            <li><a href="feed.html">Explorar</a></li>
-            <li><a href="ongsFiltro.html">ONGs</a></li>
-          </ul>
-          <a class="nav-title" href="../user/feed.html"
-            ><img
-              src="../assets/svg/Logo UneONG FINAL.svg"
-              alt=""
-              width="80"
-              height="80"
-          /></a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perfil</title>
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="../css/pages/perfil/perfil.css" />
+  <link rel="stylesheet" href="../css/partials/navbar.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="flex" style="justify-content: flex-start; width: 100%; gap: 1.5rem">
+        <div style="line-height: 50px">
+          <button class="hamburger" id="hamburger"></button>
         </div>
+        <ul class="nav-links" id="navlinks">
+          <li><a href="feed.html">Explorar</a></li>
+          <li><a href="ongsFiltro.html">ONGs</a></li>
+        </ul>
+        <a class="nav-title" href="../user/feed.html"><img src="../assets/svg/Logo UneONG FINAL.svg" alt="" width="80"
+            height="80" /></a>
+      </div>
 
-        <input type="text" name="txtbuscar" id="txtbuscar" class="buscar" placeholder="Procure uma ong..." />
-        <label for="txtbuscar"><img src="../assets/png/icones/icone_buscar.png" class="buscarIcon" alt=""></label>
+      <input type="text" name="txtbuscar" id="txtbuscar" class="buscar" placeholder="Procure uma ong..." />
+      <label for="txtbuscar"><img src="../assets/png/icones/icone_buscar.png" class="buscarIcon" alt=""></label>
 
-        <div
-          class="nav-elements"
-          style="width: 100px; justify-content: flex-end; padding-left: 1rem"
-        >
-          <div class="icon-menu">
-            <img
-              src="../assets/png/user-example.png"
-              alt=""
-              id="dropdown-perfil"
-            />
-          </div>
-          <div class="dropdown" id="dropdownMenu">
-            <div class="flex" style="width: 100%">
-              <img
-                class="foto-perfil"
-                src="../assets/jpg/foto-perfil-exemplo.jpg"
-                alt=""
-              />
-              <div class="mn-part1">
-                <p class="name-account">Juscelino Lima</p>
-                <p class="email-account">juscelinolima@gmail.com</p>
-                <a class="perfil-account" href="perfil.html">Seu perfil ➞</a>
-              </div>
-            </div>
-            <div class="mn-part2">
-                        <ul>
-                            <li><a href="configuracoes.html"><img src="../assets/png/icones/icone_configuracoes.png" alt="" style="width: 25px; margin-right: 7px; vertical-align: middle;">Configurações</a></li>
-                        </ul>
+      <div class="nav-elements" style="width: 100px; justify-content: flex-end; padding-left: 1rem">
+        <div class="icon-menu">
+          <img src="../assets/png/user-example.png" alt="" id="dropdown-perfil" />
+        </div>
+        <div class="dropdown" id="dropdownMenu">
+          <div class="flex" style="width: 100%">
+            <img class="foto-perfil" src="../assets/jpg/foto-perfil-exemplo.jpg" id="fotoPerfil2" alt="" />
+            <div class="mn-part1">
+              <p class="name-account"></p>
+              <p class="email-account"></p>
+              <a class="perfil-account" href="perfil.html">Seu perfil ➞</a>
             </div>
           </div>
-        </div>
-      </nav>
-    </header>
-
-    <div id="overlay"></div>
-
-    <div class="header-perfil" style="padding-top: 50px">
-      <img
-        class="header-image"
-        src="../assets/jpg/teste-header-perfil.jpeg"
-        alt=""
-      />
-    </div>
-    <div class="info-perfil">
-      <div class="perfil-containt">
-        <div class="div-1">
-          <div class="icon-profile">
-            <img src="../assets/jpg/foto-perfil-exemplo.jpg" />
+          <div class="mn-part2">
+            <ul>
+              <li><a href="configuracoes.html"><img src="../assets/png/icones/icone_configuracoes.png" alt=""
+                    style="width: 25px; margin-right: 7px; vertical-align: middle;">Configurações</a></li>
+            </ul>
           </div>
-          <h4 class="name-profile" style="color: #352c28">Juscelino Lima</h4>
-        </div>
-        <div class="div-2">
-          <p><span>10</span> seguindo</p>
         </div>
       </div>
-    </div>
+    </nav>
+  </header>
 
-    <div class="main-perfil">
-      <section
-        class="feed-profile"
-        style="
+  <div id="overlay"></div>
+
+  <div class="header-perfil" style="padding-top: 50px">
+    <img class="header-image" src="../assets/jpg/teste-header-perfil.jpeg" alt="" id="fotoHeader" />
+  </div>
+  <div class="info-perfil">
+    <div class="perfil-containt">
+      <div class="div-1">
+        <div class="icon-profile">
+          <img src="../assets/jpg/foto-perfil-exemplo.jpg" id="fotoPerfil" />
+        </div>
+        <h4 class="name-profile" style="color: #352c28"></h4>
+      </div>
+      <div class="div-2">
+        <p><span>0</span> seguindo</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-perfil">
+    <section class="feed-profile" style="
           display: flex;
           justify-content: flex-start;
           align-items: flex-start;
-        "
-      >
-        <div class="flex main-left">
-          <div class="itens-salvos">
-            <div class="title-itens">
-              <h4>Coleções</h4>
+        ">
+      <div class="flex main-left">
+        <div class="itens-salvos">
+          <div class="title-itens">
+            <h4>Coleções</h4>
+          </div>
+
+          <div class="elementos-salvos">
+            <div class="subcontainer-colecoes">
+              <article class="item-colecao">
+                <a class="icon-colecao">V</a>
+                <a href="">Ver mais tarde</a>
+              </article>
+
+              <article class="item-colecao">
+                <a class="icon-colecao">V</a>
+                <a href="">Ver mais tarde</a>
+              </article>
             </div>
 
-            <div class="elementos-salvos">
-              <div class="subcontainer-colecoes">
-              <article class="item-colecao">
-                <a class="icon-colecao">V</a>
-                <a href="">Ver mais tarde</a>
-              </article>
 
-              <article class="item-colecao">
-                <a class="icon-colecao">V</a>
-                <a href="">Ver mais tarde</a>
-              </article>
-              </div>
-
-
-              <div
-                style="
+            <div style="
                   width: 95%;
                   display: flex;
                   flex-direction: row;
                   justify-content: center;
                   margin: 1.5rem 0;
-                "
-              >
-                <a class="nova-colecao" href="" id="abrirCriarColecao">Nova coleção</a>
-              </div>
+                ">
+              <a class="nova-colecao" href="" id="abrirCriarColecao">Nova coleção</a>
             </div>
           </div>
         </div>
-
-        <div class="flex main-right">
-                <article class="post">
-                    <div class="autor-post">
-                        <div class="flex" style="flex-direction: column;">
-                            <div class="flex">
-                                <div class="autor-photo">
-                                    <img src="../assets/jpg/foto-perfil-exemplo.jpg" alt="" />
-                                </div>
-                                <a class="autor" href="../">Cartinha Mágica</a>
-                            </div>
-                            <span class="horario">Fev 26 às 19h19</span>
-                        </div>
-                        <div>
-                            <div class="options-container">
-                                <a class="options-post" onclick="toggleOptions(this)">...</a>
-                                <div class="dropdown-options">
-                                    <a class="btnSalvarPost" style="cursor: pointer;">Salvar post</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="corpo-post">
-                        <p>
-                            Esse projeto tem o intuito de levar alegria e esperança para crianças que muitas vezes não têm condições de ter um Natal tão especial. A cada ano, voluntários se unem para arrecadar doações e organizar essa festa inesquecível.
-                        </p>
-                    </div>
-                    <div class="reactions-post">
-                        <div style="width: 100%; gap: 5px; align-items: center;" class="flex">
-                            <img src="../assets/png/icones/icone_curtir.png" width="16px" height="16px" alt="">
-                            <span style=" color: #a6a6a6; font-weight: bold; font-size: 13px;">100</span>
-                        </div>
-                        
-                        <a class="reaction" >Curtir</a>
-                        <a class="reaction" >Compartilhar</a>
-                    </div>
-                </article>
-
-                <article class="post">
-                    <div class="autor-post">
-                        <div class="flex" style="flex-direction: column;">
-                            <div class="flex">
-                                <div class="autor-photo">
-                                    <img src="../assets/jpg/foto-perfil-exemplo.jpg" alt="" />
-                                </div>
-                                <a class="autor" href="../">Cartinha Mágica</a>
-                            </div>
-                            <span class="horario">Fev 26 às 19h19</span>
-                        </div>
-                        <div>
-                            <div class="options-container">
-                                <a class="options-post" onclick="toggleOptions(this)">...</a>
-                                <div class="dropdown-options">
-                                    <a class="btnSalvarPost" style="cursor: pointer;">Salvar post</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="corpo-post">
-                        <p>
-                            Esse projeto tem o intuito de levar alegria e esperança para crianças que muitas vezes não têm condições de ter um Natal tão especial. A cada ano, voluntários se unem para arrecadar doações e organizar essa festa inesquecível.
-                        </p>
-                    </div>
-                    <div class="reactions-post">
-                        <div style="width: 100%; gap: 5px; align-items: center;" class="flex">
-                            <img src="../assets/png/icones/icone_curtir.png" width="16px" height="16px" alt="">
-                            <span style=" color: #a6a6a6; font-weight: bold; font-size: 13px;">100</span>
-                        </div>
-                        
-                        <a class="reaction" >Curtir</a>
-                        <a class="reaction" >Compartilhar</a>
-                    </div>
-                </article>
-        </div>
-
-
-      </section>
-    </div>
-
-    <div id="modalsairconta">
-      <div class="modal-header">
-        <h1 class="modal-title">Sair</h1>
-        <button class="close-modal" id="fecharSaida">X</button>
       </div>
 
-      <div class="modal-body">
-        <div class="desc-sairconta">
-          <span>Você tem certeza que deseja sair da conta? </span>
-        </div>
-
-        <div class="opcoes-sairconta">
-          <button id="btn-cancelar-sairconta">Cancelar</button>
-
-          <button id="btn-sair-sairconta">Sair</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- MODAL CRIAR COLECAO-->
-    <div id="criarColecao">
-      <div class="modal-header">
-        <h1 class="modal-title">Criar nova coleção</h1>
-        <button class="close-modal" id="fecharCriarColecao">X</button>
-      </div>
-
-      <div class="modal-body">
-        <div class="desc-criarcolecao">
-          <span>Crie uma nova coleção para organizar seus itens salvos.</span>
-        </div>
-
-        <div class="form-criarcolecao">
-          <form action="">
-            <label for="nomeColecao">Nome da coleção</label>
-            <input
-              type="text"
-              id="nomeColecao"
-              name="nomeColecao"
-              placeholder="Ex: Pets, Causa Infantil, etc"
-            />
-
-            <div class="botoes-criarcolecao">
-              <button id="btn-cancelar-criarcolecao" type="button">
-                Cancelar
-              </button>
-
-              <button id="btn-criar-criarcolecao" type="submit">
-                Criar
-              </button>
+      <div class="flex main-right">
+        <article class="post">
+          <div class="autor-post">
+            <div class="flex" style="flex-direction: column;">
+              <div class="flex">
+                <div class="autor-photo">
+                  <img src="../assets/jpg/foto-perfil-exemplo.jpg" alt="" />
+                </div>
+                <a class="autor" href="../">Cartinha Mágica</a>
+              </div>
+              <span class="horario">Fev 26 às 19h19</span>
             </div>
-          </form>
-        </div>
+            <div>
+              <div class="options-container">
+                <a class="options-post" onclick="toggleOptions(this)">...</a>
+                <div class="dropdown-options">
+                  <a class="btnSalvarPost" style="cursor: pointer;">Salvar post</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="corpo-post">
+            <p>
+              Esse projeto tem o intuito de levar alegria e esperança para crianças que muitas vezes não têm condições
+              de ter um Natal tão especial. A cada ano, voluntários se unem para arrecadar doações e organizar essa
+              festa inesquecível.
+            </p>
+          </div>
+          <div class="reactions-post">
+            <div style="width: 100%; gap: 5px; align-items: center;" class="flex">
+              <img src="../assets/png/icones/icone_curtir.png" width="16px" height="16px" alt="">
+              <span style=" color: #a6a6a6; font-weight: bold; font-size: 13px;">100</span>
+            </div>
+
+            <a class="reaction">Curtir</a>
+            <a class="reaction">Compartilhar</a>
+          </div>
+        </article>
+
+        <article class="post">
+          <div class="autor-post">
+            <div class="flex" style="flex-direction: column;">
+              <div class="flex">
+                <div class="autor-photo">
+                  <img src="../assets/jpg/foto-perfil-exemplo.jpg" alt="" />
+                </div>
+                <a class="autor" href="../">Cartinha Mágica</a>
+              </div>
+              <span class="horario">Fev 26 às 19h19</span>
+            </div>
+            <div>
+              <div class="options-container">
+                <a class="options-post" onclick="toggleOptions(this)">...</a>
+                <div class="dropdown-options">
+                  <a class="btnSalvarPost" style="cursor: pointer;">Salvar post</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="corpo-post">
+            <p>
+              Esse projeto tem o intuito de levar alegria e esperança para crianças que muitas vezes não têm condições
+              de ter um Natal tão especial. A cada ano, voluntários se unem para arrecadar doações e organizar essa
+              festa inesquecível.
+            </p>
+          </div>
+          <div class="reactions-post">
+            <div style="width: 100%; gap: 5px; align-items: center;" class="flex">
+              <img src="../assets/png/icones/icone_curtir.png" width="16px" height="16px" alt="">
+              <span style=" color: #a6a6a6; font-weight: bold; font-size: 13px;">100</span>
+            </div>
+
+            <a class="reaction">Curtir</a>
+            <a class="reaction">Compartilhar</a>
+          </div>
+        </article>
       </div>
+
+
+    </section>
+  </div>
+
+  <div id="modalsairconta">
+    <div class="modal-header">
+      <h1 class="modal-title">Sair</h1>
+      <button class="close-modal" id="fecharSaida">X</button>
     </div>
 
-    <!-- MODAL SALVAR POST -->
+    <div class="modal-body">
+      <div class="desc-sairconta">
+        <span>Você tem certeza que deseja sair da conta? </span>
+      </div>
 
-            <div id="salvarPublicacao">
-      <div class="cabecalho-post" style="border-bottom: 2px solid #f5f5f5">
-        <div
-          style="
+      <div class="opcoes-sairconta">
+        <button id="btn-cancelar-sairconta">Cancelar</button>
+
+        <button id="btn-sair-sairconta">Sair</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL CRIAR COLECAO-->
+  <div id="criarColecao">
+    <div class="modal-header">
+      <h1 class="modal-title">Criar nova coleção</h1>
+      <button class="close-modal" id="fecharCriarColecao">X</button>
+    </div>
+
+    <div class="modal-body">
+      <div class="desc-criarcolecao">
+        <span>Crie uma nova coleção para organizar seus itens salvos.</span>
+      </div>
+
+      <div class="form-criarcolecao">
+        <form action="">
+          <label for="nomeColecao">Nome da coleção</label>
+          <input type="text" id="nomeColecao" name="nomeColecao" placeholder="Ex: Pets, Causa Infantil, etc" />
+
+          <div class="botoes-criarcolecao">
+            <button id="btn-cancelar-criarcolecao" type="button">
+              Cancelar
+            </button>
+
+            <button id="btn-criar-criarcolecao" type="submit">
+              Criar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL SALVAR POST -->
+
+  <div id="salvarPublicacao">
+    <div class="cabecalho-post" style="border-bottom: 2px solid #f5f5f5">
+      <div style="
             width: 95%;
             display: flex;
             justify-content: center;
             align-items: center;
-          "
-        >
-          <h3 style="font-size: 12pt; color: #2c2f2c">Salvar em:</h3>
-        </div>
-        <a href="../" class="sair" id="sairSalvarPublicacao">X</a>
+          ">
+        <h3 style="font-size: 12pt; color: #2c2f2c">Salvar em:</h3>
       </div>
+      <a href="../" class="sair" id="sairSalvarPublicacao">X</a>
+    </div>
 
-      <div class="corpo-post">
-        <div class="subcontainer">
-          <label for="vermaistarde1">Ver mais tarde</label>
-          <input
-            type="checkbox"
-            name="vermaistarde"
-            id="vermaistarde1"
-            style="border-radius: 50%"
-          />
-        </div>
-        <div class="subcontainer">
-          <label for="vermaistarde2">Ver mais tarde</label>
-          <input
-            type="checkbox"
-            name="vermaistarde"
-            id="vermaistarde2"
-            style="border-radius: 50%"
-          />
-        </div>
-        <div class="subcontainer">
-          <label for="vermaistarde3">Ver mais tarde</label>
-          <input
-            type="checkbox"
-            name="vermaistarde"
-            id="vermaistarde3"
-            style="border-radius: 50%"
-          />
-        </div>
-        <div class="subcontainer">
-          <label for="vermaistarde4">Ver mais tarde</label>
-          <input
-            type="checkbox"
-            name="vermaistarde"
-            id="vermaistarde4"
-            style="border-radius: 50%"
-          />
-        </div>
-        <div class="subcontainer">
-          <label for="vermaistarde5">Ver mais tarde</label>
-          <input
-            type="checkbox"
-            name="vermaistarde"
-            id="vermaistarde5"
-            style="border-radius: 50%"
-          />
-        </div>
-        <div class="subcontainer">
-          <label for="vermaistarde6">Ver mais tarde</label>
-          <input
-            type="checkbox"
-            name="vermaistarde"
-            id="vermaistarde6"
-            style="border-radius: 50%"
-          />
-        </div>
+    <div class="corpo-post">
+      <div class="subcontainer">
+        <label for="vermaistarde1">Ver mais tarde</label>
+        <input type="checkbox" name="vermaistarde" id="vermaistarde1" style="border-radius: 50%" />
       </div>
-      <br /><br />
-      <div
-        style="
+      <div class="subcontainer">
+        <label for="vermaistarde2">Ver mais tarde</label>
+        <input type="checkbox" name="vermaistarde" id="vermaistarde2" style="border-radius: 50%" />
+      </div>
+      <div class="subcontainer">
+        <label for="vermaistarde3">Ver mais tarde</label>
+        <input type="checkbox" name="vermaistarde" id="vermaistarde3" style="border-radius: 50%" />
+      </div>
+      <div class="subcontainer">
+        <label for="vermaistarde4">Ver mais tarde</label>
+        <input type="checkbox" name="vermaistarde" id="vermaistarde4" style="border-radius: 50%" />
+      </div>
+      <div class="subcontainer">
+        <label for="vermaistarde5">Ver mais tarde</label>
+        <input type="checkbox" name="vermaistarde" id="vermaistarde5" style="border-radius: 50%" />
+      </div>
+      <div class="subcontainer">
+        <label for="vermaistarde6">Ver mais tarde</label>
+        <input type="checkbox" name="vermaistarde" id="vermaistarde6" style="border-radius: 50%" />
+      </div>
+    </div>
+    <br /><br />
+    <div style="
           width: 100%;
           display: flex;
           justify-content: flex-end;
           align-items: flex-start;
           margin-bottom: 10px;
           margin-right: 10px;
-        "
-      >
-        <a href="" class="btn-confirmar">Concluir</a>
-      </div>
+        ">
+      <a href="" class="btn-confirmar">Concluir</a>
     </div>
+  </div>
 
-    <script src="../js/funcionalidades.js"></script>
-  </body>
+  <script>
+    window.onload = async () => {
+      try {
+        const res = await fetch("/api/configUser", {
+          method: "GET",
+          credentials: "include" // necessário para enviar o cookie da sessão
+        });
+        const data = await res.json();
+
+        if (!res.ok) {
+          alert(data.error);
+          // redireciona
+          window.location.href = "../cadastros/login-doador.html";
+          return;
+        }
+
+
+        document.getElementById("fotoPerfil").src = data.foto_perfil_usuario;
+        document.getElementById("fotoPerfil2").src = data.foto_perfil_usuario;
+
+        document.getElementById("fotoHeader").src = data.foto_header_usuario;
+
+        document.querySelector(".name-account").innerHTML = data.Nome_user;
+        document.querySelector(".name-profile").innerHTML = data.Nome_user;
+        document.querySelector(".email-account").innerHTML = data.Email_user;
+
+      } catch (err) {
+        console.error("Erro ao carregar dados:", err);
+      }
+
+
+    };
+
+  </script>
+
+  <script src="../js/funcionalidades.js"></script>
+</body>
+
 </html>

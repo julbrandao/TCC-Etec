@@ -12,7 +12,7 @@ export const buscarOng = async (nome_ong,cnpj,email_ong,n_localizacao,telefone) 
 
 
 export const insertOng = async ({ nome_ong, cnpj,email_ong,rua,cidade,n_localizacao,estado,complemento,telefone,nome_representante,cpf_representante,
-    objetivo,categoria_ong,descrição,senha_ong,razao_social,bairro,classificacao,AdF }) => {
+    objetivo,categoria_ong,descrição,senha_ong,razao_social,bairro,classificacao,AdF,foto_perfil_ong, foto_header_ong, seguidores }) => {
   return await supabase.from('ONG').insert({ nome_ong, cnpj,email_ong,rua,cidade,n_localizacao,estado,complemento,telefone,nome_representante,cpf_representante,
     objetivo,categoria_ong,descrição,senha_ong,razao_social,bairro,classificacao,AdF });
 };

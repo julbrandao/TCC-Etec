@@ -105,3 +105,154 @@
   height: 30px;
   border-radius: 50%;
 }
+
+
+.fotos-post {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.fotos-post img {
+  width: 100%;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.fotos-post-1 {
+  grid-template-columns: repeat(2,1fr);
+}
+
+.fotos-post-1 img {
+  grid-column: 1 / -1; /* ocupa todas as colunas */
+  height: 200px; /* maior altura para destaque */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.fotos-post-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.fotos-post-3 {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+}
+
+.fotos-post-3 img:nth-child(3) {
+  grid-column: 1 / span 2;
+}
+
+.fotos-post-4 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#lightbox-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  flex-direction: column;
+}
+
+.lightbox-hidden {
+  display: none !important;
+}
+
+#lightbox-img {
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 8px;
+}
+
+/* Navegação */
+#lightbox-prev,
+#lightbox-next {
+  position: absolute;
+  top: 50%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  transform: translateY(-50%);
+  z-index: 1000;
+  display: flex;
+}
+
+#lightbox-prev {
+  left: 20px;
+}
+
+#lightbox-next {
+  right: 20px;
+}
+
+#lightbox-next img {
+  transform: rotate(180deg);
+}
+
+#lightbox-prev img,
+#lightbox-next img {
+  width: 40px; /* ou o tamanho que preferir */
+  height: 40px;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+#lightbox-prev img:hover,
+#lightbox-next img:hover {
+  opacity: 1;
+}
+
+/* Botão fechar */
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+
+@media only screen and (max-width: 900px) {
+  .container-patrocinado {
+    display: none;
+  }
+
+  .container-acontecendo {
+    display: none;
+  }
+
+  .lg{
+    width: 100%;
+  }
+
+  .sm1 {
+    display: none;
+  }
+
+  .sm2 {
+    display: none;
+  }
+
+  .post{
+    width: 80%;
+  }
+
+  .div-post-header {
+    width: 95%;
+    justify-content: center;
+    padding: 0;
+    left: 50%;               
+    transform: translateX(-50%); 
+  }
+}

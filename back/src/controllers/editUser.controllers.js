@@ -7,10 +7,9 @@ export async function atualizarUsuarioController(req, res) {
 
   try {
     const { id } = req.session.user;
-    const dados = req.body;
 
-    const data = await atualizarUsuario(id, dados);
-    res.json({ message: "Dados do Usuário atualizados!", data });
+    const data = await atualizarUsuario(id, req.body, req.files);
+    res.json({ message: "Dados do Usuário atualizados!", ...data });
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: "Erro ao atualizar Usuário" });

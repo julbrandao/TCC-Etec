@@ -55,8 +55,8 @@
                 alt=""
               />
               <div class="mn-part1">
-                <p class="name-account">Juscelino Lima</p>
-                <p class="email-account">juscelinolima@gmail.com</p>
+                <p class="name-account"></p>
+                <p class="email-account"></p>
                 <a class="perfil-account" href="perfil.html">Seu perfil ➞</a>
               </div>
             </div>
@@ -74,31 +74,27 @@
 
       <!--Topo do perfil (fixo)-->
 
-    <div class="header-perfil" style="padding-top: 50px">
-      <img
-        class="header-image"
-        src="../assets/jpg/teste-header-perfil.jpeg"
-        alt=""
-      />
-    </div>
-    <div class="info-perfil">
-      <div class="perfil-containt">
-        <div class="div-1">
-          <div class="icon-profile">
-            <img src="../assets/jpg/foto-perfil-exemplo.jpg" />
-          </div>
-          <h4 class="name-profile">Cartinha Mágica</h4>
+  <div class="header-perfil" style="padding-top: 50px">
+    <img class="header-image" id="fotoHeader" src="" alt="" />
+  </div>
+  <div class="info-perfil">
+    <div class="perfil-containt">
+      <div class="div-1">
+        <div class="icon-profile">
+          <img src="" id="fotoPerfil" />
         </div>
-        <div class="div-2">
-          <p><span>10</span> publicações</p>
-          <p></p>
-          <p><span>100</span> seguidores</p>
-        </div>
-        <div class="div-3">
-          <a href="../user/perfil-ong.html" class="button" style="height: 25px; width: 60px; font-size: 14px; margin-right: 15px;">Seguir</a>
-        </div>
+        <h4 class="name-profile" id="txtnomeOngPerfil"></h4>
       </div>
+      <div class="div-2">
+        <p><span>10</span> publicações</p>
+        <p></p>
+        <p><span id="txtseguidores"></span> seguidores</p>
+      </div>
+              <div class="div-3">
+          <a class="button" style="height: 25px; min-width: 60px; font-size: 14px; margin-right: 15px;" id="btnSeguir">Seguir</a>
+        </div>
     </div>
+  </div>
 
      <!--Coleções (fixo)-->
 
@@ -168,88 +164,34 @@
           </div>
 
           <!-- ********** Seção Postagens ********** -->
-           <div id="secao-postagens" style="display: none; flex-direction: column; gap: 15px; transform: translateX(15px);">
-
-
-          <article class="post">
-            <div class="autor-post">
-              <div class="flex" style="flex-direction: column">
-                <div class="flex">
-                  <div class="autor-photo">
-                    <img src="../assets/jpg/foto-perfil-exemplo.jpg" alt="" />
-                  </div>
-                  <a class="autor" href="../">Cartinha Mágica</a>
-                </div>
-                <span class="horario">Fev 26 às 19h19</span>
-              </div>
-              <div>
-                <div class="options-container">
-                  <a class="options-post" onclick="toggleOptions(this)">...</a>
-                  <div class="dropdown-options">
-                    <a class="btnSalvarPost" style="cursor: pointer"
-                      >Salvar post</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="corpo-post">
-              <p>
-                Esse projeto tem o intuito de levar alegria e esperança para
-                crianças que muitas vezes não têm condições de ter um Natal tão
-                especial. A cada ano, voluntários se unem para arrecadar doações
-                e organizar essa festa inesquecível.
-              </p>
-            </div>
-            <div class="reactions-post">
-              <a class="reaction" >Curtir</a>
-              <a class="reaction" >Compartilhar</a>
-            </div>
-          </article>  
-           </div>
+          <div id="secao-postagens"
+          style="display: none; flex-direction: column; gap: 15px; transform: translateX(15px); width: 100%;">
+          <div id="post-section">
+            <article class="post">
+            </article>
+          </div>
+        </div>
 
            <!-- ********** Seção Sobre ********** -->
-    <div id="secao-sobre" style="display: none; flex-direction: column; gap: 15px; transform: translateX(20px);">
-      <article class="sobreContainer">
+        <div id="secao-sobre" style="display: none; flex-direction: column; gap: 15px; transform: translateX(20px);">
+          <article class="sobreContainer">
             <div class="sobreCorpo">
-              <h3>Causa social: Infantil</h3>
-              <p>
-                essa ong é para blalala Lorem Ipsum is simply dummy text of the
-                printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy descricao Lorem Ipsum is simply dummy
-                text of the printing and typesetting industry. Lorem Ipsum has
-                been the industry's standard dummy text ever since the 1500s,
-                when an unknown printer took a galley of type and scrambled it
-                to make a type specimen book.
-              </p>
-              <p>
-                descricao Lorem Ipsum is simply dummy text of the printing and
-                typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown
-                printer took a galley of type and scrambled it to make a type
-                specimen book.
+              <h3 id="txtrazao_social">Razão social:</h3>
+              <p id="txtdescricao">
               </p>
             </div>
             <div class="sobreFooter">
               <div style="display: flex; align-items: center; gap: 8px">
-                <img
-                  src="../assets/png/icones/icone_calendario-fundacao-sobre.png"
-                  alt=""
-                  height="20px"
-                  width="20px"
-                /><span>Fundada em 99/99/9999</span>
+                <img src="../assets/png/icones/icone_calendario-fundacao-sobre.png" alt="" height="20px"
+                  width="20px" /><span id="txtAdF">Fundada em </span>
               </div>
               <div style="display: flex; align-items: center; gap: 8px">
-                <img
-                  src="../assets/png/icones/icone_localizacao-sobre.png"
-                  alt=""
-                  height="20px"
-                  width="20px"
-                /><span>Localizada em Porto Feliz</span>
+                <img src="../assets/png/icones/icone_localizacao-sobre.png" alt="" height="20px" width="20px" /><span
+                  id="txtcidade">Localizada em </span>
               </div>
             </div>
           </article>
-    </div>
+        </div>
 
     <!-- ********** Seção Mídia ********** -->
     <div id="secao-midia" style="display: none; flex-direction: column; gap: 15px; transform: translateX(-14px); width: 92%;">
@@ -277,16 +219,7 @@
             </h4>
 
             <section class="fotos-container">
-
-              <div
-                data-modal="btnModalPost"
-                class="foto"
-                style="
-                cursor: pointer;
-                  background: url(../assets/jpg/foto-post.jpg);
-                  background-size: cover;
-                "
-              ></div>
+              <!-- AQUI VAI SER GERADO PELO CODIGO AS MINIATURAS-->
             </section>
             <div
               style="
@@ -347,6 +280,30 @@
     </div>
 
 <!-- ********** MODAIS ********** -->
+
+<!-- MODAL MIDIA ABERTA-->
+<div id="modalPost" style="display:none; position:fixed; top:50; left:50; width:80%; height: 80%; background:#fff; z-index:999;">
+  <div style="display: flex; width: 70%; height: 100%; flex-direction: column; justify-content: space-between; align-items: center;">
+    <div style="width: 100%; display: flex; align-items: center; padding: 0; height: 10px;">
+      <a href="" class="sair" style="font-weight: bold;">×</a>
+    </div>
+    <div id="midia-viewer" class="photo-post" style="display: flex; justify-content: center; align-items: center;">
+      <img id="midia-img" src="" style="max-width: 100%; max-height: 70vh; object-fit: contain;" />
+    </div>
+  </div>
+  <div style="width: 30%; border-left: 3px solid #f5f5f5; border-radius: 0 10px 10px 0; display: flex; flex-direction: column; justify-content: flex-start;">
+    <div style="border-bottom: 3px solid #f5f5f5; display: flex; align-items: center; padding: 1rem;">
+      <p class="autor" id="criadorMidia"></p>
+    </div>
+    <article class="postInfo">
+      <div style="display: flex; width: 100%; padding-left: 2.5rem; height: 20px; align-items: flex-start; justify-content: flex-start;">
+        <a class="info"></a>
+      </div>
+      <p class="txtPost" id="midia-descricao"></p>
+    </article>
+  </div>
+</div>
+
 
     <!--********** Criar Post modal **********-->
     <div id="criarPost">
@@ -510,94 +467,6 @@
       </div>
     </div>
 
-        <!-- Modal Imagem aberta -->
-    <div id="modalPost" data-modal="btnModalPost" style="display: none">
-      <div
-        style="
-          display: flex;
-          width: 70%;
-          height: 100%;
-          flex-direction: column;
-          justify-content: space-between;
-          align-items: center;
-        "
-      >
-        <div
-          style="
-            width: 100%;
-            display: flex;
-            align-items: center;
-            padding: 0;
-            height: 10px;
-          "
-        >
-          <a href="" class="sair">X</a>
-        </div>
-
-        <div
-          style="
-            background: url(../assets/jpg/foto-post.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-          "
-          class="photo-post"
-        ></div>
-      </div>
-      <div
-        style="
-          width: 30%;
-          border-left: 3px solid #f5f5f5;
-          border-radius: 0 10px 10px 0;
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-        "
-      >
-        <div
-          class=""
-          style="
-            border-bottom: 3px solid #f5f5f5;
-            display: flex;
-            align-items: center;
-            padding: 1rem;
-          "
-        >
-          <div class="autor-photo" style="line-height: 5px">
-            <img src="../assets/jpg/foto-perfil-exemplo.jpg" alt="" />
-          </div>
-          <div style="display: flex; flex-direction: column">
-            <a class="autor">Cartinha Mágica</a>
-            <a class="info">Itu - SP</a>
-          </div>
-        </div>
-        <article class="postInfo">
-          <div
-            style="
-              display: flex;
-              width: 100%;
-              padding-left: 2.5rem;
-              height: 20px;
-              align-items: flex-start;
-              justify-content: flex-start;
-            "
-          >
-            <a class="info">Out 12 às 19h19</a>
-          </div>
-          <p class="txtPost">
-            🌟 Feliz Dia das Crianças! 🌟
-            <br /><br />
-            Hoje celebramos os pequenos grandes sonhos que movem o mundo. Que
-            nunca falte sorriso, brincadeira e oportunidades para todas as
-            crianças serem exatamente quem elas desejam ser. 💛
-            <br /><br />
-            <span class="hashtags"
-              >#DiaDasCrianças #InfânciaComAmor #TransformandoVidas</span
-            >
-          </p>
-        </article>
-      </div>
-    </div>
-
         <!-- Adicionar Imagem em Mídia -->
     <div id="adicionarImagemModal">
       <header class="modal-header">
@@ -624,6 +493,278 @@
     </div>
 
  <script>
+
+let dataONG = null;
+let dataUser = null;
+
+window.onload = async () => {
+   try {
+        const res = await fetch("/api/configUser", {
+          method: "GET",
+          credentials: "include" // necessário para enviar o cookie da sessão
+        });
+        const data = await res.json();
+
+        if (!res.ok) {
+          alert(data.error);
+          // redireciona
+          window.location.href = "../cadastros/login-doador.html";
+          return;
+        }      
+
+          document.getElementById("fotoPerfil").src = data.foto_perfil_ong;
+
+        document.getElementById("fotoHeader").src = data.foto_header_ong;
+
+        console.log(data)
+        document.querySelector(".name-account").innerHTML = data.Nome_user;
+        document.querySelector(".email-account").innerHTML = data.Email_user;
+
+      } catch (err) {
+        console.error("Erro ao carregar dados:", err);
+      }
+
+  try {
+    params = new URLSearchParams(window.location.search)
+    id = params.get("id")
+
+    const res = await fetch(`/api/perfilOng/${id}`, {
+      method: "GET",
+      credentials: "include"
+    });
+
+    dataONG = await res.json();
+    if (!res.ok) {
+      alert(dataONG.error);
+      window.location.href = "../cadastros/login-user.html";
+      return;
+    }
+
+    // IMAGENS
+    document.getElementById("fotoPerfil").src = dataONG.foto_perfil_ong;
+    document.getElementById("fotoHeader").src = dataONG.foto_header_ong;
+
+    // INFORMAÇÕES
+    document.getElementById("txtnomeOngPerfil").textContent = dataONG.nome_ong;
+    document.getElementById("txtseguidores").textContent = dataONG.seguidores;
+    document.getElementById("txtrazao_social").textContent = 'Razão Social: ' + dataONG.razao_social;
+    document.getElementById("txtdescricao").textContent = dataONG.descrição;
+    document.getElementById("txtAdF").textContent = 'Fundada em ' + dataONG.AdF;
+    document.getElementById("txtcidade").textContent = 'Localizada em ' + dataONG.cidade;
+
+    console.log(dataONG);
+  } catch (err) {
+    console.error("Erro ao carregar dados ONG:", err);
+  }
+
+  try {
+    const res = await fetch("/api/configUser", {
+      method: "GET",
+      credentials: "include"
+    });
+
+    dataUser = await res.json();
+    if (!res.ok) {
+      alert(dataUser.error);
+      return;
+    }
+
+    console.log(dataUser);
+  } catch (err) {
+    console.error("Erro ao carregar dados usuário:", err);
+  }
+
+  async function atualizarBotao(userId, ongId) {
+  const res = await fetch(`/api/seguir/check?seguidor_id=${userId}&ong_id=${ongId}`);
+  const data = await res.json();
+
+  const botao = document.getElementById("btnSeguir");
+  botao.innerText = data.label; 
+}
+
+atualizarBotao(dataUser.id_user , dataONG.id_ong)
+
+
+document.getElementById('btnSeguir').addEventListener("click", async () => {
+  try {
+    const res = await fetch("/api/seguir", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        seguidor_id: dataUser.id_user,
+        ong_id: dataONG.id_ong
+      })
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) {
+      alert(data.error || "Erro desconhecido");
+      return;
+    }
+
+    console.log(data.message);
+
+    if (data.reload) {
+      window.location.reload();
+    }
+
+  } catch (err) {
+    console.error("Erro ao seguir:", err);
+    alert("Erro inesperado ao seguir/desseguir.");
+  }
+});
+// script de midias - versão usuário (read-only)
+
+
+async function carregarMidiasUsuario(idOng) {
+  if (!idOng) return;
+  const res = await fetch(`/api/midias/${idOng}`, { credentials: "include" });
+  const midias = (await res.json()) || [];
+  const fotosContainer = document.querySelector("#secao-midia .fotos-container");
+  fotosContainer.innerHTML = "";
+
+  midias.forEach(midia => {
+    const urls = Array.isArray(midia.imagem_midia) ? midia.imagem_midia : [midia.imagem_midia];
+
+    urls.forEach(url => {
+      const article = document.createElement("article");
+      article.classList.add("foto");
+      article.style.cursor = "pointer";
+      article.style.width = "100px";
+      article.style.height = "100px";
+      article.style.margin = "5px";
+
+      if (url.match(/\.(mp4|webm|ogg)$/i)) {
+        const video = document.createElement("video");
+        video.src = url;
+        video.controls = true;
+        video.width = 100;
+        video.height = 100;
+        article.appendChild(video);
+      } else {
+        article.style.background = `url(${url})`;
+        article.style.backgroundSize = "cover";
+        article.style.backgroundPosition = "center";
+      }
+
+      article.addEventListener("click", () => abrirVisualizacaoMidia(url, midia.descricao_midia,  midia.ONG?.nome_ong));
+      fotosContainer.appendChild(article);
+    });
+  });
+}
+   
+
+// Modal para visualização
+function abrirVisualizacaoMidia(url, descricao, criador) {
+  const overlay = document.getElementById("overlay");
+  const modalPost = document.getElementById("modalPost");
+  const midiaImg = document.getElementById("midia-img");
+  const midiaDescricao = document.getElementById("midia-descricao");
+  const criadorMidia = document.getElementById("criadorMidia");
+
+  // Atualiza imagem e descrição
+  midiaImg.src = url;
+  midiaDescricao.textContent = descricao;
+  criadorMidia.textContent =  criador;
+
+  // Exibe modal e overlay
+  overlay.classList.add("show");
+  modalPost.style.display = "flex";
+
+  // Fechar ao clicar no overlay ou no botão X
+  overlay.onclick = fecharModal;
+  modalPost.querySelector(".sair").onclick = fecharModal;
+
+  function fecharModal(e) {
+    if (e) e.preventDefault();
+    overlay.classList.remove("show");
+    modalPost.style.display = "none";
+  }
+}
+
+
+
+// Chama a função para carregar as mídias do perfil da ONG
+const idOng = dataONG.id_ong
+console.log(idOng)
+carregarMidiasUsuario(idOng);
+
+
+};
+ async function carregarFeed() {
+      const res = await fetch("/api/perfilSeg", {
+        method: "GET",
+        credentials: "include"
+      });
+      const posts = await res.json();
+
+      const feedDiv = document.getElementById("post-section");
+      feedDiv.innerHTML = `<div id="post-section"style="display: none; flex-direction: column; gap: 15px; transform: translateX(15px);"`;
+
+      posts.forEach(post => {
+        const postDiv = document.createElement("article");
+        postDiv.classList.add("post");
+
+
+        const midias = Array.isArray(post.imagem_url)
+          ? post.imagem_url
+          : JSON.parse(post.imagem_url || "[]");
+
+        const midia = midias.map(url => {
+          return url.endsWith(".mp4")
+            ? `<video controls src="${url}" width="300"></video>`
+            : `<img src="${url}" width="300" />`;
+        }).join("");
+
+
+
+        postDiv.innerHTML = `
+      <div class="autor-post">
+        <div class="flex" style="flex-direction: column">
+          <div class="flex">
+            <div class="autor-photo">
+              <img src="../assets/jpg/foto-perfil-exemplo.jpg" alt="" />
+            </div>
+            <a class="autor" href="../">${post.ONG?.nome_ong || "ONG desconhecida"}</a>
+          </div>
+          <span class="horario">
+            ${new Date(post.data_hora).toLocaleString("pt-BR")}
+          </span>
+        </div>
+        <div>
+          <div class="options-container" data-id="${post.id_post}">
+            <a class="options-post">...</a>
+            <div class="dropdown-options">
+              <a class="btnEditarPost" style="cursor: pointer">Editar post</a>
+              <a class="btnSalvarPost" style="cursor: pointer">Salvar post</a>
+              <a class="btnExcluirPost" style="cursor: pointer">Excluir post</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="corpo-post">
+        <p>${post.conteudo_post}</p>
+        <div class="midia">${midia}</div>
+      </div>
+
+      <div class="reactions-post">
+        <div style="width: 100%; gap: 5px; align-items: center;" class="flex">
+          <img src="../assets/png/icones/icone_curtir.png" width="16px" height="16px" alt="">
+          <span style=" color: #a6a6a6; font-weight: bold; font-size: 13px;">0</span>
+        </div>
+        <a class="reaction">Curtir</a>
+        <a class="reaction">Compartilhar</a>
+      </div>
+    `;
+
+        feedDiv.appendChild(postDiv);
+
+      });
+    }
+
+    carregarFeed();
 
       //scripts para esconder/aparecer as seções
 
@@ -716,8 +857,9 @@ linkColecao.forEach(element => {
   });
 });
 
-    </script>
 
+
+    </script>
 
     <script src="../js/funcionalidades.js"></script>
     <script src="../js/modals/modalPost.js"></script>

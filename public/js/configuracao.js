@@ -2,7 +2,7 @@
 
 //fazer a div acionar o input
 function AcionarFundo(){
-    const inputFundo = document.getElementById("input-imagem-fundo");
+    const inputFundo = document.getElementById("input_imagem_fundo");
     inputFundo.focus();
     inputFundo.click();
 }
@@ -53,7 +53,7 @@ if (inputImagemFundo && spanImagemFundo) {
 
 //fazer a div acionar o input
 function AcionarIcone(){
-    const inputPerfil = document.getElementById("input-icone-perfil");
+    const inputPerfil = document.getElementById("input_icone_perfil");
     inputPerfil.focus();
     inputPerfil.click();
 }

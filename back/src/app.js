@@ -5,12 +5,19 @@ import session from "express-session";
 
 import usuarioRoutes from './routes/usuario.routes.js';
 import ongRoutes from './routes/ong.routes.js';
+import verPerfilOng from './routes/verperfil.routes.js';
 import authRoutes from './routes/auth.routes.js';
 import configRoutes from './routes/config.routes.js';
 import configUserRoutes from './routes/configUser.routes.js';
 import editOngRoutes from './routes/editOng.routes.js';
 import editUserRoutes from './routes/editUser.routes.js';
 import sessaoRoutes from './routes/sessao.routes.js';
+import seguirRoutes from './routes/seguir.routes.js';
+import midiasRoutes from './routes/midias.routes.js';
+import postRoutes from './routes/post.routes.js';
+import postExRoutes from './routes/postEX.routes.js';
+import checkSeguirRoutes from './routes/seguir.routes.js';
+import postSegRoutes from './routes/postSeg.routes.js';
 
 
 
@@ -54,12 +61,21 @@ app.post("/logout", (req, res) => {
 // Rotas da API
 app.use('/api/usuarios', usuarioRoutes);
 app.use('/api/ongs', ongRoutes);
+app.use('/api/perfilOng/', verPerfilOng);
 app.use('/api/', authRoutes);
 app.use('/api', configRoutes);
 app.use('/api', configUserRoutes);
 app.use('/api/ong/', editOngRoutes);
 app.use('/api/user/', editUserRoutes);
+app.use('/api/seguir', seguirRoutes);
+app.use('/api/seguir', checkSeguirRoutes);
 app.use('/api', sessaoRoutes);
+app.use('/api/', postRoutes);
+app.use('/api/posts/', postExRoutes);
+app.use('/api/posts/update', postExRoutes);
+app.use('/api/', midiasRoutes);
+app.use('/api/', postSegRoutes);
+
 
 app.get("/public", (req, res) => {
   res.send("Qualquer um pode ver isso");
@@ -104,3 +120,4 @@ export default app;
 // npm i memorystorage -> Vinicius fez o storage com ele, mas nao achei informações o suficiente para min fazer
 // npm install express-session
 // npm install cookie-parser
+
