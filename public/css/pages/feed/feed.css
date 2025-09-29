@@ -222,6 +222,22 @@
   z-index: 1000;
 }
 
+.container-acontecendo{
+  border: 1px solid var(--gray-border);
+}
+
+.container-termos{
+  align-items: flex-end;
+  margin-top: 21.5rem;
+
+  .texto-termos{
+    font-size: 16px;
+    color: #969696;
+    font-family: 'Nunito Regular';
+    font-weight: 900;
+  }
+}
+
 
 @media only screen and (max-width: 900px) {
   .container-patrocinado {

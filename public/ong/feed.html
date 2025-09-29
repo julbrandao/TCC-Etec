@@ -98,6 +98,19 @@
                 </div>
             </article>
           </div>  
+           
+          <div class="container-termos">
+            <div>
+              <a href="" class="texto-termos">
+                © 2025 - UneONG </a>
+            </div>
+            <div>
+              <a href="" class="texto-termos" style="text-decoration: underline">
+            Termos de uso e política de privacidade </a>
+            </div> 
+          </div>
+          </div>
+
         </div>
 
           <!-- Menu de publicações -->
@@ -219,7 +232,57 @@
                 </article>
             </div>
 
+            <div class="create-post" style="width: 230px; border-color: none;">
+            <img src="../assets/jpg/foto-perfil-exemplo.jpg" alt="" />
+            <input
+              type="text"
+              name="abrirModalCriarPost"
+              id="abrirModalCriarPost"
+              placeholder="Fazer publicação..."
+            />
+          </div>
     </main>
+
+    <!--MODAIS-->
+
+        <!--********** Criar Post modal **********-->
+    <div id="criarPost">
+      <div class="cabecalho-post">
+        <div style="width: 95%; display: flex; justify-content: center; align-items: center;">
+          <h3>Criar Post</h3>
+        </div>
+        <a href="" class="sair" id="sairCriarPost">X</a>
+      </div>
+      <div class="corpo-post">
+        <div class="informacoes-pessoais">
+          <div
+            class="perfilIcon"
+            style="background-image: url(../assets/jpg/foto-perfil-exemplo.jpg)"
+          ></div>
+          <p>Cartinha Mágica</p>
+        </div>
+        <textarea style=" resize: none;"
+          name=""
+          id="textPost"
+          placeholder="No que você está pensando?"
+        ></textarea>
+        <input
+  type="file"
+  name="imagemPost"
+  id="imagemPost"
+  style="display: none"
+  accept="image/*,video/*"
+  multiple
+/>
+<label for="imagemPost" class="add-file-post">Adicionar ao Post</label>
+
+<div class="preview" style="min-width: 80%;" id="previewContainerPost"></div>
+
+      </div>
+      <div style="width: 100%; display: flex; justify-content: center">
+        <a class="btn-publicar">Publicar</a>
+      </div>
+    </div>
 
     <!-- MODAL SALVAR PUBLICAÇÃO -->
 
