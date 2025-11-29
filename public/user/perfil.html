@@ -147,7 +147,7 @@
 
         <!-- ********** Seção Coleção ********** -->
 
-      <div class="flex" id="secao-colecao" style="display: none; align-items: center; justify-content: center; width: 100%">
+      <div class="flex" id="secao-colecao" style="display: none; align-items: flex-start; justify-content: flex-start ; width: 100%; overflow-y: auto; max-height: 500px; display: flex; flex-direction: column; gap: 2rem;">
 
         <!-- AQUI VAI FICAR AS POSTAGENS LISTADAS -->
 
@@ -791,12 +791,12 @@ async function removerItemColecaoFrontend(id_cItem) {
       throw new Error(message);
     }
 
-    alert("✅ Item removido com sucesso!");
+    alert("Postagem removida com sucesso!");
     window.location.reload();
 
   } catch (error) {
-    console.error("❌ Erro ao remover item da coleção:", error);
-    alert("❌ Falha ao remover item. Veja o console para detalhes.");
+    console.error("Erro ao remover postagem da coleção:", error);
+    alert("Falha ao remover a postagem. Veja o console para detalhes.");
   }
 }
 

@@ -39,29 +39,45 @@ router.put(
   upload.array("novasMidias", 4),
   async (req, res) => {
     try {
-      const { data: postt, error } = await supabase
-    .from("post")
-    .select(`
-      ONG (
-        id_ong,
-      )
-    `)
-    .single()
       const { id_post } = req.params;
       const { conteudo_post, imagensExistentes } = req.body;
-      console.log(postt)
-       let id_ong = postt 
+
+      // 1. Buscar o post para pegar o id_ong
+      const { data: post, error: postError } = await supabase
+        .from("post")
+        .select(`
+          id_post,
+          ONG (
+            id_ong
+          )
+        `)
+        .eq("id_post", id_post)
+        .single();
+
+      if (postError || !post) {
+        console.error("Erro ao buscar post:", postError);
+        return res.status(404).json({ error: "Post não encontrado" });
+      }
+
+      // Extrai o id_ong corretamente
+      const id_ong = post.ONG.id_ong;
+
       // garante que imagensExistentes seja array
       let imagensAtuais = [];
       if (imagensExistentes) {
-        imagensAtuais = JSON.parse(imagensExistentes); // frontend manda JSON.stringfy([...])
+        try {
+          imagensAtuais = JSON.parse(imagensExistentes); // frontend manda JSON.stringify([...])
+        } catch (e) {
+          console.error("Erro ao parsear imagensExistentes:", e);
+          imagensAtuais = [];
+        }
       }
 
       // processa novos arquivos enviados
       const novasUrls = [];
       if (req.files && req.files.length > 0) {
         for (const file of req.files) {
-        const filePath = `Ongs/postagens/${id_ong}/${Date.now()}-${file.originalname}`;
+          const filePath = `Ongs/postagens/${id_ong}/${Date.now()}-${file.originalname}`;
           const { error: uploadError } = await supabase.storage
             .from("imagens")
             .upload(filePath, file.buffer, {
@@ -70,7 +86,7 @@ router.put(
             });
 
           if (uploadError) {
-            console.error(uploadError);
+            console.error("Erro ao fazer upload:", uploadError);
             return res.status(500).json({ error: "Erro ao enviar arquivo" });
           }
 
@@ -95,7 +111,7 @@ router.put(
         .eq("id_post", id_post);
 
       if (updateError) {
-        console.error(updateError);
+        console.error("Erro ao atualizar post:", updateError);
         return res.status(500).json({ error: "Erro ao atualizar post" });
       }
 
@@ -104,7 +120,7 @@ router.put(
         imagens: imagensFinais,
       });
     } catch (err) {
-      console.error(err);
+      console.error("Erro interno:", err);
       res.status(500).json({ error: "Erro interno" });
     }
   }

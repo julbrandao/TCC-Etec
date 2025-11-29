@@ -50,11 +50,7 @@
           /></a>
         </div>
 
-       <div style="display: flex; flex-direction: column; position: relative;">
-        <input type="text" name="txtbuscar" id="txtbuscar" class="buscar" placeholder="Procure uma ong..." />
-        <div id="results" class="results"></div>
-      </div>
-      <label for="txtbuscar"><img src="../assets/png/icones/icone_buscar.png" class="buscarIcon" alt=""></label>
+
       
         <div
           class="nav-elements"
@@ -109,7 +105,7 @@
           <h4 class="name-profile">Cartinha Mágica</h4>
         </div>
         <div class="div-2">
-          <p><span>10</span> publicações</p>
+          <p><span id="txtcountpost"></span> publicações</p>
           <p></p>
           <p><span id="txtseguidores"></span> seguidores</p>
         </div>
@@ -250,7 +246,7 @@
 
         <!-- ********** Seção Coleção ********** -->
 
-      <div class="flex" id="secao-colecao" style="display: none; align-items: center; justify-content: center; width: 100%">
+      <div class="flex" id="secao-colecao" style="display: none; align-items: flex-start; justify-content: flex-start ; width: 100%; overflow-y: auto; max-height: 500px; display: flex; flex-direction: column; gap: 2rem;">
 
         <!--Postagem salva numa coleção-->        
         <!-- POSTS SÃO GERADOS AUTOMATICAMENTE -->
@@ -275,9 +271,10 @@
         <div class="informacoes-pessoais">
           <div
             class="perfilIcon"
+            id="foto_perfil7"
             style="background-image: url(../assets/jpg/foto-perfil-exemplo.jpg)"
           ></div>
-          <p>Cartinha Mágica</p>
+          <p  id="txtnomeOng4">Cartinha Mágica</p>
         </div>
         <textarea style=" resize: none;"
           name=""
@@ -304,46 +301,36 @@
 
     <!-- EDITAR POSTAGEM -->
 
-      <div id="editarPost">
-      <div class="cabecalho-post">
-        <div
-          style="
+        <div id="editarPost">
+    <div class="cabecalho-post2">
+      <div style="
             width: 95%;
             display: flex;
             justify-content: center;
             align-items: center;
-          "
-        >
-          <h3>Editar Postagem</h3>
-        </div>
-        <a href="" class="sair" id="sairEditarPost">X</a>
+          ">
+        <h3>Editar Postagem</h3>
       </div>
-      <div class="corpo-post">
-        <div class="informacoes-pessoais">
-          <div
-            class="perfilIcon"
-            id="foto_perfil4"
-          ></div>
-          <p id="editarNomeOng"></p>
-        </div>
-        <textarea style=" resize: none;"
-          name=""
-          id="textPost2"
-          placeholder="Texto da postagem"
-        ></textarea>
-        <input
-          type="file"
-          name="imagemPost2"
-          id="imagemPost2"
-          style="display: none"
-        />
-        <label for="imagemPost2" class="add-file-post">Adicionar Imagens</label>
-        <div class="preview" style="min-width: 80%;" id="previewContainerPost2"></div>
-      </div>
-      <div style="width: 100%; display: flex; justify-content: center">
-        <a class="btn-salvar" id="btnSalvarEdicao">Salvar</a>
-      </div>
+      <a href="" class="sair" id="sairEditarPost">X</a>
     </div>
+    <div class="corpo-post2">
+      <div class="informacoes_pessoais2">
+        <div class="perfilIcon" style="background-image: url(../assets/jpg/foto-perfil-exemplo.jpg)" id="foto_perfil4"></div>
+        <p id="editarNomeOng">Cartinha Mágica</p>
+      </div>
+      <textarea style=" resize: none;" name="textPost2" id="textPost2"
+        placeholder="No que você está pensando?"></textarea>
+      <input type="file" name="imagemPost2" id="imagemPost2" style="display: none" 
+      accept="image/*,video/*"
+          multiple
+          />
+      <label for="imagemPost2" class="add-file-post2">Adicionar Imagens</label>
+      <div class="preview" style="min-width: 80%;" id="previewContainerPost2"></div>
+    </div>
+    <div style="width: 100%; display: flex; justify-content: center">
+      <a class="btn-salvar2" id="btnSalvarEdicao">Salvar</a>
+    </div>
+  </div>
 
     <!-- EXCLUIR POSTAGEM -->
 
@@ -361,7 +348,7 @@
         <div class="opcoes-excluirmodal">
           <button id="btn-cancelar-excluirmodal">Cancelar</button>
 
-          <button id="btnSairExcluirmodal">Excluir</button>
+          <button id="btnSairExcluirmodal" style="background-color: #f4863e; color: #fff;">Excluir</button>
         </div>
       </div>
     </div>
@@ -556,7 +543,10 @@ let usuarioLogadoId = null;
 
         document.querySelector(".name-account").textContent = data.nome_ong;
         document.querySelector(".foto-perfil").src = data.foto_perfil_ong;
+        document.getElementById("foto_perfil7").src = data.foto_perfil_ong
         document.getElementById("fotoPerfilPostagem").src = data.foto_perfil_ong
+
+        document.getElementById("txtnomeOng4").textContent = data.nome_ong
         document.querySelector(".email-account").textContent = data.email_ong;
 
         //IMAGENS
@@ -572,17 +562,16 @@ let usuarioLogadoId = null;
         document.getElementById("txtAdF").textContent = data.telefone;
         const foto = document.getElementById("foto_perfil4");
         foto.style.backgroundImage  = `url(${data.foto_perfil_ong})`;
-        document.getElementById("editarNomeOng").textContent = data.nome_ong;
+        const foto2 = document.getElementById("foto_perfil7");
+        foto2.style.backgroundImage  = `url(${data.foto_perfil_ong})`;
+  document.getElementById("editarNomeOng").textContent = data.nome_ong;
 
-  
-        console.log(data)
-        console.log("ID DA ONG -> " + data.id_ong)
-        carregarMidias(data.id_ong);
-        listarColecoes(data.id_ong);
-        carregarColecoesDaOng(data.id_ong);
-        usuarioLogadoId = data.id_ong;
-         console.log(usuarioLogadoId)
-         carregarFeed(usuarioLogadoId)
+  carregarMidias(data.id_ong);
+  listarColecoes(data.id_ong);
+  carregarColecoesDaOng(data.id_ong);
+  carregarQuantidadePostagens(data.id_ong)
+  usuarioLogadoId = data.id_ong;
+  carregarFeed(usuarioLogadoId)
 
       } catch (err) {
         console.error("Erro ao carregar dados:", err);
@@ -614,9 +603,8 @@ let usuarioLogadoId = null;
         body: formData,
       });
 
-      const result = await response.json();
-      console.log(result);
-      if (response.ok) {
+  const result = await response.json();
+  if (response.ok) {
         alert("Post criado com sucesso")
         carregarFeed();
         window.location.reload();
@@ -647,6 +635,7 @@ let usuarioLogadoId = null;
     console.error("Erro ao verificar curtida:", err);
   }
 }
+
 async function carregarCurtidas(postId) {
   try {
     const res = await fetch(`/api/post/curtidasO/${postId}`);
@@ -656,7 +645,6 @@ async function carregarCurtidas(postId) {
     if (contador) {
       contador.textContent = data.totalCurtidas || 0;
     }
-    console.log(data);
   } catch (err) {
     console.error("Erro ao carregar curtidas:", err);
   }
@@ -670,7 +658,7 @@ async function carregarCurtidas(postId) {
     const postId = e.target.dataset.postId;
     const usuarioId = e.target.dataset.usuarioId;
 
-    console.log("Usuário", usuarioId, "curtindo post", postId);    
+    
     try {
       const res = await fetch("/api/post/curtidasO", {
         method: "POST",
@@ -718,7 +706,8 @@ async function carregarCurtidas(postId) {
             : `<img src="${url}" width="300" />`;
         }).join("");
 
-
+        
+carregarCurtidas(post.id_post);
 
         postDiv.innerHTML = ` <div class="autor-post">
         <div class="flex" style="flex-direction: column">
@@ -726,7 +715,7 @@ async function carregarCurtidas(postId) {
             <div class="autor-photo">
               <img src="${post.ONG.foto_perfil_ong}" alt="" />
             </div>
-            <a class="autor" href="../">${post.ONG?.nome_ong || "ONG desconhecida"}</a>
+            <a class="autor">${post.ONG?.nome_ong || "ONG desconhecida"}</a>
           </div>
           <span class="horario">
             ${new Date(post.data_hora).toLocaleString("pt-BR")}
@@ -762,19 +751,232 @@ async function carregarCurtidas(postId) {
         <a class="reaction">Compartilhar</a>
       </div>
     `;
+        verificarCurtida(post.id_post, usuarioLogadoId);
 
         feedDiv.appendChild(postDiv);
-        configurarEventosPosts();
+        
 
+      });
+
+
+      configurarEventosPosts();
+          iniciarFuncaoFeed();
+
+    }
+
+    // ==== CÓDIGO DE EDIÇÃO DE POST (FORA DA FUNÇÃO configurarEventosPosts) ====
+    let arquivosSelecionadosEditar = []; // novos uploads
+    let arquivosExistentesEditar = [];   // já salvos no banco
+    const LIMITE_MIDIAS = 4;
+
+    const previewContainerEditar = document.getElementById("previewContainerPost2");
+    const fileInputEditar = document.getElementById("imagemPost2");
+
+    // ==== renderiza preview ====
+    function mostrarPreviewEditar() {
+      if (!previewContainerEditar) return;
+      
+      previewContainerEditar.innerHTML = "";
+
+      // mídias existentes
+      arquivosExistentesEditar.forEach((url, index) => {
+        const wrapper = criarPreviewEditar(url, null, index, "existente");
+        previewContainerEditar.appendChild(wrapper);
+      });
+
+      // mídias novas
+      arquivosSelecionadosEditar.forEach((file, index) => {
+        const wrapper = criarPreviewEditar(URL.createObjectURL(file), file, index, "novo");
+        previewContainerEditar.appendChild(wrapper);
       });
     }
 
-    carregarFeed();
+    function criarPreviewEditar(src, file, index, tipo) {
+      const wrapper = document.createElement("div");
+      wrapper.style.cssText =
+        "position:relative;display:inline-block;margin:5px;width:100px;height:100px;border:1px solid #ddd;border-radius:10px;overflow:hidden;";
 
+      // Detecta se é vídeo (corrigido a precedência de operadores)
+      const isVideo = (file && file.type.startsWith("video")) || 
+                      (src && (src.endsWith(".mp4") || src.endsWith(".webm") || src.endsWith(".mov")));
+
+      if (isVideo) {
+        const video = document.createElement("video");
+        video.src = src;
+        video.controls = true;
+        video.style.cssText = "width:100%;height:100%;object-fit:cover;";
+        wrapper.appendChild(video);
+      } else {
+        const img = document.createElement("img");
+        img.src = src;
+        img.style.cssText = "width:100%;height:100%;object-fit:cover;";
+        img.onerror = function() {
+          this.src = '../assets/png/image-error.png'; // fallback caso a imagem não carregue
+        };
+        wrapper.appendChild(img);
+      }
+
+      // botão excluir - CORRIGIDO: usa filter para capturar o índice correto
+      const btn = document.createElement("button");
+      btn.textContent = "✕";
+      btn.style.cssText =
+        "position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.6);color:#fff;border:none;border-radius:50%;cursor:pointer;width:20px;height:20px;font-size:14px;display:flex;align-items:center;justify-content:center;";
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        // Encontra o índice atual no momento do clique
+        if (tipo === "existente") {
+          // Remove da lista de existentes
+          arquivosExistentesEditar = arquivosExistentesEditar.filter((item, i) => i !== index);
+        } else {
+          // Remove da lista de novos
+          arquivosSelecionadosEditar = arquivosSelecionadosEditar.filter((item, i) => i !== index);
+        }
+        mostrarPreviewEditar();
+      });
+
+      wrapper.appendChild(btn);
+      return wrapper;
+    }
+
+    // ==== input para novas mídias ====
+    if (fileInputEditar) {
+      fileInputEditar.addEventListener("change", (e) => {
+        let novosArquivos = Array.from(e.target.files);
+
+        // Filtrar apenas arquivos de imagem e vídeo válidos
+        novosArquivos = novosArquivos.filter(file => {
+          const isImage = file.type.startsWith('image/');
+          const isVideo = file.type.startsWith('video/');
+          return isImage || isVideo;
+        });
+
+        const totalAtual = arquivosExistentesEditar.length + arquivosSelecionadosEditar.length;
+        const vagas = LIMITE_MIDIAS - totalAtual;
+
+        // Validação corrigida: retorna se não houver vagas
+        if (vagas <= 0) {
+          alert(`Você já atingiu o limite de ${LIMITE_MIDIAS} mídias.`);
+          fileInputEditar.value = "";
+          return;
+        }
+
+        if (novosArquivos.length > vagas) {
+          alert(`Você pode adicionar apenas ${vagas} mídia(s). As primeiras ${vagas} serão adicionadas.`);
+          novosArquivos = novosArquivos.slice(0, vagas);
+        }
+
+        // adiciona só o que couber
+        arquivosSelecionadosEditar = arquivosSelecionadosEditar.concat(novosArquivos);
+
+        mostrarPreviewEditar();
+        fileInputEditar.value = ""; // limpa input para permitir novo upload
+      });
+    }
+
+    // ==== carregar post no modal ====
+    async function carregarPostNoModal(idPost) {
+      try {
+        const res = await fetch(`/api/posts/${idPost}`);
+        if (!res.ok) throw new Error('Erro ao buscar post');
+        
+        const post = await res.json();
+        
+
+        // texto
+        document.getElementById("textPost2").value = post.conteudo_post || "";
+
+        // mídias já salvas
+        arquivosExistentesEditar = Array.isArray(post.imagem_url) ? post.imagem_url : [];
+        arquivosSelecionadosEditar = [];
+
+        
+        mostrarPreviewEditar();
+      } catch (error) {
+        console.error("Erro ao carregar post:", error);
+        alert("Erro ao carregar os dados do post.");
+      }
+    }
+
+    // Variável para controlar se já existe um listener
+    let editarPostListenerAtivo = null;
+
+    async function editarPost(idPost) {
+      // Remove o listener anterior se existir
+      const btnSalvar = document.getElementById("btnSalvarEdicao");
+      if (editarPostListenerAtivo) {
+        btnSalvar.removeEventListener("click", editarPostListenerAtivo);
+      }
+
+      // Cria o novo listener
+      editarPostListenerAtivo = async (e) => {
+        e.preventDefault();
+        
+        const texto = document.getElementById("textPost2").value;
+
+        // Validação
+        if (!texto.trim() && arquivosExistentesEditar.length === 0 && arquivosSelecionadosEditar.length === 0) {
+          alert("A publicação precisa ter pelo menos um texto ou uma imagem!");
+          return;
+        }
+
+        const formData = new FormData();
+        formData.append("conteudo_post", texto);
+        formData.append("imagensExistentes", JSON.stringify(arquivosExistentesEditar));
+
+        // novas imagens selecionadas
+        arquivosSelecionadosEditar.forEach((file) => {
+          formData.append("novasMidias", file);
+        });
+
+        try {
+          const response = await fetch(`/api/posts/update/${idPost}`, {
+            method: "PUT",
+            body: formData,
+            credentials: "include"
+          });
+
+          if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(errorData.error || 'Erro ao atualizar post');
+          }
+
+          alert("Post atualizado com sucesso!");
+          window.location.reload();
+        } catch (error) {
+          console.error("Erro ao atualizar post:", error);
+          alert("Erro ao atualizar post: " + error.message);
+        }
+      };
+
+      // Adiciona o novo listener
+      btnSalvar.addEventListener("click", editarPostListenerAtivo);
+    }
+
+    async function deletarpost(idPost) {
+      document.getElementById("btnSairExcluirmodal").addEventListener("click", async () => {
+
+        const res = await fetch(`/api/posts/${idPost}`, {
+          method: "DELETE",
+        });
+
+        const data = await res.json();
+        if (res.ok) {
+          alert("Post excluído!");
+          carregarFeed();
+          window.location.reload();
+          carregarFeed().then(() => configurarEventosPosts(), recarregarCSS());
+        } else {
+          alert("Erro: " + data.error);
+        }
+
+      });
+
+    }
+
+    // ==== FUNÇÃO configurarEventosPosts() ====
     function configurarEventosPosts() {
 
-      // ==== salvar alterações ====
-
+      // ==== Toggle de opções do post ====
       document.querySelectorAll(".options-post").forEach((btn) => {
         btn.addEventListener("click", (e) => {
           const container = btn.parentElement;
@@ -783,163 +985,15 @@ async function carregarCurtidas(postId) {
         });
       });
 
-      let arquivosSelecionadosEditar = []; // novos uploads
-      let arquivosExistentesEditar = [];   // já salvos no banco
-      const LIMITE_MIDIAS = 4;
-
-      const previewContainerEditar = document.getElementById("previewContainerPost2");
-      const fileInputEditar = document.getElementById("imagemPost2");
-
-      // ==== renderiza preview ====
-      function mostrarPreviewEditar() {
-        previewContainerEditar.innerHTML = "";
-
-        // mídias existentes
-        arquivosExistentesEditar.forEach((url, index) => {
-          const wrapper = criarPreview(url, null, index, "existente");
-          previewContainerEditar.appendChild(wrapper);
-        });
-
-        // mídias novas
-        arquivosSelecionadosEditar.forEach((file, index) => {
-          const wrapper = criarPreview(URL.createObjectURL(file), file, index, "novo");
-          previewContainerEditar.appendChild(wrapper);
-        });
-      }
-
-      function criarPreview(src, file, index, tipo) {
-        const wrapper = document.createElement("div");
-        wrapper.style.cssText =
-          "position:relative;display:inline-block;margin:5px;width:100px;height:100px;border:1px solid #ddd;border-radius:10px;overflow:hidden;";
-
-        if (file && file.type.startsWith("video") || (src.endsWith(".mp4"))) {
-          const video = document.createElement("video");
-          video.src = src;
-          video.controls = true;
-          video.style.cssText = "width:100%;height:100%;object-fit:cover;";
-          wrapper.appendChild(video);
-        } else {
-          const img = document.createElement("img");
-          img.src = src;
-          img.style.cssText = "width:100%;height:100%;object-fit:cover;";
-          wrapper.appendChild(img);
-        }
-
-        // botão excluir
-        const btn = document.createElement("button");
-        btn.textContent = "✕";
-        btn.style.cssText =
-          "position:absolute;top:4px;right:4px;background:rgba(0,0,0,0.6);color:#fff;border:none;border-radius:50%;cursor:pointer;width:20px;height:20px;";
-        btn.addEventListener("click", () => {
-          if (tipo === "existente") {
-            arquivosExistentesEditar.splice(index, 1);
-          } else {
-            arquivosSelecionadosEditar.splice(index, 1);
-          }
-          mostrarPreviewEditar();
-        });
-
-        wrapper.appendChild(btn);
-        return wrapper;
-      }
-
-      // ==== input para novas mídias ====
-      if (fileInputEditar) {
-        fileInputEditar.addEventListener("change", (e) => {
-          let novosArquivos = Array.from(e.target.files);
-
-          // filtrar duplicados
-
-
-          const totalAtual = arquivosExistentesEditar.length + arquivosSelecionadosEditar.length;
-          const vagas = LIMITE_MIDIAS - totalAtual;
-
-          if (novosArquivos.length > vagas) {
-            alert(`Você não pode adicionar mais mídias.`);
-          }
-
-          // adiciona só o que couber
-          arquivosSelecionadosEditar = arquivosSelecionadosEditar.concat(novosArquivos.slice(0, vagas));
-
-          mostrarPreviewEditar();
-          fileInputEditar.value = ""; // limpa input para permitir novo upload
-        });
-      }
-      // ==== carregar post no modal ====
-      async function carregarPostNoModal(idPost) {
-        const res = await fetch(`/api/posts/${idPost}`);
-        const post = await res.json();
-
-        // texto
-        document.getElementById("textPost2").value = post.conteudo_post;
-
-        // mídias já salvas
-        arquivosExistentesEditar = Array.isArray(post.imagem_url) ? post.imagem_url : [];
-        arquivosSelecionadosEditar = [];
-
-        mostrarPreviewEditar();
-      }
-
-      async function editarPost(idPost) {
-        document.getElementById("btnSalvarEdicao").addEventListener("click", async () => {
-
-          const texto = document.getElementById("textPost2").value;
-
-          const formData = new FormData();
-          formData.append("conteudo_post", texto);
-          formData.append("imagensExistentes", JSON.stringify(arquivosExistentesEditar));
-
-          // novas imagens selecionadas
-          arquivosSelecionadosEditar.forEach((file) => {
-            formData.append("novasMidias", file);
-          });
-
-          await fetch(`/api/posts/update/${idPost}`, {
-            method: "PUT",
-            body: formData,
-            credentials: "include"
-          });
-          alert("Post atualizado!");
-          window.location.reload();
-          carregarFeed().then(() => configurarEventosPosts(), recarregarCSS());
-
-        });
-
-      }
-
-      async function deletarpost(idPost) {
-        document.getElementById("btnSairExcluirmodal").addEventListener("click", async () => {
-
-          const res = await fetch(`/api/posts/${idPost}`, {
-            method: "DELETE",
-          });
-
-          const data = await res.json();
-          if (res.ok) {
-            alert("Post excluído!");
-            carregarFeed();
-            window.location.reload();
-            carregarFeed().then(() => configurarEventosPosts(), recarregarCSS());
-          } else {
-            alert("Erro: " + data.error);
-          }
-
-        });
-
-      }
-
       document.querySelectorAll(".btnSalvarPost").forEach((btn) => {
         btn.addEventListener("click", () => {
           abrir(document.getElementById("salvarPublicacao"));
         });
       });
 
-
       document.querySelectorAll(".btnExcluirPost").forEach((btn) => {
         btn.addEventListener("click", (e) => {
           const idPost = e.target.closest(".options-container").dataset.id;
-          console.log("Excluir post com ID:", idPost);
-
           abrir(document.getElementById("excluirPost"));
 
           // Armazena o id do post que vai ser excluído
@@ -953,8 +1007,6 @@ async function carregarCurtidas(postId) {
       document.querySelectorAll(".btnEditarPost").forEach((btn) => {
         btn.addEventListener("click", (e) => {
           const idPost = e.target.closest(".options-container").dataset.id;
-          console.log("Editar post com ID:", idPost);
-
           // Abre modal de edição
           abrir(document.getElementById("editarPost"));
 
@@ -995,9 +1047,7 @@ async function carregarCurtidas(postId) {
         return;
       }
 
-      console.log("Arquivo recebido:", file);
-
-      const formData = new FormData();
+  const formData = new FormData();
       formData.append("txtlegenda", descricao);
       formData.append("fileInput", file, file.name);
 
@@ -1178,7 +1228,8 @@ async function excluirMidia(id_midia) {
       </div>
 
       <div class="container-legenda-modal">
-        <div class="topo-legenda-modal">
+        <div class="topo-legenda-modal" style="display: flex; justify-content: space-between;">
+          <div class="flex">
           <div class="autor-photo" style="line-height: 5px">
             <img id="fotoCriador" src="" alt="" />
           </div>
@@ -1186,7 +1237,9 @@ async function excluirMidia(id_midia) {
             <a class="autor" id="criadorMidia">Cartinha Mágica</a>
             <a class="info">Itu - SP</a>
           </div>
-              <a class="btnExcluirMidia" id="btnExcluirMidia" style="cursor: pointer" onclick="excluirMidia(${id_midia})"><img width="20px" height="20px" src="../assets/png/icones/icone_excluir.png"/></a>
+          </div>
+
+              <a class="btnExcluirMidia" id="btnExcluirMidia" style="cursor: pointer;" onclick="excluirMidia(${id_midia})"><img width="20px" height="20px" src="../assets/png/icones/icone_excluir.png"/></a>
 
         </div>
 
@@ -1251,8 +1304,6 @@ fotoCriador.src = foto_perfil_ong;
     });
 
     const result = await response.json();
-    console.log(result);
-
     if (response.ok) {
       alert("Coleção criada com sucesso!");
       window.location.reload(); //recarrega a página
@@ -1316,8 +1367,6 @@ async function excluirColecao(id_colecao) {
     });
 
     const result = await response.json();
-    console.log(result);
-
     if (response.ok) {
       alert("Coleção excluída com sucesso!");
       window.location.reload(); // recarrega ou substitua por função de atualização da interface
@@ -1433,7 +1482,7 @@ document.addEventListener("click", (event) => {
 
   // Armazena o ID do post clicado
   idPostSelecionado = botao.dataset.idPost;
-  console.log("Post selecionado:", idPostSelecionado);
+  
 
   // Aqui você pode chamar a função que abre o modal ou apenas preparar os dados
   // abrirModal(); // se tiver modal
@@ -1488,13 +1537,13 @@ async function carregarColecao(idColecao) {
               <div class="autor-photo">
                 <img src="${post.ONG.foto_perfil_ong}" alt="" />
               </div>
-              <a class="autor" href="../">${post.ONG?.nome_ong || "ONG desconhecida"}</a>
+              <a class="autor">${post.ONG?.nome_ong || "ONG desconhecida"}</a>
             </div>
             <span class="horario">${new Date(post.data_hora).toLocaleString("pt-BR")}</span>
           </div>
           <div>
             <div class="options-container" data-id="${post.id_post}">
-              <a class="options-post" onclick="toggleOptions(this)">...</a>
+              <a class="options-post" onclick="">...</a>
               <div class="dropdown-options">
 <a class="btnRemoverItem" 
    onclick="removerItemColecaoFrontend(${post.id_citem_ong})" 
@@ -1517,8 +1566,7 @@ async function carregarColecao(idColecao) {
       `;
 
       colecaoDiv.appendChild(postDiv);
-      console.log("🧠 id_cItem enviado:", post.id_citem_ong);
-      console.log(post)
+      
     });
 
     configurarEventosPostsColecao();
@@ -1576,7 +1624,6 @@ async function removerItemColecaoFrontend(id_cItem) {
     // Chama a função para carregar as mídias
     carregarMidias();
 
-    carregarFeed().then(() => configurarEventosPosts(), recarregarCSS());
 
 
 
@@ -1626,6 +1673,8 @@ document.addEventListener("DOMContentLoaded", () => {
           el.style.color = "";
           el.style.fontWeight = "";
     });
+
+    carregarFeed(usuarioLogadoId,contador).then(() => configurarEventosPosts(), recarregarCSS());
       });
 
       //evento de clicar no botao de sobre
@@ -1826,6 +1875,7 @@ async function iniciarFuncaoFeed(){
     <script src="../js/funcionalidades.js"></script>
     <script src="../js/feed.js"></script>
     <script src="../js/modals/modalPost.js"></script>
-          <script src="../js/carregamento.js"></script>
+    <script src="../js/carregamento.js"></script>
+    <script src="../js/countPosts.js"></script>
   </body>
 </html>

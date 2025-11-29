@@ -108,7 +108,7 @@
           <h4 class="name-profile">Cartinha Mágica</h4>
         </div>
         <div class="div-2">
-          <p><span>10</span> publicações</p>
+          <p><span id="txtcountpost"></span> publicações</p>
           <p></p>
           <p><span id="txtseguidores"></span> seguidores</p>
         </div>
@@ -201,7 +201,7 @@
             <div class="sobreFooter">
               <div style="display: flex; align-items: center; gap: 8px">
                 <img
-                  src="../assets/png/icones/icone_calendario-fundacao-sobre.png"
+                  src="../assets/png/icones/telefone.png"
                   alt=""
                   height="20px"
                   width="20px"
@@ -234,7 +234,7 @@
 
         <!-- ********** Seção Coleção ********** -->
 
-      <div id="secao-colecao" style="display: none; align-items: center; justify-content: center; width: 100%;">
+      <div id="secao-colecao" style="display: none; align-items: flex-start; justify-content: flex-start ; width: 100%; overflow-y: auto; max-height: 500px; display: flex; flex-direction: column; gap: 2rem;">
 
           </div>  
 
@@ -355,13 +355,14 @@ carregarFeed(usuarioLogadoId);
     document.getElementById("txtseguidores").textContent = dataONG.seguidores;
     document.getElementById("txtrazao_social").textContent = 'Razão Social: ' + dataONG.razao_social;
     document.getElementById("txtdescricao").textContent = dataONG.descrição;
-    document.getElementById("txtAdF").textContent = 'Fundada em ' + dataONG.AdF;
+    document.getElementById("txtAdF").textContent = dataONG.telefone;
     document.getElementById("txtcidade").textContent = 'Localizada em ' + dataONG.cidade;
 
     window.ongId = dataONG.id_ong;
 
     listarColecoes(dataONG.id_ong)
     carregarFeed(dataONG.id_ong);
+    carregarQuantidadePostagens(dataONG.id_ong)
     
     
 
@@ -974,6 +975,7 @@ async function salvarPostEmColecoes() {
 
     // Limpa checkboxes
     document.querySelectorAll('input[name="colecoes"]').forEach(c => c.checked = false);
+    window.location.reload();
 
   } catch (error) {
     console.error("Erro ao salvar nas coleções:", error);
@@ -1332,6 +1334,7 @@ linkColecao.forEach(element => {
     <script src="../js/modals/modalPost.js"></script>
     <script src="../js/feed.js"></script>
     <script src="../js/search.js"></script>
-          <script src="../js/carregamento.js"></script>
+    <script src="../js/carregamento.js"></script>
+    <script src="../js/countPosts.js"></script>
   </body>
 </html>

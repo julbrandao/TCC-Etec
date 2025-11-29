@@ -671,6 +671,7 @@
 
             // Limpa checkboxes
             document.querySelectorAll('input[name="colecoes"]').forEach(c => c.checked = false);
+            window.location.reload();
 
           } catch (error) {
             console.error("Erro ao salvar nas coleções:", error);

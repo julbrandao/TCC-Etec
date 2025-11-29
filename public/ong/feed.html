@@ -52,12 +52,7 @@
               height="80"
           /></a>
         </div>
-<div style="display: flex; flex-direction: column; position: relative;">
-        <input type="text" name="txtbuscar" id="txtbuscar" class="buscar" placeholder="Procure uma ong..." />
-        <div id="results" class="results"></div>
-      </div>
-      <label for="txtbuscar"><img src="../assets/png/icones/icone_buscar.png" class="buscarIcon" alt=""></label>
-      
+
         <div
           class="nav-elements"
           style="width: 100px; justify-content: flex-end; padding-left: 1rem"
@@ -428,7 +423,7 @@ async function carregarCurtidas(postId) {
             <div class="autor-photo">
               <img src="${post.ONG.foto_perfil_ong}" alt="" />
             </div>
-            <a class="autor" href="../ong/perfil-ong.html?id=${post.ONG?.id_ong}">${post.ONG?.nome_ong || "ONG desconhecida"}</a>
+            <a class="autor">${post.ONG?.nome_ong || "ONG desconhecida"}</a>
           </div>
           <span class="horario">
             ${new Date(post.data_hora).toLocaleString("pt-BR")}

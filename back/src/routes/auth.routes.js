@@ -16,7 +16,6 @@ router.post("/usuario/login", async (req, res) => {
     .eq("Senha_user", Senha_user)
     .single()
 
-  if (error) return res.status(500).json({ error: error.message });
   if (!user || user.length === 0) return res.status(401).json({ error: "Usuário inválido" });
 
    req.session.user = {

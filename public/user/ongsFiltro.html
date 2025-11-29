@@ -376,6 +376,11 @@
     // Busca inicial (todas ONGs)
     carregarONGs();
 
+    // 🔍 Filtro por texto digitado
+    document.getElementById("txtbuscar").addEventListener("input", (e) => {
+      const nome = e.target.value.trim();
+      carregarONGs({ nome });
+    });
 
     // 🏙️ Filtro por cidade
     document.querySelectorAll("[data-aplicar='cidade']").forEach((btn) => {
@@ -457,7 +462,10 @@ function atualizarFiltro(chave, valor) {
 // Busca inicial
 carregarONGs();
 
-
+// 🔍 Filtro por nome
+document.getElementById("txtbuscar").addEventListener("input", (e) => {
+  atualizarFiltro("nome", e.target.value.trim());
+});
 
 // 🏙️ Filtro por cidade
 document.querySelectorAll("[data-aplicar='cidade']").forEach((btn) => {
@@ -502,7 +510,6 @@ document.getElementById("btnLimparFiltros").addEventListener("click", () => {
 </script>
 
 
-      <script src="../js/search.js"></script>
 
   <script src="../js/modals/modalsFiltro.js"></script>
   <script src="../js/funcionalidades.js"></script>

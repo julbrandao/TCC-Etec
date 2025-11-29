@@ -25,6 +25,7 @@ import postCurtir from './routes/postCurtir.routes.js';
 import postCurtirO from './routes/postCurtirO.routes.js';
 import sugestoesRoutes from "./routes/sugestoes.routes.js";
 import ongfiltro from './routes/ongsfiltro.routes.js';
+import countPostsRoutes from "./routes/countPosts.routes.js";
 
 
 const app = express();
@@ -89,6 +90,7 @@ app.use('/api/', buscarOng);
 app.use('/api/post/', postCurtir);
 app.use('/api/post/', postCurtirO);
 app.use("/api/sugestoes", sugestoesRoutes);
+app.use("/api/", countPostsRoutes);
 
 app.get("/public", (req, res) => {
   res.send("Qualquer um pode ver isso");
